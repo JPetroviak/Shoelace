@@ -1,0 +1,246 @@
+// Variables
+
+
+$theme-dark: true;
+
+// Colors
+$color-default: #000000;
+$color-default-light: #8E8E93;
+$color-default-lighter: #CECED2;
+$color-default-lightest: #EFEFF4;
+$color-primary: #1565a9;
+$color-secondary: $color-primary;
+$color-success: #4CD964;
+$color-warning: #FFCC00;
+$color-danger: #FF3B30;
+$color-information: #5AC8FA;
+$background-color-default: #FFFFFF;
+$background-color-primary: rgba($color-primary, .25);
+$background-color-secondary: rgba($color-secondary, .25);
+$background-color-success: rgba($color-success, .25);
+$background-color-warning: rgba($color-warning, .25);
+$background-color-danger: rgba($color-danger, .25);
+$background-color-information: rgba($color-information, .25);
+
+@if $theme-dark {
+	$color-default: #FFFFFF;
+	$color-default-light: #A3A3A3;
+	$color-default-lighter: #6A6A6A;
+	$color-default-lightest: #303030;
+	$color-primary: #008FBF;
+	$color-secondary: $color-primary;
+	$color-success: #5A9D48;
+	$color-warning: #FCB72E;
+	$color-danger: #D31F2A;
+	$color-information: #5AC8FA;
+	$background-color-default: #262626;
+}
+
+$colors: (
+	default: $color-default,
+	primary: $color-primary,
+	secondary: $color-secondary,
+	success: $color-success,
+	warning: $color-warning,
+	danger: $color-danger,
+	information: $color-information
+	) !default;
+
+$background-colors: (
+	default: $background-color-default,
+	primary: $background-color-primary,
+	secondary: $background-color-secondary,
+	success: $background-color-success,
+	warning: $background-color-warning,
+	danger: $background-color-danger,
+	information: $background-color-information,
+	) !default;
+
+// Components
+$padding: 20px;
+$padding-extra-large: ($padding * 2);
+$padding-large: ($padding * 1.5);
+$padding-small: ($padding / 2);
+$padding-extra-small: ($padding / 4);
+
+$borders: true; // true | false
+$border-color: $color-default-lighter;
+$border-style: solid;
+$border-width: 1px;
+$border-radius: 4px;
+$border-radius-large: ($border-radius * 1.25);
+$border-radius-small: ($border-radius * .85);
+
+$transitions: true; // true | false
+$transition-speed: 200ms;
+$transition-speed-slow: ($transition-speed * 2);
+$transition-speed-fast: ($transition-speed / 2);
+$transition-property: ease-in-out;
+
+// Typography
+$font-size: 14px;
+$font-size-large: ($font-size * 1.25);
+$font-size-small: ($font-size * .85);
+$line-height: 20/14;
+$font-size-h1: ($font-size-large * 2);
+$font-size-h2: ($font-size * 2);
+$font-size-h3: ($font-size-small * 2);
+$font-size-h4: $font-size-large;
+$font-size-h5: $font-size;
+$font-size-h6: $font-size-small;
+$font-family: -apple-system, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$font-family-headers: inherit;
+$line-height-headers: inherit;
+
+// Tables
+$table-background-color: transparent;
+$table-background-color-hover: $background-color-primary;
+$table-background-color-odd: $color-default-lightest;
+$table-background-color-even: $table-background-color;
+$table-header-color: $color-default-light;
+$table-borders: $borders; // true | false
+$table-border-color: $border-color;
+$table-border-style: $border-style;
+$table-border-width: $border-width;
+$table-padding: $padding-small;
+$table-padding-vertical: ($table-padding * .9);
+$table-padding-vertical-large: ($table-padding-vertical * 1.25);
+$table-padding-vertical-small: ($table-padding-vertical * .85);
+$table-padding-horizontal: $table-padding;
+$table-padding-horizontal-large: ($table-padding-horizontal * 1.25);
+$table-padding-horizontal-small: ($table-padding-horizontal * .85);
+$table-transitions: $transitions; // true | false
+$table-transition-speed: $transition-speed;
+$table-transition-property: $transition-property;
+
+// Forms
+// General
+$form-background-color: transparent;
+$form-borders: $borders; // true | false
+$form-border-color: $border-color;
+$form-border-style: $border-style;
+$form-border-width: $border-width;
+$form-border-radius: $border-radius;
+$form-border-radius-large: $border-radius-large;
+$form-border-radius-small: $border-radius-small;
+$form-padding: $padding-small;
+$form-padding-vertical: ($form-padding * .85);
+$form-padding-vertical-large: ($form-padding-vertical * 1.25);
+$form-padding-vertical-small: ($form-padding * .85);
+$form-padding-horizontal: $form-padding;
+$form-padding-horizontal-large: ($form-padding-horizontal * 1.25);
+$form-padding-horizontal-small: ($form-padding-horizontal * .85);
+$form-transitions: $transitions; // true | false
+$form-transition-speed: $transition-speed;
+$form-transition-property: $transition-property;
+// Inputs & Selects
+$input-background-color: $form-background-color;
+$input-borders: $form-borders; // true | false
+$input-border-color: $form-border-color;
+$input-border-style: $form-border-style;
+$input-border-width: $form-border-width;
+$input-border-radius: $form-border-radius;
+$input-border-radius-large: $form-border-radius-large;
+$input-border-radius-small: $form-border-radius-small;
+$input-focus-color: $color-primary;
+$input-padding: $form-padding;
+$input-padding-horizontal: $form-padding-horizontal;
+$input-padding-horizontal-large: $form-padding-horizontal-large;
+$input-padding-horizontal-small: $form-padding-horizontal-small;
+$input-padding-vertical: $form-padding-vertical;
+$input-padding-vertical-large: $form-padding-vertical-large;
+$input-padding-vertical-small: $form-padding-vertical-small;
+$input-transitions: $form-transitions; // true | false
+$input-transition-speed: $form-transition-speed;
+$input-transition-property: $form-transition-property;
+// Buttons
+$button-inverted: false;
+$button-background-color: $form-background-color;
+$button-borders: $form-borders; // true | false
+$button-border-color: $form-border-color;
+$button-border-style: $form-border-style;
+$button-border-width: $form-border-width;
+$button-border-radius: $form-border-radius;
+$button-border-radius-large: $form-border-radius-large;
+$button-border-radius-small: $form-border-radius-small;
+$button-padding: $form-padding;
+$button-padding-horizontal: $form-padding-horizontal;
+$button-padding-horizontal-large: $form-padding-horizontal-large;
+$button-padding-horizontal-small: $form-padding-horizontal-small;
+$button-padding-vertical: $form-padding-vertical;
+$button-padding-vertical-large: $form-padding-vertical-large;
+$button-padding-vertical-small: $form-padding-vertical-small;
+$button-text-transform: false;
+$button-transitions: $form-transitions; // true | false
+$button-transition-speed: $form-transition-speed;
+$button-transition-property: $form-transition-property;
+// Radios
+$radio-background-color: $form-background-color;
+$radio-borders: $form-borders; // true | false
+$radio-border-color: $form-border-color;
+$radio-border-style: $form-border-style;
+$radio-border-width: $form-border-width;
+$radio-border-radius: 50%;
+$radio-border-radius-large: $radio-border-radius;
+$radio-border-radius-small: $radio-border-radius;
+$radio-checked-color: $color-primary;
+$radio-size: ($form-padding * 2);
+$radio-size-large: ($radio-size * 1.25);
+$radio-size-small: ($radio-size * .85);
+$radio-transitions: $form-transitions; // true | false
+$radio-transition-speed: $form-transition-speed;
+$radio-transition-property: $form-transition-property;
+// Checkboxes
+$checkbox-background-color: $form-background-color;
+$checkbox-borders: $form-borders; // true | false
+$checkbox-border-color: $form-border-color;
+$checkbox-border-style: $form-border-style;
+$checkbox-border-width: $form-border-width;
+$checkbox-border-radius: $form-border-radius;
+$checkbox-border-radius-large: $form-border-radius-large;
+$checkbox-border-radius-small: $form-border-radius-small;
+$checkbox-checked-color: $color-primary;
+$checkbox-size: ($form-padding * 2);
+$checkbox-size-large: ($checkbox-size * 1.25);
+$checkbox-size-small: ($checkbox-size * .85);
+$checkbox-transitions: $form-transitions; // true | false
+$checkbox-transition-speed: $form-transition-speed;
+$checkbox-transition-property: $form-transition-property;
+
+// Accordion
+$accordion-background-color-hover: $background-color-primary;
+$accordion-borders: $borders;
+$accordion-border-color: $border-color;
+$accordion-border-style: $border-style;
+$accordion-border-width: $border-width;
+$accordion-padding: $padding-small;
+$accordion-transitions: $transitions; // true | false
+$accordion-transition-speed: $transition-speed;
+$accordion-transition-property: $transition-property;
+
+// Calendar
+$calendar-weekend-color: $table-background-color-odd;
+
+// Responsive Breakpoints
+$breakpoints: (
+	extra-small: 0,
+	small: 544px,
+	medium: 768px,
+	large: 992px,
+	extra-large: 1200px,
+	maximum: 1400px
+	) !default;
+
+// Grid System
+$grid-flex: true; // true | false
+$grid-count: 12;
+$grid-padding: $padding;
+$container-padding: $padding;
+
+// Utilities
+$utilities: true; // true | false
+$background-color-utilities: $utilities; // true | false
+$color-utilities: $utilities; // true | false
+$responsive-utilities: $utilities; // true | false
+$responsive-utilities-hide: $responsive-utilities; // true | false
+$responsive-utilities-align: $responsive-utilities; // true | false

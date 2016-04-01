@@ -1,0 +1,64 @@
+// Utilities
+@each $background-color in $background-colors {
+	.background-color-#{nth($background-color, 1)} {
+		background-color: #{nth($background-color, 2)};
+	}
+}
+
+@each $color in $colors {
+	.color-#{nth($color, 1)} {
+		color: #{nth($color, 2)};
+	}
+}
+
+.hidden, [hidden], template {
+	display: none;
+}
+
+.hidden-print {
+	@media print {
+		display: none;
+	}
+}
+
+@each $breakpoint in map-keys($breakpoints) {
+	@include breakpoint-up($breakpoint) {
+		.hidden-#{$breakpoint}-up {
+			display: none;
+		}
+	}
+
+	@include breakpoint-down($breakpoint) {
+		.hidden-#{$breakpoint}-down {
+			display: none;
+		}
+	}
+}
+
+.align-left {
+	text-align: left;
+}
+
+.align-right {
+	text-align: right;
+}
+
+.align-center {
+	text-align: center;
+}
+
+@each $breakpoint in map-keys($breakpoints) {
+	@include breakpoint-up($breakpoint) {
+		.align-#{$breakpoint}-left {
+			text-align: left;
+		}
+
+		.align-#{$breakpoint}-right {
+			text-align: right;
+		}
+
+		.align-#{$breakpoint}-center {
+			text-align: center;
+		}
+	}
+}

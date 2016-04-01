@@ -1,0 +1,77 @@
+// Calendar
+.calendar {
+	> tbody > tr > td {
+		width: (100% / 7);
+
+		&:first-child, &:last-child {
+			background-color: $calendar-weekend-color;
+		}
+
+		.date {
+			display: inline-block;
+			height: $padding-large;
+			line-height: $padding-large;
+			text-align: center;
+			vertical-align: top;
+			width: $padding-large;
+		}
+
+		&.event {
+			.date {
+				background-color: $color-default;
+				border-radius: 50%;
+				color: $background-color-default;
+			}
+
+			.event-list {
+				margin-bottom: 0;
+				margin-top: $table-padding;
+				padding-left: 14px;
+
+				li {
+					text-align: left;
+
+					span {
+						color: $color-default;
+						font-size: $font-size-small;
+					}
+				}
+			}
+		}
+
+		&.today .date {
+			background-color: $color-primary;
+			border-radius: 50%;
+			color: $background-color-default;
+		}
+
+		&.off .date {
+			color: $color-default-lighter;
+		}
+	}
+
+	&.responsive {
+		@include breakpoint-only(extra-small) {
+			tbody > tr {
+				border-top: 0;
+				padding: 0;
+
+				> td {
+					border-top: $table-border-width $table-border-style $table-border-color;
+					padding: $table-padding;
+
+					&.event .event-list {
+						display: inline-block;
+						margin-left: $padding-extra-small;
+						margin-top: 0;
+						vertical-align: top;
+					}
+
+					&.off {
+						display: none;
+					}
+				}
+			}
+		}
+	}
+}

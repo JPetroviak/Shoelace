@@ -1,0 +1,117 @@
+// Tables
+.table {
+	background-color: $table-background-color;
+	border-collapse: collapse;
+	border-spacing: 0;
+	margin-bottom: $padding;
+	width: 100%;
+
+	caption, th, td {
+		padding: $table-padding-vertical $table-padding-horizontal;
+		vertical-align: top;
+	}
+
+	caption, th {
+		color: $table-header-color;
+		font-weight: normal;
+		text-align: left;
+	}
+
+	@if $table-borders {
+		> tbody > tr > td {
+			border-top: $table-border-width $table-border-style $table-border-color;
+		}
+	}
+
+	&.large {
+		> thead > tr > th, tbody > tr > td {
+			padding: $table-padding-vertical-large $table-padding-horizontal-large;
+		}
+	}
+
+	&.small {
+		> thead > tr > th, tbody > tr > td {
+			padding: $table-padding-vertical-small $table-padding-horizontal-small;
+		}
+	}
+
+	> .table-row-link > tr:not(.table-row-hidden):hover > td:not(.table-cell-link-skip) {
+		cursor: pointer;
+		-webkit-user-select: none;
+	}
+
+	&.striped > tbody > tr {
+		&:nth-child(odd) {
+			background-color: $table-background-color-odd;
+		}
+
+		&:nth-child(even) {
+			background-color: $table-background-color-even;
+		}
+	}
+
+	&.toggle-row {
+		> tbody > tr.table-row-hidden > td {
+			border-top: none;
+			padding: 0;
+
+			> * {
+				display: none;
+				padding: $table-padding;
+			}
+		}
+
+		&.striped > tbody > tr {
+			&:nth-child(4n+1) {
+				background-color: $table-background-color-odd;
+			}
+
+			&:nth-child(4n+2) {
+				background-color: $table-background-color-odd;
+			}
+
+			&:nth-child(4n+3) {
+				background-color: $table-background-color-even;
+			}
+
+			&:nth-child(4n+4) {
+				background-color: $table-background-color-even;
+			}
+		}
+	}
+
+	&.hover > tbody > tr:not(.table-row-hidden) {
+		@if $form-transitions {
+			transition: background-color $form-transition-speed $form-transition-property;
+		}
+
+		&:hover {
+			background-color: $table-background-color-hover;
+		}
+	}
+
+	&.responsive {
+		@include breakpoint-only(extra-small) {
+			> thead {
+				display: none;
+			}
+
+			> tbody {
+				display: block;
+
+				> tr {
+					border-top: $table-border-width $table-border-style $table-border-color;
+					display: block;
+					padding: $table-padding;
+
+					> td {
+						border-top: none;
+						display: block;
+						padding: 0;
+						width: 100%;
+					}
+				}
+			}
+		}
+	}
+}

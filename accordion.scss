@@ -1,0 +1,44 @@
+// Accordion
+.accordion-group {
+	margin-bottom: $padding;
+
+	> .accordion {
+		+ .accordion {
+			@if $accordion-borders {
+				border-top: $accordion-border-width $accordion-border-style $accordion-border-color;
+			}
+		}
+
+		> .accordion-toggle {
+			cursor: pointer;
+			padding: $accordion-padding;
+			text-decoration: none;
+			-webkit-user-select: none;
+		}
+
+		> .accordion-content {
+			display: none;
+			padding: $accordion-padding;
+		}
+	}
+
+	&.striped > .accordion {
+		&:nth-child(odd) > .accordion-toggle {
+			background-color: $table-background-color-odd;
+		}
+
+		&:nth-child(even) > .accordion-toggle {
+			background-color: $table-background-color-even;
+		}
+	}
+
+	&.hover > .accordion > .accordion-toggle {
+		@if $form-transitions {
+			transition: background-color $form-transition-speed $form-transition-property;
+
+			&:hover {
+				background-color: $accordion-background-color-hover;
+			}
+		}
+	}
+}
