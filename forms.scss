@@ -291,6 +291,11 @@ button.button {
 	}
 
 	touch-action: manipulation;
+
+	@if $button-transitions {
+		transition: background-color $button-transition-speed $button-transition-property, border-color $button-transition-speed $button-transition-property;
+	}
+
 	-webkit-user-select: none;
 
 	&:disabled {

@@ -183,7 +183,7 @@ $button-padding-horizontal-small: $form-padding-horizontal-small;
 $button-padding-vertical: $form-padding-vertical;
 $button-padding-vertical-large: $form-padding-vertical-large;
 $button-padding-vertical-small: $form-padding-vertical-small;
-$button-text-transform: false;
+$button-text-transform: false; // true | false
 $button-transitions: $form-transitions; // true | false
 $button-transition-speed: $form-transition-speed;
 $button-transition-property: $form-transition-property;
