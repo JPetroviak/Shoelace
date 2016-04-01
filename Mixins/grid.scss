@@ -12,9 +12,9 @@
 }
 
 @mixin make-container-sizes($breakpoints: $breakpoints) {
-	@each $breakpoint in map-keys($breakpoints) {
-		&.#{$breakpoint} {
-			max-width: breakpoint-maximum($breakpoint);
+	@each $class, $breakpoint in $breakpoints {
+	  &.#{$class} {
+			max-width: $breakpoint;
 		}
 	}
 }
