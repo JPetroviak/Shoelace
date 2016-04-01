@@ -1,13 +1,13 @@
 // Utilities
-@each $background-color in $background-colors {
-	.background-color-#{nth($background-color, 1)} {
-		background-color: #{nth($background-color, 2)};
+@each $class, $background-color in $background-colors {
+  .background-color-#{$class} {
+		background-color: $background-color;
 	}
 }
 
-@each $color in $colors {
-	.color-#{nth($color, 1)} {
-		color: #{nth($color, 2)};
+@each $class, $color in $colors {
+  .color-#{$class} {
+		color: $color;
 	}
 }
 

@@ -328,13 +328,13 @@ button.button {
 		&:not(.inverted) {
 			background-color: $color-default-lighter;
 			color: $background-color-default;
-
-			@each $color in $colors {
-				&.#{nth($color, 1)} {
-					background-color: #{nth($color, 2)};
-					border-color: #{nth($color, 2)};
-				}
-			}
+      
+      @each $class, $color in $colors {
+        &.#{$class} {
+					background-color: $color;
+					border-color: $color;
+        }
+      }
 		}
 
 		&.inverted {
@@ -342,10 +342,10 @@ button.button {
 			border-color: $color-default-lighter;
 			color: $color-default-lighter;
 
-			@each $color in $colors {
-				&.#{nth($color, 1)} {
-					border-color: #{nth($color, 2)};
-					color: #{nth($color, 2)};
+			@each $class, $color in $colors {
+        &.#{$class} {
+					border-color: $color;
+					color: $color;
 				}
 			}
 		}
@@ -355,10 +355,10 @@ button.button {
 			border-color: $color-default-lighter;
 			color: $color-default-lighter;
 
-			@each $color in $colors {
-				&.#{nth($color, 1)} {
-					border-color: #{nth($color, 2)};
-					color: #{nth($color, 2)};
+			@each $class, $color in $colors {
+        &.#{$class} {
+					border-color: $color;
+					color: $color;
 				}
 			}
 		}
@@ -367,10 +367,10 @@ button.button {
 			background-color: $color-default-lighter;
 			color: $background-color-default;
 
-			@each $color in $colors {
-				&.#{nth($color, 1)} {
-					background-color: #{nth($color, 2)};
-					border-color: #{nth($color, 2)};
+			@each $class, $color in $colors {
+        &.#{$class} {
+					background-color: $color;
+					border-color: $color;
 				}
 			}
 		}
