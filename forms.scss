@@ -101,24 +101,34 @@ legend {
 	}
 
 	&.required .input-label:after {
-		color: $color-danger;
+		color: $form-error-color;
 		content: '*';
 		margin-left: $padding-extra-small;
 	}
 
 	&.error{
-		@if $input-borders {
-			.input-field {
-				border-color: $color-danger;
+		.input-field {
+			@if $form-error-background-color {
+			  background-color: $form-error-background-color;
+			}
+
+			@if $input-borders {
+			  @if $form-error-color {
+			    border-color: $form-error-color;
+			  }
 			}
 		}
 
 		.radio + label:before, .checkbox + label:before {
-			border-color: $color-danger;
+			@if $form-error-background-color {
+			  background-color: $form-error-background-color;
+			}
+
+			border-color: $form-error-color;
 		}
 
 		.input-helper {
-			color: $color-danger;
+			color: $form-error-color;
 		}
 	}
 }
@@ -139,7 +149,7 @@ optgroup {
 	-webkit-user-select: none;
 
 	&.required:after {
-		color: $color-danger;
+		color: $form-error-color;
 		content: '*';
 		margin-left: $padding-extra-small;
 	}
@@ -205,10 +215,18 @@ textarea.input-field {
 		-webkit-user-select: none;
 	}
 
+  @if $input-hover {
+    &:hover {
+      border-color: $input-hover-color;
+    }
+  }
+
 	&:focus {
-		@if $input-borders {
-			border-color: $input-focus-color;
-		}
+    @if $input-focus {
+      @if $input-borders {
+        border-color: $input-focus-color;
+      }
+    }
 
 		outline: 0;
 	}
@@ -236,9 +254,15 @@ textarea.input-field {
 		padding: $input-padding-vertical-small $input-padding-horizontal-small;
 	}
 
-	@if $input-borders {
-		&.error {
-			border-color: $color-danger;
+	&.error {
+		@if $form-error-background-color {
+		  background-color: $form-error-background-color;
+		}
+
+		@if $input-borders {
+		  @if $form-error-color {
+		    border-color: $form-error-color;
+		  }
 		}
 	}
 }
@@ -249,7 +273,7 @@ textarea.input-field {
 	margin-bottom: $padding;
 
 	&.error {
-		color: $color-danger;
+		color: $form-error-color;
 	}
 }
 
@@ -339,15 +363,19 @@ button.button {
 					background-color: $color;
 					border-color: $color;
 
-					&:hover {
-					  background-color: darken($color, 7.5%);
-					  border-color: darken($color, 7.5%);
-					}
-					
-					&:focus, &:active {
-					  background-color: darken($color, 15%);
-					  border-color: darken($color, 15%);
-					}
+				  @if $button-hover {
+				    &:hover {
+				      background-color: darken($color, 7.5%);
+				      border-color: darken($color, 7.5%);
+				    }
+				  }
+
+				  @if $button-focus {
+						&:focus, &:active {
+						  background-color: darken($color, 15%);
+						  border-color: darken($color, 15%);
+						}
+				 	}
         }
       }
 		}
@@ -387,15 +415,19 @@ button.button {
 					background-color: $color;
 					border-color: $color;
 
-					&:hover {
-					  background-color: darken($color, 7.5%);
-					  border-color: darken($color, 7.5%);
-					}
-					
-					&:focus, &:active {
-					  background-color: darken($color, 15%);
-					  border-color: darken($color, 15%);
-					}
+				  @if $button-hover {
+				    &:hover {
+				      background-color: darken($color, 7.5%);
+				      border-color: darken($color, 7.5%);
+				    }
+				  }
+
+				  @if $button-focus {
+						&:focus, &:active {
+						  background-color: darken($color, 15%);
+						  border-color: darken($color, 15%);
+						}
+				 	}
 				}
 			}
 		}
@@ -469,7 +501,15 @@ button.button {
 	}
 
 	&.error + label:before {
-		border-color: $color-danger;
+		@if $form-error-background-color {
+		  background-color: $form-error-background-color;
+		}
+
+		@if $radio-borders {
+			@if $form-error-color {
+				border-color: $form-error-color;
+			}
+		}
 	}
 }
 
@@ -540,6 +580,14 @@ button.button {
 	}
 
 	&.error + label:before {
-		border-color: $color-danger;
+		@if $form-error-background-color {
+		  background-color: $form-error-background-color;
+		}
+
+		@if $checkbox-borders {
+			@if $form-error-color {
+				border-color: $form-error-color;
+			}
+		}
 	}
 }
