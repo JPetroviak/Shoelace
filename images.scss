@@ -1,0 +1,68 @@
+// Images
+svg:not(:root) {
+	overflow: hidden;
+}
+
+figure {
+	margin: 0 0 $padding;
+}
+
+img {
+	border: 0;
+
+	&.responsive {
+		display: inline-block;
+		height: auto;
+		max-width: 100%;
+	}
+
+	&.contain {
+		object-fit: none;
+		width: 100%;
+
+		&.bottom {
+			object-position: 50%  100%;
+		}
+
+		&.bottom-left {
+			object-position: 0  100%;
+		}
+
+		&.bottom-right {
+			object-position: 100% 100%;
+		}
+
+		&.left {
+			object-position: 0%  50%;
+		}
+
+		&.right {
+			object-position: 100%  50%;
+		}
+
+		&.top {
+			object-position: 50%  0%;
+		}
+
+		&.top-left {
+			object-position: 0  0;
+		}
+
+		&.top-right {
+			object-position: 100%  0;
+		}
+	}
+
+	&.cover {
+		object-fit: cover;
+		width: 100%;
+
+		&.bottom {
+			object-position: 50%  100%;
+		}
+
+		&.top {
+			object-position: 50%  0%;
+		}
+	}
+}
