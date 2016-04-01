@@ -90,6 +90,22 @@ $font-family: -apple-system, 'Helvetica Neue', Helvetica, Arial, sans-serif;
 $font-family-headers: inherit;
 $line-height-headers: inherit;
 
+// Breakpoints
+$breakpoints: (
+	extra-small: 0,
+	small: 544px,
+	medium: 768px,
+	large: 992px,
+	extra-large: 1200px,
+	maximum: 1400px
+	) !default;
+
+// Grid System
+$grid-flex: true; // true | false
+$grid-count: 12;
+$grid-padding: $padding;
+$container-padding: $padding;
+
 // Tables
 $table-background-color: transparent;
 $table-background-color-hover: $background-color-primary;
@@ -112,7 +128,6 @@ $table-transition-speed: $transition-speed;
 $table-transition-property: $transition-property;
 
 // Forms
-// General
 $form-background-color: transparent;
 $form-borders: $borders; // true | false
 $form-border-color: $border-color;
@@ -218,22 +233,6 @@ $accordion-transition-property: $transition-property;
 
 // Calendar
 $calendar-weekend-color: $table-background-color-odd;
-
-// Responsive Breakpoints
-$breakpoints: (
-	extra-small: 0,
-	small: 544px,
-	medium: 768px,
-	large: 992px,
-	extra-large: 1200px,
-	maximum: 1400px
-	) !default;
-
-// Grid System
-$grid-flex: true; // true | false
-$grid-count: 12;
-$grid-padding: $padding;
-$container-padding: $padding;
 
 // Utilities
 $utilities: true; // true | false
