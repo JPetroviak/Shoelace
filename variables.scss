@@ -42,7 +42,7 @@ $colors: (
   information: $color-information,
 	warning: $color-warning,
 	danger: $color-danger
-	) !default;
+	);
 
 $background-colors: (
 	default: $background-color-default,
@@ -52,7 +52,7 @@ $background-colors: (
   information: $background-color-information,
 	warning: $background-color-warning,
 	danger: $background-color-danger
-	) !default;
+	);
 
 // Components
 $padding: 20px;
@@ -97,7 +97,7 @@ $breakpoints: (
 	medium: 768px,
 	large: 992px,
 	extra-large: 1200px
-	) !default;
+	);
 
 // Grid System
 $grid-flex: true; // true | false
