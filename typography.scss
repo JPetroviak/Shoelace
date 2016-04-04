@@ -102,12 +102,14 @@ ul, ol, dl {
 	&.list-inline {
 		list-style: none;
 		padding-left: 0;
-		margin: (-$padding-extra-small) (-$padding-extra-small) $padding;
+		margin-left: (-$padding-extra-small);
+    margin-right: (-$padding-extra-small);
 
 		li {
 			display: inline-block;
       margin-right: -4px;
-			padding: $padding-extra-small;
+			padding-left: $padding-extra-small;
+      padding-right: $padding-extra-small;
 		}
 	}
 }
