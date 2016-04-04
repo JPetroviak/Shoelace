@@ -576,6 +576,12 @@ button.button {
 		  content: '*';
 		  margin-left: $padding-extra-small;
 		}
+
+		@if $radio-hover {
+		  &:hover:before {
+		    border-color: $radio-hover-color;
+		  }
+		}
 	}
 
 	&:disabled + label {
@@ -659,6 +665,12 @@ button.button {
 		  color: $form-error-color;
 		  content: '*';
 		  margin-left: $padding-extra-small;
+		}
+
+		@if $checkbox-hover {
+		  &:hover:before {
+		    border-color: $checkbox-hover-color;
+		  }
 		}
 	}
 
