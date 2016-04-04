@@ -112,10 +112,12 @@ legend {
 		}
 	}
 
-	&.required .input-label:after {
-		color: $form-error-color;
-		content: '*';
-		margin-left: $padding-extra-small;
+	&.required {
+    .input-label:after, .radio + label:after, .checkbox + label:after {
+      color: $form-error-color;
+      content: '*';
+      margin-left: $padding-extra-small;
+    }
 	}
 
 	&.error{
@@ -568,6 +570,12 @@ button.button {
 
 			width: $radio-size;
 		}
+
+		&.required:after {
+		  color: $form-error-color;
+		  content: '*';
+		  margin-left: $padding-extra-small;
+		}
 	}
 
 	&:disabled + label {
@@ -645,6 +653,12 @@ button.button {
 			}
 
 			width: $checkbox-size;
+		}
+
+		&.required:after {
+		  color: $form-error-color;
+		  content: '*';
+		  margin-left: $padding-extra-small;
 		}
 	}
 
