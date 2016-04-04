@@ -24,6 +24,18 @@ legend {
 		margin-bottom: $padding;
 	}
 
+	.radio {
+	  + label {
+	    margin-bottom: $padding-small;
+	  }
+	}
+	
+	.checkbox {
+	  + label {
+	    margin-bottom: $padding-small;
+	  }
+	}
+
 	&.large {
 		.input-field {
 			@if $input-border-radius-large > 0 {
@@ -441,7 +453,6 @@ button.button {
 	+ label {
 		cursor: pointer;
 		display: inline-block;
-		margin-bottom: $padding-small;
 		touch-action: manipulation;
 		-webkit-user-select: none;
 
@@ -520,7 +531,6 @@ button.button {
 	+ label {
 		cursor: pointer;
 		display: inline-block;
-		margin-bottom: $padding-small;
 		touch-action: manipulation;
 		-webkit-user-select: none;
 
