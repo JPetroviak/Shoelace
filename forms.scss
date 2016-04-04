@@ -326,11 +326,6 @@ button.button {
 	}
 
 	touch-action: manipulation;
-  
-  @if $button-transitions {
-		transition: background-color $button-transition-speed $button-transition-property, border-color $button-transition-speed $button-transition-property;
-	}
-  
 	-webkit-user-select: none;
 
 	&:disabled {
@@ -369,6 +364,24 @@ button.button {
 			background-color: $color-default-lighter;
 			color: $color-default;
       
+      @if $button-transitions {
+        transition: background-color $button-transition-speed $button-transition-property, border-color $button-transition-speed $button-transition-property;
+      }
+      
+      @if $button-hover {
+        &:hover {
+          background-color: darken($color-default-lighter, 7.5%);
+          border-color: darken($color-default-lighter, 7.5%);
+        }
+      }
+
+      @if $button-focus {
+        &:focus, &:active {
+          background-color: darken($color-default-lighter, 15%);
+          border-color: darken($color-default-lighter, 15%);
+        }
+      }
+      
       @each $class, $color in $colors {
         &.#{$class} {
 					background-color: $color;
@@ -396,11 +409,41 @@ button.button {
 			background-color: $button-background-color;
 			border-color: $color-default-lighter;
 			color: $color-default;
+      
+      @if $button-transitions {
+        transition: background-color $button-transition-speed $button-transition-property, color $button-transition-speed $button-transition-property;
+      }
+      
+      @if $button-hover {
+        &:hover {
+          background-color: $color-default-lighter;
+        }
+      }
+
+      @if $button-focus {
+        &:focus, &:active {
+          background-color: $color-default-lighter;
+        }
+      }
 
 			@each $class, $color in $colors {
         &.#{$class} {
 					border-color: $color;
 					color: $color;
+          
+          @if $button-hover {
+            &:hover {
+              background-color: $color;
+              color: $background-color-default;
+            }
+          }
+          
+          @if $button-focus {
+            &:focus, &:active {
+              background-color: $color;
+              color: $background-color-default;
+            }
+          }
 				}
 			}
 		}
@@ -409,11 +452,41 @@ button.button {
 			background-color: $button-background-color;
 			border-color: $color-default-lighter;
 			color: $color-default;
+      
+      @if $button-transitions {
+        transition: background-color $button-transition-speed $button-transition-property, color $button-transition-speed $button-transition-property;
+      }
+      
+      @if $button-hover {
+        &:hover {
+          background-color: $color-default-lighter;
+        }
+      }
+
+      @if $button-focus {
+        &:focus, &:active {
+          background-color: $color-default-lighter;
+        }
+      }
 
 			@each $class, $color in $colors {
         &.#{$class} {
 					border-color: $color;
 					color: $color;
+          
+          @if $button-hover {
+            &:hover {
+              background-color: $color;
+              color: $background-color-default;
+            }
+          }
+          
+          @if $button-focus {
+            &:focus, &:active {
+              background-color: $color;
+              color: $background-color-default;
+            }
+          }
 				}
 			}
 		}
@@ -421,6 +494,24 @@ button.button {
 		&.inverted {
 			background-color: $color-default-lighter;
 			color: $color-default;
+      
+      @if $button-transitions {
+        transition: background-color $button-transition-speed $button-transition-property, border-color $button-transition-speed $button-transition-property;
+      }
+      
+      @if $button-hover {
+        &:hover {
+          background-color: darken($color-default-lighter, 7.5%);
+          border-color: darken($color-default-lighter, 7.5%);
+        }
+      }
+
+      @if $button-focus {
+        &:focus, &:active {
+          background-color: darken($color-default-lighter, 15%);
+          border-color: darken($color-default-lighter, 15%);
+        }
+      }
 
 			@each $class, $color in $colors {
         &.#{$class} {
