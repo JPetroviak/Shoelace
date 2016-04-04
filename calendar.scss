@@ -1,6 +1,11 @@
 // Calendar
 .calendar {
+  caption, th {
+    text-align: center;
+  }
+  
 	> tbody > tr > td {
+    text-align: center;
 		width: (100% / 7);
 
 		&:first-child, &:last-child {
@@ -59,6 +64,7 @@
 				> td {
 					border-top: $table-border-width $table-border-style $table-border-color;
 					padding: $table-padding;
+          text-align: left;
 
 					&.event .event-list {
 						display: inline-block;
