@@ -577,7 +577,7 @@ button.button {
 		  margin-left: $padding-extra-small;
 		}
 
-		@if $radio-hover {
+		@if $radio-hovers {
 		  &:hover:before {
 		    border-color: $radio-hover-color;
 		  }
@@ -667,7 +667,7 @@ button.button {
 		  margin-left: $padding-extra-small;
 		}
 
-		@if $checkbox-hover {
+		@if $checkbox-hovers {
 		  &:hover:before {
 		    border-color: $checkbox-hover-color;
 		  }
