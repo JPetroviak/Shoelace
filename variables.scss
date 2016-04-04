@@ -9,16 +9,16 @@ $color-default-lightest: #EFEFF4;
 $color-primary: #1565a9;
 $color-secondary: $color-primary;
 $color-success: #4CD964;
+$color-information: #5AC8FA;
 $color-warning: #FFCC00;
 $color-danger: #FF3B30;
-$color-information: #5AC8FA;
 $background-color-default: #FFFFFF;
 $background-color-primary: rgba($color-primary, .25);
 $background-color-secondary: rgba($color-secondary, .25);
 $background-color-success: rgba($color-success, .25);
+$background-color-information: rgba($color-information, .25);
 $background-color-warning: rgba($color-warning, .25);
 $background-color-danger: rgba($color-danger, .25);
-$background-color-information: rgba($color-information, .25);
 
 @if $theme-dark {
 	$color-default: #FFFFFF;
@@ -28,9 +28,9 @@ $background-color-information: rgba($color-information, .25);
 	$color-primary: #008FBF;
 	$color-secondary: $color-primary;
 	$color-success: #5A9D48;
+  $color-information: #5AC8FA;
 	$color-warning: #FCB72E;
 	$color-danger: #D31F2A;
-	$color-information: #5AC8FA;
 	$background-color-default: #262626;
 }
 
@@ -39,9 +39,9 @@ $colors: (
 	primary: $color-primary,
 	secondary: $color-secondary,
 	success: $color-success,
+  information: $color-information,
 	warning: $color-warning,
-	danger: $color-danger,
-	information: $color-information
+	danger: $color-danger
 	) !default;
 
 $background-colors: (
@@ -49,9 +49,9 @@ $background-colors: (
 	primary: $background-color-primary,
 	secondary: $background-color-secondary,
 	success: $background-color-success,
+  information: $background-color-information,
 	warning: $background-color-warning,
-	danger: $background-color-danger,
-	information: $background-color-information,
+	danger: $background-color-danger
 	) !default;
 
 // Components
@@ -136,7 +136,7 @@ $form-border-radius: $border-radius;
 $form-border-radius-large: $border-radius-large;
 $form-border-radius-small: $border-radius-small;
 $form-error-color: $color-danger;
-$form-error-background-color: $form-background-color;
+$form-error-background-color: false;
 $form-padding: $padding-small;
 $form-padding-vertical: ($form-padding * .85);
 $form-padding-vertical-large: ($form-padding-vertical * 1.25);
