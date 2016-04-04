@@ -23,13 +23,17 @@
 	}
 
 	&.striped > .accordion {
-		&:nth-child(odd) > .accordion-toggle {
-			background-color: $table-background-color-odd;
-		}
+    &:nth-child(odd) > {
+      .accordion-toggle, .accordion-content {
+        background-color: $table-background-color-odd;
+      }
+    }
 
-		&:nth-child(even) > .accordion-toggle {
-			background-color: $table-background-color-even;
-		}
+    &:nth-child(even) > {
+      .accordion-toggle, .accordion-content {
+        background-color: $table-background-color-even;
+      }
+    }
 	}
 
 	&.hover > .accordion > .accordion-toggle {
