@@ -372,15 +372,15 @@ button.button {
       
       @if $button-hover {
         &:hover {
-          background-color: darken($color-default-lighter, 7.5%);
-          border-color: darken($color-default-lighter, 7.5%);
+          background-color: darken($color-default-lighter, 10%);
+          border-color: darken($color-default-lighter, 10%);
         }
       }
 
       @if $button-focus {
         &:focus, &:active {
-          background-color: darken($color-default-lighter, 15%);
-          border-color: darken($color-default-lighter, 15%);
+          background-color: darken($color-default-lighter, 20%);
+          border-color: darken($color-default-lighter, 20%);
         }
       }
       
@@ -392,15 +392,15 @@ button.button {
           
           @if $button-hover {
             &:hover {
-              background-color: darken($color, 7.5%);
-              border-color: darken($color, 7.5%);
+              background-color: darken($color, 10%);
+              border-color: darken($color, 10%);
             }
           }
           
           @if $button-focus {
             &:focus, &:active {
-              background-color: darken($color, 15%);
-              border-color: darken($color, 15%);
+              background-color: darken($color, 20%);
+              border-color: darken($color, 20%);
             }
           }
         }
@@ -503,15 +503,15 @@ button.button {
       
       @if $button-hover {
         &:hover {
-          background-color: darken($color-default-lighter, 7.5%);
-          border-color: darken($color-default-lighter, 7.5%);
+          background-color: darken($color-default-lighter, 10%);
+          border-color: darken($color-default-lighter, 10%);
         }
       }
 
       @if $button-focus {
         &:focus, &:active {
-          background-color: darken($color-default-lighter, 15%);
-          border-color: darken($color-default-lighter, 15%);
+          background-color: darken($color-default-lighter, 20%);
+          border-color: darken($color-default-lighter, 20%);
         }
       }
 
@@ -523,15 +523,15 @@ button.button {
           
           @if $button-hover {
             &:hover {
-              background-color: darken($color, 7.5%);
-              border-color: darken($color, 7.5%);
+              background-color: darken($color, 10%);
+              border-color: darken($color, 10%);
             }
           }
           
           @if $button-focus {
             &:focus, &:active {
-              background-color: darken($color, 15%);
-              border-color: darken($color, 15%);
+              background-color: darken($color, 20%);
+              border-color: darken($color, 20%);
             }
           }
 				}
