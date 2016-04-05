@@ -92,7 +92,7 @@ sub {
 }
 
 ul, ol, dl {
-	margin-bottom: $padding;
+	margin: 0 0 $padding;
 
 	&.list-unstyled {
 		list-style: none;
