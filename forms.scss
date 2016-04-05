@@ -231,6 +231,11 @@ textarea {
 
 	&:disabled {
 		background-color: $color-default-lightest;
+
+		@if $input-borders {
+	    border-color: $form-border-color;
+		}
+
 		cursor: not-allowed;
 		opacity: 1;
 		-webkit-user-select: none;
@@ -583,6 +588,10 @@ button {
 
 		&:before {
 			background-color: $color-default-lightest;
+
+			@if $radio-borders {
+				border-color: $radio-border-color;
+			}
 		}
 	}
 
@@ -672,6 +681,10 @@ button {
 
 		&:before {
 			background-color: $color-default-lightest;
+
+			@if $checkbox-borders {
+				border-color: $radio-border-color;
+			}
 		}
 	}
 
