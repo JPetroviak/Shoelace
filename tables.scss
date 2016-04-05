@@ -1,8 +1,15 @@
 // Tables
-.table {
-	background-color: $table-background-color;
+table {
 	border-collapse: collapse;
 	border-spacing: 0;
+}
+
+caption, th {
+	text-align: left;
+}
+
+.table {
+	background-color: $table-background-color;
 	margin-bottom: $padding;
 	width: 100%;
 
@@ -14,7 +21,6 @@
 	caption, th {
 		color: $table-header-color;
 		font-weight: normal;
-		text-align: left;
 	}
 
 	@if $table-borders {

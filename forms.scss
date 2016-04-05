@@ -155,9 +155,11 @@ optgroup {
 	font-weight: bold;
 }
 
+label {
+	display: inline-block;
+}
+
 .input-label {
-	color: $color-default;
-	display: block;
 	margin-bottom: $padding-extra-small;
 	touch-action: manipulation;
 	-webkit-user-select: none;
@@ -169,19 +171,19 @@ optgroup {
 	}
 }
 
-input[type="number"].input-field {
+input[type="number"] {
 	&::-webkit-inner-spin-button, &::-webkit-outer-spin-button {
 		height: auto;
 	}
 }
 
-input[type="search"].input-field {
+input[type="search"] {
 	&::-webkit-search-cancel-button, &::-webkit-search-decoration {
 		-webkit-appearance: none;
 	}
 }
 
-textarea.input-field {
+textarea {
 	overflow: auto;
 	resize: vertical;
 }
@@ -291,7 +293,11 @@ textarea.input-field {
 	}
 }
 
-button.button {
+[role="button"] {
+  cursor: pointer;
+}
+
+button {
 	margin: 0;
 	overflow: visible;
 
@@ -311,10 +317,7 @@ button.button {
 		border: none;
 	}
 
-	@if $button-border-radius > 0 {
-		border-radius: $button-border-radius;
-	}
-
+	border-radius: $button-border-radius;
 	cursor: pointer;
 	display: inline-block;
 	font-family: $font-family;
@@ -546,7 +549,6 @@ button.button {
 
 	+ label {
 		cursor: pointer;
-		display: inline-block;
 		touch-action: manipulation;
 		-webkit-user-select: none;
 
@@ -636,7 +638,6 @@ button.button {
 
 	+ label {
 		cursor: pointer;
-		display: inline-block;
 		touch-action: manipulation;
 		-webkit-user-select: none;
 
