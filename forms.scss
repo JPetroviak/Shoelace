@@ -220,17 +220,6 @@ textarea {
 		opacity: 1;
 	}
 
-	option:disabled {
-		color: $color-default-lighter;
-	}
-
-	&:disabled {
-		background-color: $color-default-lightest;
-		cursor: not-allowed;
-		opacity: 1;
-		-webkit-user-select: none;
-	}
-
   @if $input-hover {
     &:hover {
       border-color: $input-hover-color;
@@ -270,6 +259,17 @@ textarea {
 		padding: $input-padding-vertical-small $input-padding-horizontal-small;
 	}
 
+	option:disabled {
+		color: $color-default-lighter;
+	}
+
+	&:disabled {
+		background-color: $color-default-lightest;
+		cursor: not-allowed;
+		opacity: 1;
+		-webkit-user-select: none;
+	}
+
 	&.error {
 		@if $form-error-background-color {
 		  background-color: $form-error-background-color;
@@ -300,6 +300,10 @@ textarea {
 button {
 	margin: 0;
 	overflow: visible;
+
+	&:focus {
+		outline: 0;
+	}
 
 	&::-moz-focus-inner {
 		border: 0;
@@ -333,15 +337,6 @@ button {
 
 	touch-action: manipulation;
 	-webkit-user-select: none;
-
-	&:disabled {
-		cursor: not-allowed;
-		opacity: .85;
-	}
-
-	&:focus {
-		outline: 0;
-	}
 
 	&.large {
 		@if $button-border-radius-large > 0 {
@@ -542,6 +537,11 @@ button {
 			}
 		}
 	}
+
+	&:disabled {
+		cursor: not-allowed;
+		opacity: .85;
+	}
 }
 
 .radio {
@@ -587,15 +587,6 @@ button {
 		}
 	}
 
-	&:disabled + label {
-		cursor: not-allowed;
-		-webkit-user-select: none;
-
-		&:before {
-			background-color: $color-default-lightest;
-		}
-	}
-
 	&.large + label:before {
 		@if $radio-border-radius-large > 0 {
 			border-radius: $radio-border-radius-large;
@@ -618,6 +609,15 @@ button {
 		background-color: $radio-checked-color;
 		border-color: $radio-checked-color;
 		box-shadow: inset 0 0 0 2px $background-color-default;
+	}
+
+	&:disabled + label {
+		cursor: not-allowed;
+		-webkit-user-select: none;
+
+		&:before {
+			background-color: $color-default-lightest;
+		}
 	}
 
 	&.error + label:before {
@@ -676,15 +676,6 @@ button {
 		}
 	}
 
-	&:disabled + label {
-		cursor: not-allowed;
-		-webkit-user-select: none;
-
-		&:before {
-			background-color: $color-default-lightest;
-		}
-	}
-
 	&.large + label:before {
 		@if $checkbox-border-radius-large > 0 {
 			border-radius: $checkbox-border-radius-large;
@@ -707,6 +698,15 @@ button {
 		background-color: $checkbox-checked-color;
 		border-color: $checkbox-checked-color;
 		box-shadow: inset 0 0 0 2px $background-color-default;
+	}
+
+	&:disabled + label {
+		cursor: not-allowed;
+		-webkit-user-select: none;
+
+		&:before {
+			background-color: $color-default-lightest;
+		}
 	}
 
 	&.error + label:before {
