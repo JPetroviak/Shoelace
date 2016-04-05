@@ -12,6 +12,7 @@ $color-success: #4CD964;
 $color-information: #5AC8FA;
 $color-warning: #FFCC00;
 $color-danger: #FF3B30;
+
 $background-color-default: #FFFFFF;
 $background-color-primary: rgba($color-primary, .25);
 $background-color-secondary: rgba($color-secondary, .25);
@@ -42,7 +43,7 @@ $colors: (
   information: $color-information,
 	warning: $color-warning,
 	danger: $color-danger
-	);
+);
 
 $background-colors: (
 	default: $background-color-default,
@@ -52,7 +53,7 @@ $background-colors: (
   information: $background-color-information,
 	warning: $background-color-warning,
 	danger: $background-color-danger
-	);
+);
 
 // Components
 $padding: 20px;
@@ -61,7 +62,7 @@ $padding-large: ($padding * 1.5);
 $padding-small: ($padding / 2);
 $padding-extra-small: ($padding / 4);
 
-$borders: true; // true | false
+$borders: true;
 $border-color: $color-default-lighter;
 $border-style: solid;
 $border-width: 1px;
@@ -69,7 +70,7 @@ $border-radius: 4px;
 $border-radius-large: ($border-radius * 1.25);
 $border-radius-small: ($border-radius * .85);
 
-$transitions: true; // true | false
+$transitions: true;
 $transition-speed: 200ms;
 $transition-speed-slow: ($transition-speed * 2);
 $transition-speed-fast: ($transition-speed / 2);
@@ -97,10 +98,10 @@ $breakpoints: (
 	medium: 768px,
 	large: 992px,
 	extra-large: 1200px
-	);
+);
 
 // Grid System
-$grid-flex: true; // true | false
+$grid-flex: true;
 $grid-count: 12;
 $grid-padding: $padding;
 $container-padding: $padding;
@@ -111,7 +112,7 @@ $table-background-color-hover: $background-color-primary;
 $table-background-color-odd: $color-default-lightest;
 $table-background-color-even: $table-background-color;
 $table-header-color: $color-default-light;
-$table-borders: $borders; // true | false
+$table-borders: $borders;
 $table-border-color: $border-color;
 $table-border-style: $border-style;
 $table-border-width: $border-width;
@@ -122,13 +123,13 @@ $table-padding-vertical-small: ($table-padding-vertical * .85);
 $table-padding-horizontal: $table-padding;
 $table-padding-horizontal-large: ($table-padding-horizontal * 1.25);
 $table-padding-horizontal-small: ($table-padding-horizontal * .85);
-$table-transitions: $transitions; // true | false
+$table-transitions: $transitions;
 $table-transition-speed: $transition-speed;
 $table-transition-property: $transition-property;
 
 // Forms
 $form-background-color: transparent;
-$form-borders: $borders; // true | false
+$form-borders: $borders;
 $form-border-color: $border-color;
 $form-border-style: $border-style;
 $form-border-width: $border-width;
@@ -148,12 +149,12 @@ $form-padding-vertical-small: ($form-padding * .85);
 $form-padding-horizontal: $form-padding;
 $form-padding-horizontal-large: ($form-padding-horizontal * 1.25);
 $form-padding-horizontal-small: ($form-padding-horizontal * .85);
-$form-transitions: $transitions; // true | false
+$form-transitions: $transitions;
 $form-transition-speed: $transition-speed;
 $form-transition-property: $transition-property;
-// Inputs & Selects
+
 $input-background-color: $form-background-color;
-$input-borders: $form-borders; // true | false
+$input-borders: $form-borders;
 $input-border-color: $form-border-color;
 $input-border-style: $form-border-style;
 $input-border-width: $form-border-width;
@@ -171,13 +172,13 @@ $input-padding-horizontal-small: $form-padding-horizontal-small;
 $input-padding-vertical: $form-padding-vertical;
 $input-padding-vertical-large: $form-padding-vertical-large;
 $input-padding-vertical-small: $form-padding-vertical-small;
-$input-transitions: $form-transitions; // true | false
+$input-transitions: $form-transitions;
 $input-transition-speed: $form-transition-speed;
 $input-transition-property: $form-transition-property;
-// Buttons
+
 $button-inverted: false;
 $button-background-color: $form-background-color;
-$button-borders: $form-borders; // true | false
+$button-borders: $form-borders;
 $button-border-color: $form-border-color;
 $button-border-style: $form-border-style;
 $button-border-width: $form-border-width;
@@ -193,13 +194,13 @@ $button-padding-horizontal-small: $form-padding-horizontal-small;
 $button-padding-vertical: $form-padding-vertical;
 $button-padding-vertical-large: $form-padding-vertical-large;
 $button-padding-vertical-small: $form-padding-vertical-small;
-$button-text-transform: false; // true | false
-$button-transitions: $form-transitions; // true | false
+$button-text-transform: false;
+$button-transitions: $form-transitions;
 $button-transition-speed: $form-transition-speed;
 $button-transition-property: $form-transition-property;
-// Radios
+
 $radio-background-color: $form-background-color;
-$radio-borders: $form-borders; // true | false
+$radio-borders: $form-borders;
 $radio-border-color: $form-border-color;
 $radio-border-style: $form-border-style;
 $radio-border-width: $form-border-width;
@@ -212,12 +213,12 @@ $radio-hover-color: $form-hover-color;
 $radio-size: ($form-padding * 2);
 $radio-size-large: ($radio-size * 1.25);
 $radio-size-small: ($radio-size * .85);
-$radio-transitions: $form-transitions; // true | false
+$radio-transitions: $form-transitions;
 $radio-transition-speed: $form-transition-speed;
 $radio-transition-property: $form-transition-property;
-// Checkboxes
+
 $checkbox-background-color: $form-background-color;
-$checkbox-borders: $form-borders; // true | false
+$checkbox-borders: $form-borders;
 $checkbox-border-color: $form-border-color;
 $checkbox-border-style: $form-border-style;
 $checkbox-border-width: $form-border-width;
@@ -232,7 +233,7 @@ $input-focus-color: $form-focus-color;
 $checkbox-size: ($form-padding * 2);
 $checkbox-size-large: ($checkbox-size * 1.25);
 $checkbox-size-small: ($checkbox-size * .85);
-$checkbox-transitions: $form-transitions; // true | false
+$checkbox-transitions: $form-transitions;
 $checkbox-transition-speed: $form-transition-speed;
 $checkbox-transition-property: $form-transition-property;
 
@@ -250,17 +251,9 @@ $accordion-border-color: $border-color;
 $accordion-border-style: $border-style;
 $accordion-border-width: $border-width;
 $accordion-padding: $padding-small;
-$accordion-transitions: $transitions; // true | false
+$accordion-transitions: $transitions;
 $accordion-transition-speed: $transition-speed;
 $accordion-transition-property: $transition-property;
 
 // Calendar
 $calendar-weekend-color: $table-background-color-odd;
-
-// Utilities
-$utilities: true; // true | false
-$background-color-utilities: $utilities; // true | false
-$color-utilities: $utilities; // true | false
-$responsive-utilities: $utilities; // true | false
-$responsive-utilities-hide: $responsive-utilities; // true | false
-$responsive-utilities-align: $responsive-utilities; // true | false
