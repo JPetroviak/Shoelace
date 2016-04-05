@@ -292,6 +292,7 @@ textarea.input-field {
 }
 
 button.button {
+	margin: 0;
 	overflow: visible;
 
 	&::-moz-focus-inner {
