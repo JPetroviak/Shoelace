@@ -1,0 +1,29 @@
+// Progress
+.progress {
+  height: $padding;
+  margin-bottom: $padding;
+  width: 100%;
+}
+
+.progress[value] {
+  appearance: none;
+  border: $progress-border-width $progress-border-style $progress-border-color;
+  border-radius: $progress-border-radius;
+  color: #0074d9;
+}
+
+.progress[value]::-webkit-progress-bar {
+  background-color: $color-default-lightest;
+  border-radius: $progress-border-radius;
+}
+
+.progress[value]::-webkit-progress-value {
+  background-color: $color-primary;
+  border-top-left-radius: $progress-border-radius;
+  border-bottom-left-radius: $border-radius;
+}
+
+.progress[value="100"]::-webkit-progress-value {
+  border-top-right-radius: $progress-border-radius;
+  border-bottom-right-radius: $progress-border-radius;
+}
