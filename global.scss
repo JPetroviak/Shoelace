@@ -56,7 +56,7 @@ a {
 	touch-action: manipulation;
 
 	@if $transitions {
-		transition: $transitions;
+		transition: $transition-speed $transion-property;
 	}
 
 	&:active,
