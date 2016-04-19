@@ -25,7 +25,7 @@
 		flex-wrap: wrap;
 	} @else {
 		display: block;
-		letter-spacing: -4.5px;
+		letter-spacing: -4px;
 	}
 
 	@if $grid-padding > 0 {
