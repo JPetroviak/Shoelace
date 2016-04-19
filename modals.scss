@@ -34,8 +34,16 @@ body.modal-open {
 
   .modal-content {
     background-color: $modal-background-color;
-    border: $modal-border-color $modal-border-style $modal-border-width;
-    border-radius: $modal-border-radius;
+
+    @if $modal-borders {
+      border: $modal-border-color $modal-border-style $modal-border-width;
+      
+    }
+    
+    @if $modal-border-radius > 0 {
+      border-radius: $modal-border-radius;
+    }
+
     margin-left: auto;
     margin-right: auto;
     
