@@ -1,6 +1,7 @@
 // Modals
 body.modal-open {
   overflow: hidden;
+  touch-action: none;
 }
 
 .modal-background {
@@ -18,23 +19,33 @@ body.modal-open {
   bottom: 0;
   display: none;
   left: 0;
-  overflow-y: auto;
+  letter-spacing: -4.5px;
+  overflow: auto;
   
   @if $container-padding > 0 {
-		padding-left: $container-padding;
+    padding-left: $container-padding;
     padding-right: $container-padding;
-	}
+  }
   
   position: fixed;
+  text-align: center;
   right: 0;
   top: 0;
+  vertical-align: middle;
   z-index: 10000;
   
-	@include make-modal-sizes();
+  &:after {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+  }
+  
+  @include make-modal-sizes();
 
   .modal-content {
     background-color: $modal-background-color;
-
+    
     @if $modal-borders {
       border: $modal-border-color $modal-border-style $modal-border-width;
       
@@ -43,19 +54,21 @@ body.modal-open {
     @if $modal-border-radius > 0 {
       border-radius: $modal-border-radius;
     }
-
-    margin-left: auto;
-    margin-right: auto;
     
-    @if $container-padding > 0 {
-      margin-bottom: $container-padding;
-      margin-top: $container-padding;
+    display: inline-block;
+    letter-spacing: normal;
+    
+    @if $padding > 0 {
+      margin-bottom: $padding;
+      margin-top: $padding;
     }
 
     @if $modal-padding > 0 {
       padding: $modal-padding;
     }
     
+    text-align: left;
+    vertical-align: middle;
     width: 100%;
   }
 }
