@@ -1,0 +1,8 @@
+// Modals
+@mixin make-modal-sizes($breakpoints: $breakpoints) {
+	@each $breakpoint in map-keys($breakpoints) {
+		&.#{$breakpoint} .modal-content {
+			max-width: breakpoint-maximum($breakpoint);
+		}
+	}
+}

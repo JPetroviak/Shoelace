@@ -4,8 +4,9 @@
 */
 
 @import "variables";
-@import "Mixins/breakpoints";
-@import "Mixins/grid";
+@import "mixins/breakpoints";
+@import "mixins/grid";
+@import "mixins/modals";
 @import "global";
 @import "typography";
 @import "images";
