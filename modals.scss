@@ -1,0 +1,53 @@
+// Modals
+body.modal-open {
+  overflow: hidden;
+}
+
+.modal-background {
+  background-color: rgba($color-default, .5);
+  bottom: 0;
+  display: none;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 9999;
+}
+
+.modal {
+  bottom: 0;
+  display: none;
+  left: 0;
+  overflow-y: auto;
+  
+  @if $container-padding > 0 {
+		padding-left: $container-padding;
+    padding-right: $container-padding;
+	}
+  
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 10000;
+  
+	@include make-modal-sizes();
+
+  .modal-content {
+    background-color: $modal-background-color;
+    border: $modal-border-color $modal-border-style $modal-border-width;
+    border-radius: $modal-border-radius;
+    margin-left: auto;
+    margin-right: auto;
+    
+    @if $container-padding > 0 {
+      margin-bottom: $container-padding;
+      margin-top: $container-padding;
+    }
+
+    @if $modal-padding > 0 {
+      padding: $modal-padding;
+    }
+    
+    width: 100%;
+  }
+}
