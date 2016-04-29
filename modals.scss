@@ -1,4 +1,8 @@
 // Modals
+[data-toggle="modal"] {
+  cursor: pointer;
+}
+
 body.modal-open {
   overflow: hidden;
   touch-action: none;
