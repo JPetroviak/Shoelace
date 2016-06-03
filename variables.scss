@@ -128,7 +128,7 @@ $table-transition-speed: $transition-speed;
 $table-transition-property: $transition-property;
 
 // Forms
-$form-background-color: transparent;
+$form-background-color: $background-color-default;
 $form-borders: $borders;
 $form-border-color: $border-color;
 $form-border-style: $border-style;

@@ -524,6 +524,8 @@ button {
 		-webkit-user-select: none;
 
 		&:before {
+			background-color: $radio-background-color;
+
 			@if $radio-borders {
 				border: $radio-border-width $radio-border-style $radio-border-color;
 			}
@@ -617,6 +619,8 @@ button {
 		-webkit-user-select: none;
 
 		&:before {
+			background-color: $checkbox-background-color;
+
 			@if $checkbox-borders {
 				border: $checkbox-border-width $checkbox-border-style $radio-border-color;
 			}
