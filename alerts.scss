@@ -3,11 +3,9 @@
   @if $alert-borders {
    border: $alert-border-style $alert-border-width;
   }
-  
   @if $alert-border-radius > 0 {
     border-radius: $border-radius;
   }
-  
   padding: $alert-padding;
   margin-bottom: $padding;
   

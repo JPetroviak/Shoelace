@@ -49,16 +49,13 @@ body.modal-open {
 
   .modal-content {
     background-color: $modal-background-color;
-    
     @if $modal-borders {
       border: $modal-border-color $modal-border-style $modal-border-width;
       
     }
-    
     @if $modal-border-radius > 0 {
       border-radius: $modal-border-radius;
     }
-    
     display: inline-block;
     letter-spacing: normal;
     
