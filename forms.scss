@@ -25,15 +25,15 @@ legend {
 	}
 
 	.radio {
-	  + label {
-	    margin-bottom: $padding-small;
-	  }
+		+ label {
+			margin-bottom: $padding-small;
+		}
 	}
-	
+
 	.checkbox {
-	  + label {
-	    margin-bottom: $padding-small;
-	  }
+		+ label {
+			margin-bottom: $padding-small;
+		}
 	}
 
 	&.large {
@@ -186,18 +186,18 @@ textarea {
 		opacity: 1;
 	}
 
-  @if $input-hover {
-    &:hover {
-      border-color: $input-hover-color;
-    }
-  }
+	@if $input-hover {
+		&:hover {
+			border-color: $input-hover-color;
+		}
+	}
 
 	&:focus {
-    @if $input-focus {
-      @if $input-borders {
-        border-color: $input-focus-color;
-      }
-    }
+		@if $input-focus {
+			@if $input-borders {
+				border-color: $input-focus-color;
+			}
+		}
 
 		outline: 0;
 	}
@@ -233,7 +233,7 @@ textarea {
 		background-color: $color-default-lightest;
 
 		@if $input-borders {
-	    border-color: $form-border-color;
+			border-color: $form-border-color;
 		}
 
 		cursor: not-allowed;
@@ -243,13 +243,13 @@ textarea {
 
 	&.error {
 		@if $form-error-background-color {
-		  background-color: $form-error-background-color;
+			background-color: $form-error-background-color;
 		}
 
 		@if $input-borders {
-		  @if $form-error-color {
-		    border-color: $form-error-color;
-		  }
+			@if $form-error-color {
+				border-color: $form-error-color;
+			}
 		}
 	}
 }
@@ -265,7 +265,7 @@ textarea {
 }
 
 [role="button"] {
-  cursor: pointer;
+	cursor: pointer;
 }
 
 button {
@@ -335,87 +335,97 @@ button {
 		&:not(.inverted) {
 			background-color: $color-default-lighter;
 			color: $color-default;
-      
-      @if $button-transitions {
-        transition: background-color $button-transition-speed $button-transition-property, border-color $button-transition-speed $button-transition-property;
-      }
-      
-      @if $button-hover {
-        &:hover {
-          background-color: darken($color-default-lighter, 10%);
-          border-color: darken($color-default-lighter, 10%);
-        }
-      }
 
-      @if $button-focus {
-        &:focus, &:active {
-          background-color: darken($color-default-lighter, 20%);
-          border-color: darken($color-default-lighter, 20%);
-        }
-      }
-      
-      @each $class, $color in $colors {
-        &.#{$class} {
+			@if $button-transitions {
+				transition: background-color $button-transition-speed $button-transition-property, border-color $button-transition-speed $button-transition-property;
+			}
+
+			@if $button-hover {
+				&:hover {
+					background-color: darken($color-default-lighter, 10%);
+					border-color: darken($color-default-lighter, 10%);
+				}
+			}
+
+			@if $button-focus {
+				&:focus, &:active {
+					background-color: darken($color-default-lighter, 20%);
+					border-color: darken($color-default-lighter, 20%);
+				}
+			}
+
+			@each $class, $color in $colors {
+				&.#{$class} {
 					background-color: $color;
 					border-color: $color;
-          color: $background-color-default;
-          
-          @if $button-hover {
-            &:hover {
-              background-color: darken($color, 10%);
-              border-color: darken($color, 10%);
-            }
-          }
-          
-          @if $button-focus {
-            &:focus, &:active {
-              background-color: darken($color, 20%);
-              border-color: darken($color, 20%);
-            }
-          }
-        }
-      }
+					color: $background-color-default;
+
+					@if $button-hover {
+						&:hover {
+							background-color: darken($color, 10%);
+							border-color: darken($color, 10%);
+						}
+					}
+
+					@if $button-focus {
+						&:focus, &:active {
+							background-color: darken($color, 20%);
+							border-color: darken($color, 20%);
+						}
+					}
+
+					&:disabled {
+						background-color: $color;
+						border-color: $color;
+					}
+				}
+			}
 		}
 
 		&.inverted {
 			background-color: $button-background-color;
 			border-color: $color-default-lighter;
 			color: $color-default;
-      
-      @if $button-transitions {
-        transition: background-color $button-transition-speed $button-transition-property, color $button-transition-speed $button-transition-property;
-      }
-      
-      @if $button-hover {
-        &:hover {
-          background-color: $color-default-lighter;
-        }
-      }
 
-      @if $button-focus {
-        &:focus, &:active {
-          background-color: $color-default-lighter;
-        }
-      }
+			@if $button-transitions {
+				transition: background-color $button-transition-speed $button-transition-property, color $button-transition-speed $button-transition-property;
+			}
+
+			@if $button-hover {
+				&:hover {
+					background-color: $color-default-lighter;
+				}
+			}
+
+			@if $button-focus {
+				&:focus, &:active {
+					background-color: $color-default-lighter;
+				}
+			}
 
 			@each $class, $color in $colors {
-        &.#{$class} {
+				&.#{$class} {
 					border-color: $color;
 					color: $color;
-          
-          @if $button-hover {
-            &:hover {
-              background-color: $color;
-              color: $background-color-default;
-            }
-          }
-          
-          @if $button-focus {
-            &:focus, &:active {
-              background-color: $color;
-              color: $background-color-default;
-            }
-          }
+
+					@if $button-hover {
+						&:hover {
+							background-color: $color;
+							color: $background-color-default;
+						}
+					}
+
+					@if $button-focus {
+						&:focus, &:active {
+							background-color: $color;
+							color: $background-color-default;
+						}
+					}
+
+					&:disabled {
+						background-color: $button-background-color;
+						color: $color;
+					}
 				}
 			}
 		}
@@ -424,41 +434,46 @@ button {
 			background-color: $button-background-color;
 			border-color: $color-default-lighter;
 			color: $color-default;
-      
-      @if $button-transitions {
-        transition: background-color $button-transition-speed $button-transition-property, color $button-transition-speed $button-transition-property;
-      }
-      
-      @if $button-hover {
-        &:hover {
-          background-color: $color-default-lighter;
-        }
-      }
 
-      @if $button-focus {
-        &:focus, &:active {
-          background-color: $color-default-lighter;
-        }
-      }
+			@if $button-transitions {
+				transition: background-color $button-transition-speed $button-transition-property, color $button-transition-speed $button-transition-property;
+			}
+
+			@if $button-hover {
+				&:hover {
+					background-color: $color-default-lighter;
+				}
+			}
+
+			@if $button-focus {
+				&:focus, &:active {
+					background-color: $color-default-lighter;
+				}
+			}
 
 			@each $class, $color in $colors {
-        &.#{$class} {
+				&.#{$class} {
 					border-color: $color;
 					color: $color;
-          
-          @if $button-hover {
-            &:hover {
-              background-color: $color;
-              color: $background-color-default;
-            }
-          }
-          
-          @if $button-focus {
-            &:focus, &:active {
-              background-color: $color;
-              color: $background-color-default;
-            }
-          }
+
+					@if $button-hover {
+						&:hover {
+							background-color: $color;
+							color: $background-color-default;
+						}
+					}
+
+					@if $button-focus {
+						&:focus, &:active {
+							background-color: $color;
+							color: $background-color-default;
+						}
+					}
+
+					&:disabled {
+						background-color: $button-background-color;
+						color: $color;
+					}
 				}
 			}
 		}
@@ -466,44 +481,49 @@ button {
 		&.inverted {
 			background-color: $color-default-lighter;
 			color: $color-default;
-      
-      @if $button-transitions {
-        transition: background-color $button-transition-speed $button-transition-property, border-color $button-transition-speed $button-transition-property;
-      }
-      
-      @if $button-hover {
-        &:hover {
-          background-color: darken($color-default-lighter, 10%);
-          border-color: darken($color-default-lighter, 10%);
-        }
-      }
 
-      @if $button-focus {
-        &:focus, &:active {
-          background-color: darken($color-default-lighter, 20%);
-          border-color: darken($color-default-lighter, 20%);
-        }
-      }
+			@if $button-transitions {
+				transition: background-color $button-transition-speed $button-transition-property, border-color $button-transition-speed $button-transition-property;
+			}
+
+			@if $button-hover {
+				&:hover {
+					background-color: darken($color-default-lighter, 10%);
+					border-color: darken($color-default-lighter, 10%);
+				}
+			}
+
+			@if $button-focus {
+				&:focus, &:active {
+					background-color: darken($color-default-lighter, 20%);
+					border-color: darken($color-default-lighter, 20%);
+				}
+			}
 
 			@each $class, $color in $colors {
-        &.#{$class} {
+				&.#{$class} {
 					background-color: $color;
 					border-color: $color;
-          color: $background-color-default;
-          
-          @if $button-hover {
-            &:hover {
-              background-color: darken($color, 10%);
-              border-color: darken($color, 10%);
-            }
-          }
-          
-          @if $button-focus {
-            &:focus, &:active {
-              background-color: darken($color, 20%);
-              border-color: darken($color, 20%);
-            }
-          }
+					color: $background-color-default;
+
+					@if $button-hover {
+						&:hover {
+							background-color: darken($color, 10%);
+							border-color: darken($color, 10%);
+						}
+					}
+
+					@if $button-focus {
+						&:focus, &:active {
+							background-color: darken($color, 20%);
+							border-color: darken($color, 20%);
+						}
+					}
+
+					&:disabled {
+						background-color: $color;
+						border-color: $color;
+					}
 				}
 			}
 		}
@@ -511,7 +531,7 @@ button {
 
 	&:disabled {
 		cursor: not-allowed;
-		opacity: .85;
+		opacity: .5;
 	}
 }
 
@@ -548,15 +568,15 @@ button {
 		}
 
 		&.required:after {
-		  color: $form-error-color;
-		  content: '*';
-		  margin-left: $padding-extra-small;
+			color: $form-error-color;
+			content: '*';
+			margin-left: $padding-extra-small;
 		}
 
 		@if $radio-hovers {
-		  &:hover:before {
-		    border-color: $radio-hover-color;
-		  }
+			&:hover:before {
+				border-color: $radio-hover-color;
+			}
 		}
 	}
 
@@ -599,7 +619,7 @@ button {
 
 	&.error + label:before {
 		@if $form-error-background-color {
-		  background-color: $form-error-background-color;
+			background-color: $form-error-background-color;
 		}
 
 		@if $radio-borders {
@@ -643,15 +663,15 @@ button {
 		}
 
 		&.required:after {
-		  color: $form-error-color;
-		  content: '*';
-		  margin-left: $padding-extra-small;
+			color: $form-error-color;
+			content: '*';
+			margin-left: $padding-extra-small;
 		}
 
 		@if $checkbox-hovers {
-		  &:hover:before {
-		    border-color: $checkbox-hover-color;
-		  }
+			&:hover:before {
+				border-color: $checkbox-hover-color;
+			}
 		}
 	}
 
@@ -694,7 +714,7 @@ button {
 
 	&.error + label:before {
 		@if $form-error-background-color {
-		  background-color: $form-error-background-color;
+			background-color: $form-error-background-color;
 		}
 
 		@if $checkbox-borders {
