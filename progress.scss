@@ -4,58 +4,72 @@
   height: $padding;
   margin-bottom: $padding;
   width: 100%;
-}
 
-.progress[value] {
-  appearance: none;
-  background-color: $progress-background-color;
-  @if $progress-borders {
-    border: $progress-border-width $progress-border-style $progress-border-color;
+  &[value] {
+    appearance: none;
+    background-color: $progress-background-color;
+    @if $progress-borders {
+      border: $progress-border-width $progress-border-style $progress-border-color;
+    }
+    @if $progress-border-radius > 0 {
+      border-radius: $progress-border-radius;
+    }
   }
-  @if $progress-border-radius > 0 {
-    border-radius: $progress-border-radius;
+
+  &[value]::-ms-fill {
+    background-color: $progress-color;
+    border: 0;
   }
-}
 
-.progress[value]::-ms-fill {
-  background-color: $progress-color;
-  border: 0;
-}
-
-.progress[value]::-moz-progress-bar {
-  background-color: $progress-color;
-  @if $progress-border-radius > 0 {
-    border-bottom-left-radius: $progress-border-radius;
-    border-top-left-radius: $progress-border-radius;
+  &[value]::-moz-progress-bar {
+    background-color: $progress-color;
+    @if $progress-border-radius > 0 {
+      border-bottom-left-radius: $progress-border-radius;
+      border-top-left-radius: $progress-border-radius;
+    }
   }
-}
 
-.progress[value]::-webkit-progress-value {
-  background-color: $progress-color;
-  @if $progress-border-radius > 0 {
-    border-bottom-left-radius: $progress-border-radius;
-    border-top-left-radius: $progress-border-radius;
+  &[value]::-webkit-progress-value {
+    background-color: $progress-color;
+    @if $progress-border-radius > 0 {
+      border-bottom-left-radius: $progress-border-radius;
+      border-top-left-radius: $progress-border-radius;
+    }
   }
-}
 
-.progress[value="100"]::-moz-progress-bar {
-  @if $progress-border-radius > 0 {
-    border-bottom-right-radius: $progress-border-radius;
-    border-top-right-radius: $progress-border-radius;
+  &[value="100"]::-moz-progress-bar {
+    @if $progress-border-radius > 0 {
+      border-bottom-right-radius: $progress-border-radius;
+      border-top-right-radius: $progress-border-radius;
+    }
   }
-}
 
-.progress[value="100"]::-webkit-progress-value {
-  @if $progress-border-radius > 0 {
-    border-bottom-right-radius: $progress-border-radius;
-    border-top-right-radius: $progress-border-radius;
+  &[value="100"]::-webkit-progress-value {
+    @if $progress-border-radius > 0 {
+      border-bottom-right-radius: $progress-border-radius;
+      border-top-right-radius: $progress-border-radius;
+    }
   }
-}
 
-.progress[value]::-webkit-progress-bar {
-  background-color: $progress-background-color;
-  @if $progress-border-radius > 0 {
-    border-radius: $progress-border-radius;
+  &[value]::-webkit-progress-bar {
+    background-color: $progress-background-color;
+    @if $progress-border-radius > 0 {
+      border-radius: $progress-border-radius;
+    }
+  }
+
+  @each $class, $color in $colors {
+    &.#{$class} {
+      &[value]::-webkit-progress-value {
+        background-color: $color;
+      }
+    }
+
+    &.#{$class} {
+      &[value]::-moz-progress-bar {
+        background-color: $color;
+      }
+    }
   }
 }
 
