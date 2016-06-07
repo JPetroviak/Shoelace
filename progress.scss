@@ -18,12 +18,12 @@
 }
 
 .progress[value]::-ms-fill {
-  background-color: $color-primary;
+  background-color: $progress-color;
   border: 0;
 }
 
 .progress[value]::-moz-progress-bar {
-  background-color: $color-primary;
+  background-color: $progress-color;
   @if $progress-border-radius > 0 {
     border-bottom-left-radius: $progress-border-radius;
     border-top-left-radius: $progress-border-radius;
@@ -31,7 +31,7 @@
 }
 
 .progress[value]::-webkit-progress-value {
-  background-color: $color-primary;
+  background-color: $progress-color;
   @if $progress-border-radius > 0 {
     border-bottom-left-radius: $progress-border-radius;
     border-top-left-radius: $progress-border-radius;
