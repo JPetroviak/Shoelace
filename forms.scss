@@ -23,18 +23,18 @@ legend {
 	.button {
 		margin-bottom: $padding;
 	}
-  
-  .radio {
-    + label {
-      margin-bottom: $padding-small;
-    }
-  }
-  
-  .checkbox {
-    + label {
-      margin-bottom: $padding-small;
-    }
-  }
+
+	.radio {
+		+ label {
+			margin-bottom: $padding-small;
+		}
+	}
+
+	.checkbox {
+		+ label {
+			margin-bottom: $padding-small;
+		}
+	}
 
 	&.large {
 		.input-field {
@@ -114,7 +114,7 @@ optgroup {
 }
 
 label {
-  display: inline-block;
+	display: inline-block;
 }
 
 .input-label {
@@ -172,19 +172,19 @@ textarea {
 		color: $color-default-lighter;
 		opacity: 1;
 	}
-  
-  @if $input-hover {
-    &:hover {
-      border-color: $input-hover-color;
-    }
-  }
+
+	@if $input-hover {
+		&:hover {
+			border-color: $input-hover-color;
+		}
+	}
 
 	&:focus {
-    @if $input-focus {
-      @if $input-borders {
-        border-color: $input-focus-color;
-      }
-    }
+		@if $input-focus {
+			@if $input-borders {
+				border-color: $input-focus-color;
+			}
+		}
 		outline: 0;
 	}
 
@@ -208,31 +208,31 @@ textarea {
 		font-size: $font-size-small;
 		padding: $input-padding-vertical-small $input-padding-horizontal-small;
 	}
-  
-  option:disabled {
+
+	option:disabled {
 		color: $color-default-lighter;
 	}
 
 	&:disabled {
-		background-color: $color-default-lightest; 
-    @if $input-borders {
-	    border-color: $form-border-color;
+		background-color: $color-default-lightest;
+		@if $input-borders {
+			border-color: $form-border-color;
 		}
 		cursor: not-allowed;
 		opacity: 1;
 		-webkit-user-select: none;
 	}
 
-  &.error {
-    @if $form-error-background-color {
-      background-color: $form-error-background-color;
-    }
-    @if $input-borders {
-      @if $form-error-color {
-        border-color: $form-error-color;
-      }
-    }
-  }
+	&.error {
+		@if $form-error-background-color {
+			background-color: $form-error-background-color;
+		}
+		@if $input-borders {
+			@if $form-error-color {
+				border-color: $form-error-color;
+			}
+		}
+	}
 }
 
 .input-helper {
@@ -246,15 +246,15 @@ textarea {
 }
 
 [role="button"] {
-  cursor: pointer;
+	cursor: pointer;
 }
 
 button {
-  border-radius: 0;
-  margin: 0;
+	border-radius: 0;
+	margin: 0;
 	overflow: visible;
-  
-  &:focus {
+
+	&:focus {
 		outline: 0;
 	}
 
@@ -266,6 +266,7 @@ button {
 }
 
 .button {
+	background-color: $color-default-lighter;
 	@if $button-borders {
 		border: $button-border-width $button-border-style $button-border-color;
 	}
@@ -273,6 +274,7 @@ button {
 		border: none;
 	}
 	border-radius: $button-border-radius;
+	color: $color-default;
 	cursor: pointer;
 	display: inline-block;
 	font-family: $font-family;
@@ -281,11 +283,12 @@ button {
 	padding: $button-padding-vertical $button-padding-horizontal;
 	text-align: center;
 	text-decoration: none;
-
 	@if $button-text-transform {
 		text-transform: $button-text-transform;
 	}
-
+	@if $button-transitions {
+		transition: background-color $button-transition-speed $button-transition-property, border-color $button-transition-speed $button-transition-property;
+	}
 	touch-action: manipulation;
 	-webkit-user-select: none;
 
@@ -293,7 +296,6 @@ button {
 		@if $button-border-radius-large > 0 {
 			border-radius: $button-border-radius-large;
 		}
-
 		font-size: $font-size-large;
 		padding: $button-padding-vertical-large $button-padding-horizontal-large;
 	}
@@ -302,7 +304,6 @@ button {
 		@if $button-border-radius-small > 0 {
 			border-radius: $button-border-radius-small;
 		}
-
 		font-size: $font-size-small;
 		padding: $button-padding-vertical-small $button-padding-horizontal-small;
 	}
@@ -311,221 +312,106 @@ button {
 		width: 100%;
 	}
 
-	@if not $button-inverted {
-		&:not(.inverted) {
-			background-color: $color-default-lighter;
-			color: $color-default;
-      @if $button-transitions {
-        transition: background-color $button-transition-speed $button-transition-property, border-color $button-transition-speed $button-transition-property;
-      }
-  		 
-      @if $button-hover {
-        &:hover {
-          background-color: darken($color-default-lighter, 10%);
-          border-color: darken($color-default-lighter, 10%);
-        }
-      }
-
-      @if $button-focus {
-        &:focus, &:active {
-          background-color: darken($color-default-lighter, 20%);
-          border-color: darken($color-default-lighter, 20%);
-        }
-      }
-      
-      &:disabled {
-        background-color: $color-default-lighter;
-        border-color: $color-default-lighter;
-			  color: $color-default;
-      }
-      
-      @each $class, $color in $colors {
-        &.#{$class} {
-					background-color: $color;
-					border-color: $color;
-          color: $background-color-default;
-          
-          @if $button-hover {
-            &:hover {
-              background-color: darken($color, 10%);
-              border-color: darken($color, 10%);
-            }
-          }
-          
-          @if $button-focus {
-            &:focus, &:active {
-              background-color: darken($color, 20%);
-              border-color: darken($color, 20%);
-            }
-          }
-          
-          &:disabled {
-            background-color: $color;
-            border-color: $color;
-          }
-        }
-      }
+	@if $button-hover {
+		&:hover {
+			background-color: darken($color-default-lighter, 10%);
+			border-color: darken($color-default-lighter, 10%);
 		}
+	}
 
-		&.inverted {
-			background-color: $button-background-color;
-			border-color: $color-default-lighter;
-			color: $color-default;
-      @if $button-transitions {
-        transition: background-color $button-transition-speed $button-transition-property, color $button-transition-speed $button-transition-property;
-      }
-      
-      @if $button-hover {
-        &:hover {
-          background-color: $color-default-lighter;
-        }
-      }
+	@if $button-focus {
+		&:focus, &:active {
+			background-color: darken($color-default-lighter, 20%);
+			border-color: darken($color-default-lighter, 20%);
+		}
+	}
 
-      @if $button-focus {
-        &:focus, &:active {
-          background-color: $color-default-lighter;
-        }
-      }
-      
-      &:disabled {
-        background-color: $button-background-color;
-			  color: $color-default;
-      }
+	&:disabled {
+		background-color: $color-default-lighter;
+		border-color: $color-default-lighter;
+		color: $color-default;
+	}
 
-			@each $class, $color in $colors {
-        &.#{$class} {
-					border-color: $color;
-					color: $color;
-          
-          @if $button-hover {
-            &:hover {
-              background-color: $color;
-              color: $background-color-default;
-            }
-          }
-          
-          @if $button-focus {
-            &:focus, &:active {
-              background-color: $color;
-              color: $background-color-default;
-            }
-          }
-          
-          &:disabled {
-            background-color: $button-background-color;
-					  color: $color;
-          }
+	@each $class, $color in $colors {
+		&.#{$class} {
+			background-color: $color;
+			border-color: $color;
+			color: $background-color-default;
+
+			@if $button-hover {
+				&:hover {
+					background-color: darken($color, 10%);
+					border-color: darken($color, 10%);
 				}
 			}
-		}
-	} @else {
-		&:not(.inverted) {
-			background-color: $button-background-color;
-			border-color: $color-default-lighter;
-			color: $color-default; 
-      @if $button-transitions {
-        transition: background-color $button-transition-speed $button-transition-property, color $button-transition-speed $button-transition-property;
-      }
-      
-      @if $button-hover {
-        &:hover {
-          background-color: $color-default-lighter;
-        }
-      }
 
-      @if $button-focus {
-        &:focus, &:active {
-          background-color: $color-default-lighter;
-        }
-      }
-      
-      &:disabled {
-        background-color: $button-background-color;
-      }
-
-			@each $class, $color in $colors {
-        &.#{$class} {
-					border-color: $color;
-					color: $color;
-          
-          @if $button-hover {
-            &:hover {
-              background-color: $color;
-              color: $background-color-default;
-            }
-          }
-          
-          @if $button-focus {
-            &:focus, &:active {
-              background-color: $color;
-              color: $background-color-default;
-            }
-          }
-          
-          &:disabled {
-            background-color: $button-background-color;
-					  color: $color;
-          }
+			@if $button-focus {
+				&:focus, &:active {
+					background-color: darken($color, 20%);
+					border-color: darken($color, 20%);
 				}
+			}
+
+			&:disabled {
+				background-color: $color;
+				border-color: $color;
+			}
+		}
+	}
+
+	&.inverted {
+		background-color: $button-background-color;
+		border-color: $color-default-lighter;
+		color: $color-default;
+		@if $button-transitions {
+			transition: background-color $button-transition-speed $button-transition-property, color $button-transition-speed $button-transition-property;
+		}
+
+		@if $button-hover {
+			&:hover {
+				background-color: $color-default-lighter;
 			}
 		}
 
-		&.inverted {
-			background-color: $color-default-lighter;
-			color: $color-default; 
-      @if $button-transitions {
-        transition: background-color $button-transition-speed $button-transition-property, border-color $button-transition-speed $button-transition-property;
-      }
-      
-      @if $button-hover {
-        &:hover {
-          background-color: darken($color-default-lighter, 10%);
-          border-color: darken($color-default-lighter, 10%);
-        }
-      }
+		@if $button-focus {
+			&:focus, &:active {
+				background-color: $color-default-lighter;
+			}
+		}
 
-      @if $button-focus {
-        &:focus, &:active {
-          background-color: darken($color-default-lighter, 20%);
-          border-color: darken($color-default-lighter, 20%);
-        }
-      }
-      
-      &:disabled {
-        background-color: $color-default-lighter;
-			  border-color: $color-default-lighter;
-      }
+		&:disabled {
+			background-color: $button-background-color;
+			color: $color-default;
+		}
 
-			@each $class, $color in $colors {
-        &.#{$class} {
-					background-color: $color;
-					border-color: $color;
-          color: $background-color-default;
-          
-          @if $button-hover {
-            &:hover {
-              background-color: darken($color, 10%);
-              border-color: darken($color, 10%);
-            }
-          }
-          
-          @if $button-focus {
-            &:focus, &:active {
-              background-color: darken($color, 20%);
-              border-color: darken($color, 20%);
-            }
-          }
-          
-          &:disabled {
-            background-color: $color;
-					  border-color: $color;
-          }
+		@each $class, $color in $colors {
+			&.#{$class} {
+				border-color: $color;
+				color: $color;
+
+				@if $button-hover {
+					&:hover {
+						background-color: $color;
+						color: $background-color-default;
+					}
+				}
+
+				@if $button-focus {
+					&:focus, &:active {
+						background-color: $color;
+						color: $background-color-default;
+					}
+				}
+
+				&:disabled {
+					background-color: $button-background-color;
+					color: $color;
 				}
 			}
 		}
 	}
-  
-  &:disabled {
+
+	&:disabled {
 		cursor: not-allowed;
 		opacity: .5;
 	}
@@ -540,7 +426,7 @@ button {
 		-webkit-user-select: none;
 
 		&:before {
-      background-color: $radio-background-color;
+			background-color: $radio-background-color;
 			@if $radio-borders {
 				border: $radio-border-width $radio-border-style $radio-border-color;
 			}
@@ -557,18 +443,18 @@ button {
 			}
 			width: $radio-size;
 		}
-    
-    &.required:after {
-      color: $form-error-color;
-      content: '*';
-      margin-left: $padding-extra-small;
-    }
-    
-    @if $radio-hovers {
-      &:hover:before {
-        border-color: $radio-hover-color;
-      }
-    }
+
+		&.required:after {
+			color: $form-error-color;
+			content: '*';
+			margin-left: $padding-extra-small;
+		}
+
+		@if $radio-hovers {
+			&:hover:before {
+				border-color: $radio-hover-color;
+			}
+		}
 	}
 
 	&.large + label:before {
@@ -592,8 +478,8 @@ button {
 		border-color: $radio-checked-color;
 		box-shadow: inset 0 0 0 2px $radio-background-color;
 	}
-  
-  &:disabled + label {
+
+	&:disabled + label {
 		cursor: not-allowed;
 		-webkit-user-select: none;
 
@@ -607,9 +493,9 @@ button {
 	}
 
 	&.error + label:before {
-    @if $form-error-background-color {
-		  background-color: $form-error-background-color;
-		}  
+		@if $form-error-background-color {
+			background-color: $form-error-background-color;
+		}
 		@if $radio-borders {
 			@if $form-error-color {
 				border-color: $form-error-color;
@@ -627,7 +513,7 @@ button {
 		-webkit-user-select: none;
 
 		&:before {
-      background-color: $checkbox-background-color;
+			background-color: $checkbox-background-color;
 			@if $checkbox-borders {
 				border: $checkbox-border-width $checkbox-border-style $radio-border-color;
 			}
@@ -644,18 +530,18 @@ button {
 			}
 			width: $checkbox-size;
 		}
-    
-    @if $checkbox-hovers {
-      &:hover:before {
-        border-color: $checkbox-hover-color;
-      }
-    }
-    
-    &.required:after {
-      color: $form-error-color;
-      content: '*';
-      margin-left: $padding-extra-small;
-    }
+
+		@if $checkbox-hovers {
+			&:hover:before {
+				border-color: $checkbox-hover-color;
+			}
+		}
+
+		&.required:after {
+			color: $form-error-color;
+			content: '*';
+			margin-left: $padding-extra-small;
+		}
 	}
 
 	&.large + label:before {
@@ -679,7 +565,7 @@ button {
 		border-color: $checkbox-checked-color;
 		box-shadow: inset 0 0 0 2px $checkbox-background-color;
 	}
-  
+
 	&:disabled + label {
 		cursor: not-allowed;
 		-webkit-user-select: none;
@@ -693,8 +579,8 @@ button {
 	}
 
 	&.error + label:before {
-    @if $form-error-background-color {
-		  background-color: $form-error-background-color;
+		@if $form-error-background-color {
+			background-color: $form-error-background-color;
 		}
 		@if $checkbox-borders {
 			@if $form-error-color {
