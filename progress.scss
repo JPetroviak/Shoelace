@@ -2,7 +2,7 @@
 progress {
   display: inline-block;
   vertical-align: baseline;
-  
+
   &.progress {
     display: block;
     height: $padding;
@@ -89,12 +89,5 @@ progress {
         }
       }
     }
-  }
-}
-
-base::-moz-progress-bar, .progress[value] {
-  background-color: $progress-background-color;
-  @if $progress-border-radius > 0 {
-    border-radius: $progress-border-radius;
   }
 }

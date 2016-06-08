@@ -2216,11 +2216,6 @@ progress.progress.danger[value]::-moz-progress-bar {
   background-color: #FF3B30;
 }
 
-base::-moz-progress-bar, .progress[value] {
-  background-color: #FFFFFF;
-  border-radius: 4px;
-}
-
 [data-toggle="modal"] {
   cursor: pointer;
 }
