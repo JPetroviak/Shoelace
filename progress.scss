@@ -58,6 +58,20 @@
     }
   }
 
+  &.large {
+    @if $progress-border-radius-large > 0 {
+      border-radius: $input-border-radius-large;
+    }
+    height: $padding-large;
+  }
+
+  &.small {
+    @if $progress-border-radius-small > 0 {
+      border-radius: $input-border-radius-small;
+    }
+    height: $padding-small;
+  }
+
   @each $class, $color in $colors {
     &.#{$class} {
       &[value]::-webkit-progress-value {
