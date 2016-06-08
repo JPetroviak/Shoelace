@@ -235,6 +235,12 @@ textarea {
 	}
 }
 
+select.input-field {
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKBAMAAABGe2PVAAAAIVBMVEW0tLRHcEy0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQTaA0nAAAACnRSTlPSAH+AmAPXXPWUIzvUfQAAAEFJREFUeF5jqEhgAAO2dobIVVAwlUHQCsJaJMggKAxhKgKZgloQQSATIqwIZgpagQQhTCGQIIQpaLVYEMYUcQSRANWhHo38of5RAAAAAElFTkSuQmCC) no-repeat right $padding-small center;
+  background-size: $padding-small $padding-extra-small;
+  padding-right: $padding + $padding-small;
+}
+
 .input-helper {
 	color: $color-default-light;
 	margin-top: $padding-small;

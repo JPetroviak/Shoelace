@@ -1653,6 +1653,12 @@ textarea {
   border-color: #FF3B30;
 }
 
+select.input-field {
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKBAMAAABGe2PVAAAAIVBMVEW0tLRHcEy0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQTaA0nAAAACnRSTlPSAH+AmAPXXPWUIzvUfQAAAEFJREFUeF5jqEhgAAO2dobIVVAwlUHQCsJaJMggKAxhKgKZgloQQSATIqwIZgpagQQhTCGQIIQpaLVYEMYUcQSRANWhHo38of5RAAAAAElFTkSuQmCC) no-repeat right 10px center;
+  background-size: 10px 5px;
+  padding-right: 30px;
+}
+
 .input-helper {
   color: #8E8E93;
   margin-top: 10px;
