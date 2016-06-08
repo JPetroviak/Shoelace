@@ -2106,18 +2106,22 @@ button::-moz-focus-inner {
 .alert.success {
   background-color: rgba(76, 217, 100, 0.25);
   border-color: #4CD964;
+  color: #219e37;
 }
 .alert.information {
   background-color: rgba(90, 200, 250, 0.25);
   border-color: #5AC8FA;
+  color: #07a1e7;
 }
 .alert.warning {
   background-color: rgba(255, 204, 0, 0.25);
   border-color: #FFCC00;
+  color: #997a00;
 }
 .alert.danger {
   background-color: rgba(255, 59, 48, 0.25);
   border-color: #FF3B30;
+  color: #960800;
 }
 
 .progress {
