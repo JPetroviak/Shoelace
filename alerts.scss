@@ -20,24 +20,20 @@
   &.success {
     background-color: $background-color-success;
     border-color: $color-success;
-    color: darken($color-success, 20%);
   }
-
+  
   &.information {
     background-color: $background-color-information;
     border-color: $color-information;
-    color: darken($color-information, 20%);
   }
-
+  
   &.warning {
     background-color: $background-color-warning;
     border-color: $color-warning;
-    color: darken($color-warning, 20%);
   }
-
+  
   &.danger {
     background-color: $background-color-danger;
     border-color: $color-danger;
-    color: darken($color-danger, 30%);
   }
 }
