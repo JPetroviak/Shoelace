@@ -198,6 +198,9 @@ code, kbd, pre, samp {
 blockquote {
   margin: 0 0 20px;
 }
+blockquote.blockquote cite {
+  color: #8E8E93;
+}
 
 svg:not(:root) {
   overflow: hidden;

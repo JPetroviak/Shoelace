@@ -129,5 +129,11 @@ code, kbd, pre, samp {
 }
 
 blockquote {
-	margin: 0 0 $padding;
+  margin: 0 0 $padding;
+  
+  &.blockquote {
+    cite {
+      color: $color-default-light;
+    }
+  }
 }
