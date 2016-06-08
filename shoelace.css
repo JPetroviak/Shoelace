@@ -2259,16 +2259,19 @@ body.modal-open {
   vertical-align: middle;
 }
 .modal.extra-small .modal-content {
-  max-width: 543px;
+  max-width: 0;
 }
 .modal.small .modal-content {
-  max-width: 767px;
+  max-width: 544px;
 }
 .modal.medium .modal-content {
-  max-width: 991px;
+  max-width: 768px;
 }
 .modal.large .modal-content {
-  max-width: 1399px;
+  max-width: 992px;
+}
+.modal.extra-large .modal-content {
+  max-width: 1400px;
 }
 .modal .modal-content {
   background-color: #FFFFFF;
