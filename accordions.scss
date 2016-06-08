@@ -38,8 +38,8 @@
 	}
 
 	&.hover > .accordion > .accordion-toggle {
-		@if $form-transitions {
-			transition: background-color $form-transition-speed $form-transition-property;
+		@if $accordion-transitions {
+			transition: background-color $accordion-transition-speed $accordion-transition-property;
 
 			&:hover {
 				background-color: $accordion-background-color-hover;
