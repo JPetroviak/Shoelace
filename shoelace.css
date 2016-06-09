@@ -183,12 +183,12 @@ ul.list-inline, ol.list-inline, dl.list-inline {
           flex-wrap: wrap;
   list-style: none;
   padding-left: 0;
-  margin-left: -10px;
-  margin-right: -10px;
+  margin-left: -5px;
+  margin-right: -5px;
 }
 ul.list-inline li, ol.list-inline li, dl.list-inline li {
-  padding-left: 10px;
-  padding-right: 10px;
+  padding-left: 5px;
+  padding-right: 5px;
 }
 
 ol ol, ul ul, ol ul, ul ol {
