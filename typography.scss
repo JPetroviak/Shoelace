@@ -100,16 +100,22 @@ ul, ol, dl {
 	}
 
 	&.list-inline {
+		@if $flex {
+			display: flex;
+			flex-direction: row;
+			flex-wrap: wrap;
+		}
 		list-style: none;
 		padding-left: 0;
-		margin-left: (-$padding-extra-small);
-    margin-right: (-$padding-extra-small);
+		margin-left: -$padding-extra-small;
+		margin-right: -$padding-extra-small;
 
 		li {
-			display: inline-block;
-      margin-right: -4px;
+			@if not $flex {
+				display: inline-block;
+			}
 			padding-left: $padding-extra-small;
-      padding-right: $padding-extra-small;
+			padding-right: $padding-extra-small;
 		}
 	}
 }
@@ -129,11 +135,11 @@ code, kbd, pre, samp {
 }
 
 blockquote {
-  margin: 0 0 $padding;
-  
-  &.blockquote {
-    cite {
-      color: $color-default-light;
-    }
-  }
+	margin: 0 0 $padding;
+
+	&.blockquote {
+		cite {
+			color: $color-default-light;
+		}
+	}
 }

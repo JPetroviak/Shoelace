@@ -1,5 +1,6 @@
 // Variables
 $theme-dark: false;
+$flex: true;
 
 // Colors
 $color-default: #000000;
@@ -101,7 +102,6 @@ $breakpoints: (
 );
 
 // Grid System
-$grid-flex: true;
 $grid-count: 12;
 $grid-padding: $padding;
 $container-padding: $padding;

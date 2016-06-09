@@ -169,14 +169,24 @@ ul.list-unstyled, ol.list-unstyled, dl.list-unstyled {
   padding-left: 0;
 }
 ul.list-inline, ol.list-inline, dl.list-inline {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
   list-style: none;
   padding-left: 0;
   margin-left: -5px;
   margin-right: -5px;
 }
 ul.list-inline li, ol.list-inline li, dl.list-inline li {
-  display: inline-block;
-  margin-right: -4px;
   padding-left: 5px;
   padding-right: 5px;
 }
