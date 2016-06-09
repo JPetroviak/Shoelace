@@ -20,7 +20,7 @@
 }
 
 @mixin make-grid {
-	@if $grid-flex {
+	@if $flex {
 		display: flex;
 		flex-wrap: wrap;
 	} @else {
@@ -35,7 +35,7 @@
 }
 
 @mixin make-tile {
-	@if not $grid-flex {
+	@if not $flex {
 		display: inline-block;
 		letter-spacing: normal;
 		vertical-align: top;
@@ -51,7 +51,7 @@
 }
 
 @mixin make-tile-width($size, $grid-count) {
-	@if $grid-flex {
+	@if $flex {
 		flex: 0 0 percentage($size / $grid-count);
 		max-width: percentage($size / $grid-count);
 	} @else {
