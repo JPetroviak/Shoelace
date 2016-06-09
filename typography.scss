@@ -107,15 +107,15 @@ ul, ol, dl {
 		}
 		list-style: none;
 		padding-left: 0;
-		margin-left: -$padding-extra-small;
-		margin-right: -$padding-extra-small;
+		margin-left: -$padding-small;
+		margin-right: -$padding-small;
 
 		li {
 			@if not $flex {
 				display: inline-block;
 			}
-			padding-left: $padding-extra-small;
-			padding-right: $padding-extra-small;
+			padding-left: $padding-small;
+			padding-right: $padding-small;
 		}
 	}
 }
