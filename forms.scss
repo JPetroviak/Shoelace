@@ -140,16 +140,16 @@ optgroup {
 label {
   display: inline-block;
   
-  &.input-label {
-  	@if $label-color != $color-default {
-  		color: $label-color;
+  &.label {
+  	@if $form-label-color != $color-default {
+  		color: $form-label-color;
   	}
     margin-bottom: $padding-extra-small;
     touch-action: manipulation;
     -webkit-user-select: none;
 
     &.required:after {
-      color: $form-error-color;
+      color: $form-label-required-color;
       content: '*';
       margin-left: $padding-extra-small;
     }
@@ -261,8 +261,8 @@ textarea {
 			background-color: $form-error-background-color;
 		}
 		@if $input-borders {
-			@if $form-error-color {
-				border-color: $form-error-color;
+			@if $form-error-border-color {
+				border-color: $form-error-border-color;
 			}
 		}
 	}
@@ -292,12 +292,12 @@ select.input-field {
 }
 
 .input-helper {
-	color: $input-helper-color;
+	color: $form-helper-color;
 	margin-top: $padding-small;
 	margin-bottom: $padding;
 
 	&.error {
-		color: $form-error-color;
+		color: $form-helper-error-color;
 	}
 }
 
@@ -565,8 +565,8 @@ button {
 			background-color: $form-error-background-color;
 		}
 		@if $radio-borders {
-			@if $form-error-color {
-				border-color: $form-error-color;
+			@if $form-error-border-color {
+				border-color: $form-error-border-color;
 			}
 		}
 	}
@@ -606,7 +606,7 @@ button {
 		}
 
 		&.required:after {
-			color: $form-error-color;
+			color: $form-label-required-color;
 			content: '*';
 			margin-left: $padding-extra-small;
 		}
@@ -657,8 +657,8 @@ button {
 			background-color: $form-error-background-color;
 		}
 		@if $checkbox-borders {
-			@if $form-error-color {
-				border-color: $form-error-color;
+			@if $form-error-border-color {
+				border-color: $form-error-border-color;
 			}
 		}
 	}
