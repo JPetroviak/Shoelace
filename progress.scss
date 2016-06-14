@@ -66,6 +66,9 @@ progress {
       @if $progress-border-radius-large != $progress-border-radius {
         border-radius: $progress-border-radius-large;
       }
+      @if $progress-border-width-large != $progress-border-width {
+        border-width: $progress-border-width-large;
+      }
       height: $padding-large;
     }
 
@@ -73,9 +76,12 @@ progress {
       @if $progress-border-radius-small != $progress-border-radius {
         border-radius: $progress-border-radius-small;
       }
+      @if $progress-border-width-small != $progress-border-width {
+        border-width: $progress-border-width-small;
+      }
       height: $padding-small;
     }
-
+    
     @each $class, $color in $colors {
       &.#{$class} {
         &[value]::-webkit-progress-value {

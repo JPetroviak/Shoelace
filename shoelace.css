@@ -2202,10 +2202,12 @@ progress.progress[value]::-webkit-progress-bar {
 }
 progress.progress.large {
   border-radius: 5px;
+  border-width: 2px;
   height: 30px;
 }
 progress.progress.small {
   border-radius: 3.4px;
+  border-width: 0.5px;
   height: 10px;
 }
 progress.progress.default[value]::-webkit-progress-value {

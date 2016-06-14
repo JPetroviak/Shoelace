@@ -257,11 +257,13 @@ $alert-border-radius: $border-radius;
 $alert-padding: $padding-small;
 
 // Progress
-$progress-background-color: $form-background-color;
-$progress-borders: $borders; // true | false
+$progress-background-color: $background-color-default;
+$progress-borders: $borders;
 $progress-border-color: $border-color;
 $progress-border-style: $border-style;
 $progress-border-width: $border-width;
+$progress-border-width-large: $border-width-large;
+$progress-border-width-small: $border-width-small;
 $progress-border-radius: $border-radius;
 $progress-border-radius-large: $border-radius-large;
 $progress-border-radius-small: $border-radius-small;
