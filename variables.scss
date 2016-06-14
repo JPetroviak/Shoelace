@@ -78,18 +78,18 @@ $transition-speed-fast: ($transition-speed / 2);
 $transition-property: ease-in-out;
 
 // Typography
+$font-family: -apple-system, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$font-family-headings: inherit;
 $font-size: 14px;
 $font-size-large: ($font-size * 1.25);
 $font-size-small: ($font-size * .85);
-$line-height: 20/14;
 $font-size-h1: ($font-size-large * 2);
 $font-size-h2: ($font-size * 2);
 $font-size-h3: ($font-size-small * 2);
 $font-size-h4: $font-size-large;
 $font-size-h5: $font-size;
 $font-size-h6: $font-size-small;
-$font-family: -apple-system, 'Helvetica Neue', Helvetica, Arial, sans-serif;
-$font-family-headings: inherit;
+$line-height: 20/14;
 $line-height-headings: inherit;
 
 // Breakpoints
