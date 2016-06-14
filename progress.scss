@@ -63,15 +63,15 @@ progress {
     }
 
     &.large {
-      @if $progress-border-radius-large > 0 {
-        border-radius: $input-border-radius-large;
+      @if $progress-border-radius-large != $progress-border-radius {
+        border-radius: $progress-border-radius-large;
       }
       height: $padding-large;
     }
 
     &.small {
-      @if $progress-border-radius-small > 0 {
-        border-radius: $input-border-radius-small;
+      @if $progress-border-radius-small != $progress-border-radius {
+        border-radius: $progress-border-radius-small;
       }
       height: $padding-small;
     }
