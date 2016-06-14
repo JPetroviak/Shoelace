@@ -1526,7 +1526,6 @@ legend {
   padding: 10.625px 12.5px;
 }
 .form-group.large .radio + label:before {
-  border-radius: 50%;
   height: 25px;
   width: 25px;
 }
@@ -1546,7 +1545,6 @@ legend {
   padding: 8.5px 8.5px;
 }
 .form-group.small .radio + label:before {
-  border-radius: 50%;
   height: 17px;
   width: 17px;
 }
@@ -2032,12 +2030,10 @@ button::-moz-focus-inner {
   border-color: #007AFF;
 }
 .radio.large + label:before {
-  border-radius: 50%;
   height: 25px;
   width: 25px;
 }
 .radio.small + label:before {
-  border-radius: 50%;
   height: 17px;
   width: 17px;
 }
