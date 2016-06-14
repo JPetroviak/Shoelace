@@ -1573,14 +1573,13 @@ optgroup {
 label {
   display: inline-block;
 }
-
-.input-label {
+label.input-label {
   margin-bottom: 5px;
   -ms-touch-action: manipulation;
       touch-action: manipulation;
   -webkit-user-select: none;
 }
-.input-label.required:after {
+label.input-label.required:after {
   color: #FF3B30;
   content: '*';
   margin-left: 5px;

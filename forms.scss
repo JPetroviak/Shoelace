@@ -138,19 +138,22 @@ optgroup {
 }
 
 label {
-	display: inline-block;
-}
+  display: inline-block;
+  
+  &.input-label {
+  	@if $label-color != $color-default {
+  		color: $label-color;
+  	}
+    margin-bottom: $padding-extra-small;
+    touch-action: manipulation;
+    -webkit-user-select: none;
 
-.input-label {
-	margin-bottom: $padding-extra-small;
-	touch-action: manipulation;
-	-webkit-user-select: none;
-
-	&.required:after {
-		color: $form-error-color;
-		content: '*';
-		margin-left: $padding-extra-small;
-	}
+    &.required:after {
+      color: $form-error-color;
+      content: '*';
+      margin-left: $padding-extra-small;
+    }
+  }
 }
 
 input[type="number"] {
@@ -289,7 +292,7 @@ select.input-field {
 }
 
 .input-helper {
-	color: $color-default-light;
+	color: $input-helper-color;
 	margin-top: $padding-small;
 	margin-bottom: $padding;
 
