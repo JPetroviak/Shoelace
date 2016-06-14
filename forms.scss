@@ -41,6 +41,9 @@ legend {
 			@if $input-border-radius-large != $input-border-radius {
 				border-radius: $input-border-radius-large;
 			}
+			@if $input-border-width-large != $input-border-width {
+				border-width: $input-border-width-large;
+			}
 			font-size: $font-size-large;
 			padding: $input-padding-vertical-large $input-padding-horizontal-large;
 		}
@@ -48,6 +51,9 @@ legend {
 		.button {
 			@if $button-border-radius-large != $button-border-radius {
 				border-radius: $button-border-radius-large;
+			}
+			@if $button-border-width-large != $button-border-width {
+				border-width: $button-border-width-large;
 			}
 			font-size: $font-size-large;
 			padding: $button-padding-vertical-large $button-padding-horizontal-large;
@@ -57,6 +63,9 @@ legend {
 			@if $radio-border-radius-large != $radio-border-radius {
 				border-radius: $radio-border-radius-large;
 			}
+			@if $radio-border-width-large != $radio-border-width {
+				border-width: $radio-border-width-large;
+			}
 			height: $radio-size-large;
 			width: $radio-size-large;
 		}
@@ -64,6 +73,9 @@ legend {
 		.checkbox + label:before {
 			@if $checkbox-border-radius-large != $checkbox-border-radius {
 				border-radius: $checkbox-border-radius-large;
+			}
+			@if $checkbox-border-width-large != $checkbox-border-width {
+				border-width: $checkbox-border-width-large;
 			}
 			height: $checkbox-size-large;
 			width: $checkbox-size-large;
@@ -75,6 +87,9 @@ legend {
 			@if $input-border-radius-small != $input-border-radius {
 				border-radius: $input-border-radius-small;
 			}
+			@if $input-border-width-small != $input-border-width {
+				border-width: $input-border-width-small;
+			}
 			font-size: $font-size-small;
 			padding: $input-padding-vertical-small $input-padding-horizontal-small;
 		}
@@ -82,6 +97,9 @@ legend {
 		.button {
 			@if $button-border-radius-small != $button-border-radius {
 				border-radius: $button-border-radius-small;
+			}
+			@if $button-border-width-small != $button-border-width {
+				border-width: $button-border-width-small;
 			}
 			font-size: $font-size-small;
 			padding: $button-padding-vertical-small $button-padding-horizontal-small;
@@ -91,6 +109,9 @@ legend {
 			@if $radio-border-radius-small != $radio-border-radius {
 				border-radius: $radio-border-radius-small;
 			}
+			@if $radio-border-width-small != $radio-border-width {
+				border-width: $radio-border-width-small;
+			}
 			height: $radio-size-small;
 			width: $radio-size-small;
 		}
@@ -98,6 +119,9 @@ legend {
 		.checkbox + label:before {
 			@if $checkbox-border-radius-small != $checkbox-border-radius {
 				border-radius: $checkbox-border-radius-small;
+			}
+			@if $checkbox-border-width-small != $checkbox-border-width {
+				border-width: $checkbox-border-width-small;
 			}
 			height: $checkbox-size-small;
 			width: $checkbox-size-small;
@@ -194,19 +218,25 @@ textarea {
 	}
 
 	&.large {
-	  @if $input-border-radius-large != $input-border-radius {
-	    border-radius: $input-border-radius-large;
-	  }
-	  font-size: $font-size-large;
-	  padding: $input-padding-vertical-large $input-padding-horizontal-large;
+		@if $input-border-radius-large != $input-border-radius {
+			border-radius: $input-border-radius-large;
+		}
+		@if $input-border-width-large != $input-border-width {
+			border-width: $input-border-width-large;
+		}
+		font-size: $font-size-large;
+		padding: $input-padding-vertical-large $input-padding-horizontal-large;
 	}
 
 	&.small {
-	  @if $input-border-radius-small != $input-border-radius {
-	    border-radius: $input-border-radius-small;
-	  }
-	  font-size: $font-size-small;
-	  padding: $input-padding-vertical-small $input-padding-horizontal-small;
+		@if $input-border-radius-small != $input-border-radius {
+			border-radius: $input-border-radius-small;
+		}
+		@if $input-border-width-small != $input-border-width {
+			border-width: $input-border-width-small;
+		}
+		font-size: $font-size-small;
+		padding: $input-padding-vertical-small $input-padding-horizontal-small;
 	}
 
 	option:disabled {
@@ -316,19 +346,25 @@ button {
 	-webkit-user-select: none;
 
 	&.large {
-	  @if $button-border-radius-large != $button-border-radius {
-	    border-radius: $button-border-radius-large;
-	  }
-	  font-size: $font-size-large;
-	  padding: $button-padding-vertical-large $button-padding-horizontal-large;
+		@if $button-border-radius-large != $button-border-radius {
+			border-radius: $button-border-radius-large;
+		}
+		@if $button-border-width-large != $button-border-width {
+			border-width: $button-border-width-large;
+		}
+		font-size: $font-size-large;
+		padding: $button-padding-vertical-large $button-padding-horizontal-large;
 	}
 
 	&.small {
-	  @if $button-border-radius-small != $button-border-radius {
-	    border-radius: $button-border-radius-small;
-	  }
-	  font-size: $font-size-small;
-	  padding: $button-padding-vertical-small $button-padding-horizontal-small;
+		@if $button-border-radius-small != $button-border-radius {
+			border-radius: $button-border-radius-small;
+		}
+		@if $button-border-width-small != $button-border-width {
+			border-width: $button-border-width-small;
+		}
+		font-size: $font-size-small;
+		padding: $button-padding-vertical-small $button-padding-horizontal-small;
 	}
 
 	&.full {
@@ -481,19 +517,25 @@ button {
 	}
 
 	&.large + label:before {
-	  @if $radio-border-radius-large != $radio-border-radius {
-	    border-radius: $radio-border-radius-large;
-	  }
-	  height: $radio-size-large;
-	  width: $radio-size-large;
+		@if $radio-border-radius-large != $radio-border-radius {
+			border-radius: $radio-border-radius-large;
+		}
+		@if $radio-border-width-large != $radio-border-width {
+			border-width: $radio-border-width-large;
+		}
+		height: $radio-size-large;
+		width: $radio-size-large;
 	}
 
 	&.small + label:before {
-	  @if $radio-border-radius-small != $radio-border-radius {
-	    border-radius: $radio-border-radius-small;
-	  }
-	  height: $radio-size-small;
-	  width: $radio-size-small;
+		@if $radio-border-radius-small != $radio-border-radius {
+			border-radius: $radio-border-radius-small;
+		}
+		@if $radio-border-width-small != $radio-border-width {
+			border-width: $radio-border-width-small;
+		}
+		height: $radio-size-small;
+		width: $radio-size-small;
 	}
 
 	&:checked + label:before {
@@ -568,19 +610,25 @@ button {
 	}
 
 	&.large + label:before {
-	  @if $checkbox-border-radius-large != $checkbox-border-radius {
-	    border-radius: $checkbox-border-radius-large;
-	  }
-	  height: $checkbox-size-large;
-	  width: $checkbox-size-large;
+		@if $checkbox-border-radius-large != $checkbox-border-radius {
+			border-radius: $checkbox-border-radius-large;
+		}
+		@if $checkbox-border-width-large != $checkbox-border-width {
+			border-width: $checkbox-border-width-large;
+		}
+		height: $checkbox-size-large;
+		width: $checkbox-size-large;
 	}
 
 	&.small + label:before {
-	  @if $checkbox-border-radius-small != $checkbox-border-radius {
-	    border-radius: $checkbox-border-radius-small;
-	  }
-	  height: $checkbox-size-small;
-	  width: $checkbox-size-small;
+		@if $checkbox-border-radius-small != $checkbox-border-radius {
+			border-radius: $checkbox-border-radius-small;
+		}
+		@if $checkbox-border-width-small != $checkbox-border-width {
+			border-width: $checkbox-border-width-small;
+		}
+		height: $checkbox-size-small;
+		width: $checkbox-size-small;
 	}
 
 	&:checked + label:before {

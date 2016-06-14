@@ -1517,39 +1517,47 @@ legend {
 }
 .form-group.large .input-field {
   border-radius: 5px;
+  border-width: 2px;
   font-size: 17.5px;
   padding: 10.625px 12.5px;
 }
 .form-group.large .button {
   border-radius: 5px;
+  border-width: 2px;
   font-size: 17.5px;
   padding: 10.625px 12.5px;
 }
 .form-group.large .radio + label:before {
+  border-width: 2px;
   height: 25px;
   width: 25px;
 }
 .form-group.large .checkbox + label:before {
   border-radius: 5px;
+  border-width: 2px;
   height: 25px;
   width: 25px;
 }
 .form-group.small .input-field {
   border-radius: 3.4px;
+  border-width: 0.5px;
   font-size: 11.9px;
   padding: 8.5px 8.5px;
 }
 .form-group.small .button {
   border-radius: 3.4px;
+  border-width: 0.5px;
   font-size: 11.9px;
   padding: 8.5px 8.5px;
 }
 .form-group.small .radio + label:before {
+  border-width: 0.5px;
   height: 17px;
   width: 17px;
 }
 .form-group.small .checkbox + label:before {
   border-radius: 3.4px;
+  border-width: 0.5px;
   height: 17px;
   width: 17px;
 }
@@ -1639,11 +1647,13 @@ textarea {
 }
 .input-field.large {
   border-radius: 5px;
+  border-width: 2px;
   font-size: 17.5px;
   padding: 10.625px 12.5px;
 }
 .input-field.small {
   border-radius: 3.4px;
+  border-width: 0.5px;
   font-size: 11.9px;
   padding: 8.5px 8.5px;
 }
@@ -1722,11 +1732,13 @@ button::-moz-focus-inner {
 }
 .button.large {
   border-radius: 5px;
+  border-width: 2px;
   font-size: 17.5px;
   padding: 10.625px 12.5px;
 }
 .button.small {
   border-radius: 3.4px;
+  border-width: 0.5px;
   font-size: 11.9px;
   padding: 8.5px 8.5px;
 }
@@ -2030,10 +2042,12 @@ button::-moz-focus-inner {
   border-color: #007AFF;
 }
 .radio.large + label:before {
+  border-width: 2px;
   height: 25px;
   width: 25px;
 }
 .radio.small + label:before {
+  border-width: 0.5px;
   height: 17px;
   width: 17px;
 }
@@ -2086,11 +2100,13 @@ button::-moz-focus-inner {
 }
 .checkbox.large + label:before {
   border-radius: 5px;
+  border-width: 2px;
   height: 25px;
   width: 25px;
 }
 .checkbox.small + label:before {
   border-radius: 3.4px;
+  border-width: 0.5px;
   height: 17px;
   width: 17px;
 }
