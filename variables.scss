@@ -79,7 +79,7 @@ $transition-property: ease-in-out;
 
 // Typography
 $font-family: -apple-system, 'Helvetica Neue', Helvetica, Arial, sans-serif;
-$font-family-headings: inherit;
+$font-family-headings: $font-family-headings;
 $font-size: 14px;
 $font-size-large: ($font-size * 1.25);
 $font-size-small: ($font-size * .85);
@@ -90,7 +90,7 @@ $font-size-h4: $font-size-large;
 $font-size-h5: $font-size;
 $font-size-h6: $font-size-small;
 $line-height: 20/14;
-$line-height-headings: inherit;
+$line-height-headings: $line-height;
 
 // Breakpoints
 $breakpoints: (
