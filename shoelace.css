@@ -6,8 +6,9 @@ html {
   box-sizing: border-box;
   font-size: 10px;
   -webkit-tap-highlight-color: transparent;
-  -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
+      -ms-text-size-adjust: 100%;
+          text-size-adjust: 100%;
 }
 
 *, *:before, *:after {
