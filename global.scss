@@ -45,8 +45,8 @@ audio:not([controls]) {
 }
 
 ::selection {
-	color: $background-color-default;
-	background-color: $color-primary;
+	color: $selection-color;
+	background-color: selection-background-color;
 }
 
 a {

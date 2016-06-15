@@ -48,12 +48,12 @@ audio:not([controls]) {
 
 ::-moz-selection {
   color: #FFFFFF;
-  background-color: #007AFF;
+  background-color: selection-background-color;
 }
 
 ::selection {
   color: #FFFFFF;
-  background-color: #007AFF;
+  background-color: selection-background-color;
 }
 
 a {
