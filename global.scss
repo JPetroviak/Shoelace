@@ -51,7 +51,7 @@ audio:not([controls]) {
 
 a {
 	background-color: transparent;
-	color: $color-primary;
+	color: $link-color;
 	text-decoration: none;
 	touch-action: manipulation;
 	@if $transition {
@@ -60,7 +60,7 @@ a {
 
 	&:active,
 	&:hover {
-		color: $color-secondary;
+		color: $link-hover-color;
 		outline: 0;
 	}
 }
