@@ -1,5 +1,10 @@
 // Variables
+
+// Options
 $theme-dark: false; // true | false
+
+
+
 $flex: true; // true | false
 
 // Colors
@@ -55,6 +60,14 @@ $background-colors: (
 	danger: $background-color-danger
 );
 
+// Global
+$body-background-color: $background-color-default;
+$body-color: $color-default;
+$link-color: $color-primary;
+$link-hover-color: $color-secondary;
+$selection-background-color: $color-primary;
+$selection-color: $background-color-default;
+
 // Components
 $border: true; // true | false
 $border-color: $color-default-lighter;
@@ -90,10 +103,6 @@ $font-size-h5: $font-size;
 $font-size-h6: $font-size-small;
 $line-height: 20/14;
 $line-height-heading: $line-height;
-$link-color: $color-primary;
-$link-hover-color: $color-secondary;
-$selection-background-color: $color-primary;
-$selection-color: $background-color-default;
 
 // Breakpoints
 $breakpoints: (
