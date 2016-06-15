@@ -45,7 +45,6 @@ hr {
 	} @else {
 		border-bottom: none;
 	}
-
 	border-top: none;
 	box-sizing: content-box;
 	height: 0;
@@ -57,8 +56,7 @@ abbr[title] {
 	border-bottom: $border-width $border-style $border-color;
 }
 
-b,
-strong {
+b, strong {
 	font-weight: bold;
 }
 
@@ -75,8 +73,7 @@ small {
 	font-size: 80%;
 }
 
-sub,
-sup {
+sub, sup {
 	font-size: 75%;
 	line-height: 0;
 	position: relative;
