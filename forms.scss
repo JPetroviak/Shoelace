@@ -184,7 +184,7 @@ textarea {
 	margin: 0;
 	padding: $form-padding-vertical $form-padding-horizontal;
 	touch-action: manipulation;
-	@if $form-transitions {
+	@if $form-transition {
 		transition: border-color $form-transition-speed $form-transition-property, background-image $form-transition-speed $form-transition-property;
 	}
 	width: 100%;
@@ -333,7 +333,7 @@ button {
 	padding: $form-padding-vertical $form-padding-horizontal;
 	text-align: center;
 	text-decoration: none;
-	@if $form-transitions {
+	@if $form-transition {
 		transition: background-color $form-transition-speed $form-transition-property, border-color $form-transition-speed $form-transition-property;
 	}
 	touch-action: manipulation;
@@ -416,7 +416,7 @@ button {
 		background-color: $form-background-color;
 		border-color: $color-default-lighter;
 		color: $color-default;
-		@if $form-transitions {
+		@if $form-transition {
 			transition: background-color $form-transition-speed $form-transition-property, color $form-transition-speed $form-transition-property;
 		}
 
@@ -489,7 +489,7 @@ button {
 			height: $radio-size;
 			margin-bottom: -$padding-extra-small;
 			margin-right: $padding-extra-small;
-			@if $form-transitions {
+			@if $form-transition {
 				transition: background-color $form-transition-speed $form-transition-property, border-color $form-transition-speed $form-transition-property, box-shadow $form-transition-speed $form-transition-property;
 			}
 			width: $radio-size;
@@ -576,7 +576,7 @@ button {
 			height: $checkbox-size;
 			margin-bottom: -$padding-extra-small;
 			margin-right: $padding-extra-small;
-			@if $form-transitions {
+			@if $form-transition {
 				transition: background-color $form-transition-speed $form-transition-property, border-color $form-transition-speed $form-transition-property, box-shadow $form-transition-speed $form-transition-property;
 			}
 			width: $checkbox-size;

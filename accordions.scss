@@ -38,7 +38,7 @@
 	}
 
 	&.hover > .accordion > .accordion-toggle {
-		@if $accordion-transitions {
+		@if $accordion-transition {
 			transition: background-color $accordion-transition-speed $accordion-transition-property;
 
 			&:hover {

@@ -86,7 +86,7 @@ table {
     }
 
     &.hover > tbody > tr:not(.table-row-hidden) {
-      @if $table-transitions {
+      @if $table-transition {
         transition: background-color $table-transition-speed $table-transition-property;
       }
 
