@@ -4,7 +4,7 @@
 
 	> .accordion {
 		+ .accordion {
-			@if $accordion-borders {
+			@if $accordion-border {
 				border-top: $accordion-border-width $accordion-border-style $accordion-border-color;
 			}
 		}

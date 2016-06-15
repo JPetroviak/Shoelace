@@ -1,6 +1,6 @@
 // Alerts
 .alert {
-  @if $alert-borders {
+  @if $alert-border {
    border: $alert-border-style $alert-border-width;
   }
   @if $alert-border-radius > 0 {

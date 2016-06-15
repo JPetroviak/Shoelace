@@ -40,7 +40,7 @@ p {
 }
 
 hr {
-	@if $borders {
+	@if $border {
 		border-bottom: $border-width $border-style $border-color;
 	} @else {
 		border-bottom: none;

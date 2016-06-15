@@ -12,7 +12,7 @@ progress {
     &[value] {
       appearance: none;
       background-color: $progress-background-color;
-      @if $progress-borders {
+      @if $progress-border {
         border: $progress-border-width $progress-border-style $progress-border-color;
       }
       @if $progress-border-radius > 0 {

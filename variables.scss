@@ -56,7 +56,7 @@ $background-colors: (
 );
 
 // Components
-$borders: true;
+$border: true;
 $border-color: $color-default-lighter;
 $border-radius: 4px;
 $border-radius-large: ($border-radius * 1.25);
@@ -111,7 +111,7 @@ $table-background-color-hover: $background-color-primary;
 $table-background-color-odd: $color-default-lightest;
 $table-background-color-even: $table-background-color;
 $table-header-color: $color-default-light;
-$table-borders: $borders;
+$table-border: $border;
 $table-border-color: $border-color;
 $table-border-style: $border-style;
 $table-border-width: $border-width;
@@ -128,7 +128,7 @@ $table-transition-property: $transition-property;
 
 // Forms
 $form-background-color: $background-color-default;
-$form-borders: $borders;
+$form-border: $border;
 $form-border-color: $border-color;
 $form-border-style: $border-style;
 $form-border-width: $border-width;
@@ -137,6 +137,7 @@ $form-border-width-small: $border-width-small;
 $form-border-radius: $border-radius;
 $form-border-radius-large: $border-radius-large;
 $form-border-radius-small: $border-radius-small;
+$form-checked-color: $color-primary;
 $form-error-color: $color-danger;
 $form-error-border-color: $form-error-color;
 $form-error-background-color: false;
@@ -159,18 +160,16 @@ $form-transitions: $transitions;
 $form-transition-speed: $transition-speed;
 $form-transition-property: $transition-property;
 
-$radio-checked-color: $color-primary;
-$radio-size: ($form-padding * 2);
+$radio-size: $padding;
 $radio-size-large: ($radio-size * 1.25);
 $radio-size-small: ($radio-size * .85);
 
-$checkbox-checked-color: $color-primary;
-$checkbox-size: ($form-padding * 2);
+$checkbox-size: $padding;
 $checkbox-size-large: ($checkbox-size * 1.25);
 $checkbox-size-small: ($checkbox-size * .85);
 
 // Alerts
-$alert-borders: $borders;
+$alert-border: $border;
 $alert-border-style: $border-style;
 $alert-border-width: $border-width;
 $alert-border-radius: $border-radius;
@@ -178,7 +177,7 @@ $alert-padding: $padding-small;
 
 // Progress
 $progress-background-color: $background-color-default;
-$progress-borders: $borders;
+$progress-border: $border;
 $progress-border-color: $border-color;
 $progress-border-style: $border-style;
 $progress-border-width: $border-width;
@@ -191,7 +190,7 @@ $progress-color: $color-default-lightest;
 
 // Modals
 $modal-background-color: $background-color-default;
-$modal-borders: $borders;
+$modal-border: $border;
 $modal-border-color: $border-color;
 $modal-border-style: $border-style;
 $modal-border-width: $border-width;
@@ -200,7 +199,7 @@ $modal-padding: $padding;
 
 // Accordions
 $accordion-background-color-hover: $background-color-primary;
-$accordion-borders: $borders;
+$accordion-border: $border;
 $accordion-border-color: $border-color;
 $accordion-border-style: $border-style;
 $accordion-border-width: $border-width;

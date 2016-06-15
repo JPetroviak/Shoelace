@@ -49,7 +49,7 @@ body.modal-open {
 
   .modal-content {
     background-color: $modal-background-color;
-    @if $modal-borders {
+    @if $modal-border {
       border: $modal-border-color $modal-border-style $modal-border-width;
       
     }

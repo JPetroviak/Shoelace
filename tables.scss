@@ -22,7 +22,7 @@ table {
       font-weight: normal;
     }
 
-    @if $table-borders {
+    @if $table-border {
       > tbody > tr > td {
         border-top: $table-border-width $table-border-style $table-border-color;
       }
