@@ -25,12 +25,10 @@ body.modal-open {
   left: 0;
   letter-spacing: -4px;
   overflow: auto;
-  
   @if $container-padding > 0 {
     padding-left: $container-padding;
     padding-right: $container-padding;
   }
-  
   position: fixed;
   text-align: center;
   right: 0;
@@ -58,16 +56,13 @@ body.modal-open {
     }
     display: inline-block;
     letter-spacing: normal;
-    
     @if $padding > 0 {
       margin-bottom: $padding;
       margin-top: $padding;
     }
-
     @if $modal-padding > 0 {
       padding: $modal-padding;
-    }
-    
+    } 
     text-align: left;
     vertical-align: middle;
     width: 100%;
