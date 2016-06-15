@@ -10,9 +10,17 @@
 	@if $flex {
 		@each $breakpoint in map-keys($breakpoints) {
 			@include breakpoint-up($breakpoint) {
-				&.#{$breakpoint}-top    { align-items: flex-start; }
-				&.#{$breakpoint}-center { align-items: center; }
-				&.#{$breakpoint}-bottom { align-items: flex-end; }
+				&.#{$breakpoint}-top {
+					align-items: flex-start;
+				}
+
+				&.#{$breakpoint}-center {
+					align-items: center;
+				}
+
+				&.#{$breakpoint}-bottom {
+					align-items: flex-end;
+				}
 			}
 		}
 	}
@@ -24,16 +32,29 @@
 		@if $flex {
 			@each $breakpoint in map-keys($breakpoints) {
 				@include breakpoint-up($breakpoint) {
-					&.#{$breakpoint}-first { order: -1; }
-					&.#{$breakpoint}-last  { order: 1; }
+					&.#{$breakpoint}-first {
+						order: -1;
+					}
+
+					&.#{$breakpoint}-last {
+						order: 1;
+					}
 				}
 			}
 
 			@each $breakpoint in map-keys($breakpoints) {
 				@include breakpoint-up($breakpoint) {
-					&.#{$breakpoint}-top    { align-self: flex-start; }
-					&.#{$breakpoint}-center { align-self: center; }
-					&.#{$breakpoint}-bottom { align-self: flex-end; }
+					&.#{$breakpoint}-top {
+						align-self: flex-start;
+					}
+
+					&.#{$breakpoint}-center {
+						align-self: center;
+					}
+
+					&.#{$breakpoint}-bottom {
+						align-self: flex-end;
+					}
 				}
 			}
 		}

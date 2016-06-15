@@ -2,12 +2,10 @@
 @mixin make-container {
 	margin-left: auto;
 	margin-right: auto;
-
 	@if $container-padding > 0 {
 		padding-left: $container-padding;
 		padding-right: $container-padding;
 	}
-
 	width: 100%;
 }
 
@@ -27,7 +25,6 @@
 		display: block;
 		letter-spacing: -4px;
 	}
-
 	@if $grid-padding > 0 {
 		margin-left: -($grid-padding / 2);
 		margin-right: -($grid-padding / 2);
@@ -40,12 +37,10 @@
 		letter-spacing: normal;
 		vertical-align: top;
 	}
-
 	@if $grid-padding > 0 {
 		padding-left: ($grid-padding / 2);
 		padding-right: ($grid-padding / 2);
 	}
-
 	position: relative;
 	width: 100%;
 }
