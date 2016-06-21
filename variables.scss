@@ -76,8 +76,8 @@ $border-width: 1px;
 $border-width-large: ($border-width * 2);
 $border-width-small: ($border-width / 2);
 $spacing: 20px;
-$spacing-extra-large: ($spacing * 2);
-$spacing-large: ($spacing * 1.5);
+$spacing-extra-large: ($spacing * 4);
+$spacing-large: ($spacing * 2);
 $spacing-small: ($spacing / 2);
 $spacing-extra-small: ($spacing / 4);
 $transition: true; // true | false

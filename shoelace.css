@@ -2201,7 +2201,7 @@ progress.progress[value]::-webkit-progress-bar {
 progress.progress.large {
   border-radius: 5px;
   border-width: 2px;
-  height: 30px;
+  height: 40px;
 }
 progress.progress.small {
   border-radius: 3.4px;
@@ -2365,11 +2365,11 @@ body.modal-open {
 }
 .calendar > tbody > tr > td .date {
   display: inline-block;
-  height: 30px;
-  line-height: 30px;
+  height: 40px;
+  line-height: 40px;
   text-align: center;
   vertical-align: top;
-  width: 30px;
+  width: 40px;
 }
 .calendar > tbody > tr > td.event .date {
   background-color: #000000;
