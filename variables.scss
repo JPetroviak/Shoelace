@@ -75,11 +75,11 @@ $border-style: solid;
 $border-width: 1px;
 $border-width-large: ($border-width * 2);
 $border-width-small: ($border-width / 2);
-$padding: 20px;
-$padding-extra-large: ($padding * 2);
-$padding-large: ($padding * 1.5);
-$padding-small: ($padding / 2);
-$padding-extra-small: ($padding / 4);
+$spacing: 20px;
+$spacing-extra-large: ($spacing * 2);
+$spacing-large: ($spacing * 1.5);
+$spacing-small: ($spacing / 2);
+$spacing-extra-small: ($spacing / 4);
 $transition: true; // true | false
 $transition-speed: 200ms;
 $transition-speed-slow: ($transition-speed * 2);
@@ -112,8 +112,8 @@ $breakpoints: (
 
 // Grid System
 $grid-count: 12;
-$grid-padding: $padding;
-$container-padding: $padding;
+$grid-spacing: $spacing;
+$container-spacing: $spacing;
 
 // Tables
 $table-background-color: transparent;
@@ -125,13 +125,13 @@ $table-border: $border; // true | false
 $table-border-color: $border-color;
 $table-border-style: $border-style;
 $table-border-width: $border-width;
-$table-padding: $padding-small;
-$table-padding-vertical: ($table-padding * .9);
-$table-padding-vertical-large: ($table-padding-vertical * 1.25);
-$table-padding-vertical-small: ($table-padding-vertical * .85);
-$table-padding-horizontal: $table-padding;
-$table-padding-horizontal-large: ($table-padding-horizontal * 1.25);
-$table-padding-horizontal-small: ($table-padding-horizontal * .85);
+$table-spacing: $spacing-small;
+$table-spacing-vertical: ($table-spacing * .9);
+$table-spacing-vertical-large: ($table-spacing-vertical * 1.25);
+$table-spacing-vertical-small: ($table-spacing-vertical * .85);
+$table-spacing-horizontal: $table-spacing;
+$table-spacing-horizontal-large: ($table-spacing-horizontal * 1.25);
+$table-spacing-horizontal-small: ($table-spacing-horizontal * .85);
 $table-transition: $transition; // true | false
 $table-transition-speed: $transition-speed;
 $table-transition-property: $transition-property;
@@ -159,22 +159,22 @@ $form-hover: true; // true | false
 $form-hover-color: $background-color-primary;
 $form-label-color: $color-default;
 $form-label-required-color: $form-error-color;
-$form-padding: $padding-small;
-$form-padding-horizontal: $form-padding;
-$form-padding-horizontal-large: ($form-padding-horizontal * 1.25);
-$form-padding-horizontal-small: ($form-padding-horizontal * .85);
-$form-padding-vertical: ($form-padding * .85);
-$form-padding-vertical-large: ($form-padding-vertical * 1.25);
-$form-padding-vertical-small: ($form-padding * .85);
+$form-spacing: $spacing-small;
+$form-spacing-horizontal: $form-spacing;
+$form-spacing-horizontal-large: ($form-spacing-horizontal * 1.25);
+$form-spacing-horizontal-small: ($form-spacing-horizontal * .85);
+$form-spacing-vertical: ($form-spacing * .85);
+$form-spacing-vertical-large: ($form-spacing-vertical * 1.25);
+$form-spacing-vertical-small: ($form-spacing * .85);
 $form-transition: $transition; // true | false
 $form-transition-speed: $transition-speed;
 $form-transition-property: $transition-property;
 
-$radio-size: $padding;
+$radio-size: $spacing;
 $radio-size-large: ($radio-size * 1.25);
 $radio-size-small: ($radio-size * .85);
 
-$checkbox-size: $padding;
+$checkbox-size: $spacing;
 $checkbox-size-large: ($checkbox-size * 1.25);
 $checkbox-size-small: ($checkbox-size * .85);
 
@@ -183,7 +183,7 @@ $alert-border: $border; // true | false
 $alert-border-style: $border-style;
 $alert-border-width: $border-width;
 $alert-border-radius: $border-radius;
-$alert-padding: $padding-small;
+$alert-spacing: $spacing-small;
 
 // Progress
 $progress-background-color: $background-color-default;
@@ -205,7 +205,7 @@ $modal-border-color: $border-color;
 $modal-border-style: $border-style;
 $modal-border-width: $border-width;
 $modal-border-radius: $border-radius;
-$modal-padding: $padding;
+$modal-spacing: $spacing;
 
 // Accordions
 $accordion-background-color-hover: $background-color-primary;
@@ -213,7 +213,7 @@ $accordion-border: $border;
 $accordion-border-color: $border-color;
 $accordion-border-style: $border-style;
 $accordion-border-width: $border-width;
-$accordion-padding: $padding-small;
+$accordion-spacing: $spacing-small;
 $accordion-transition: $transition; // true | false
 $accordion-transition-speed: $transition-speed;
 $accordion-transition-property: $transition-property;

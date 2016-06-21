@@ -9,11 +9,11 @@ table {
 
   &.table {
     background-color: $table-background-color;
-    margin-bottom: $padding;
+    margin-bottom: $spacing;
     width: 100%;
 
     caption, th, td {
-      padding: $table-padding-vertical $table-padding-horizontal;
+      padding: $table-spacing-vertical $table-spacing-horizontal;
       vertical-align: top;
     }
 
@@ -30,13 +30,13 @@ table {
 
     &.large {
       > thead > tr > th, tbody > tr > td {
-        padding: $table-padding-vertical-large $table-padding-horizontal-large;
+        padding: $table-spacing-vertical-large $table-spacing-horizontal-large;
       }
     }
 
     &.small {
       > thead > tr > th, tbody > tr > td {
-        padding: $table-padding-vertical-small $table-padding-horizontal-small;
+        padding: $table-spacing-vertical-small $table-spacing-horizontal-small;
       }
     }
 
@@ -62,7 +62,7 @@ table {
 
         > * {
           display: none;
-          padding: $table-padding;
+          padding: $table-spacing;
         }
       }
 
@@ -107,7 +107,7 @@ table {
           > tr {
             border-top: $table-border-width $table-border-style $table-border-color;
             display: block;
-            padding: $table-padding;
+            padding: $table-spacing;
 
             > td {
               border-top: none;

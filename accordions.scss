@@ -1,6 +1,6 @@
 // Accordions
 .accordion-group {
-	margin-bottom: $padding;
+	margin-bottom: $spacing;
 
 	> .accordion {
 		+ .accordion {
@@ -12,14 +12,14 @@
 		> .accordion-toggle {
 			cursor: pointer;
 			margin: 0;
-			padding: $accordion-padding;
+			padding: $accordion-spacing;
 			text-decoration: none;
 			-webkit-user-select: none;
 		}
 
 		> .accordion-content {
 			display: none;
-			padding: $accordion-padding;
+			padding: $accordion-spacing;
 		}
 	}
 

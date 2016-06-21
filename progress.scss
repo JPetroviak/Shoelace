@@ -5,8 +5,8 @@ progress {
 
   &.progress {
     display: block;
-    height: $padding;
-    margin-bottom: $padding;
+    height: $spacing;
+    margin-bottom: $spacing;
     width: 100%;
 
     &[value] {
@@ -69,7 +69,7 @@ progress {
       @if $progress-border-width-large != $progress-border-width {
         border-width: $progress-border-width-large;
       }
-      height: $padding-large;
+      height: $spacing-large;
     }
 
     &.small {
@@ -79,7 +79,7 @@ progress {
       @if $progress-border-width-small != $progress-border-width {
         border-width: $progress-border-width-small;
       }
-      height: $padding-small;
+      height: $spacing-small;
     }
     
     @each $class, $color in $colors {

@@ -14,11 +14,11 @@
 
 		.date {
 			display: inline-block;
-			height: $padding-large;
-			line-height: $padding-large;
+			height: $spacing-large;
+			line-height: $spacing-large;
 			text-align: center;
 			vertical-align: top;
-			width: $padding-large;
+			width: $spacing-large;
 		}
 
 		&.event {
@@ -30,7 +30,7 @@
 
 			.event-list {
 				margin-bottom: 0;
-				margin-top: $table-padding;
+				margin-top: $table-spacing;
 				padding-left: 14px;
 
 				li {
@@ -63,12 +63,12 @@
 
 				> td {
 					border-top: $table-border-width $table-border-style $table-border-color;
-					padding: $table-padding;
+					padding: $table-spacing;
           text-align: left;
 
 					&.event .event-list {
 						display: inline-block;
-						margin-left: $padding-extra-small;
+						margin-left: $spacing-extra-small;
 						margin-top: 0;
 						vertical-align: top;
 					}

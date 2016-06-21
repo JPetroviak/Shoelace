@@ -13,26 +13,26 @@ legend {
 
 .form-group {
 	.input-field {
-		margin-bottom: $padding;
+		margin-bottom: $spacing;
 
 		+ .input-helper {
-			margin-top: -$padding-small;
+			margin-top: -$spacing-small;
 		}
 	}
 
 	.button {
-		margin-bottom: $padding;
+		margin-bottom: $spacing;
 	}
 
 	.radio {
 		+ label {
-			margin-bottom: $padding-small;
+			margin-bottom: $spacing-small;
 		}
 	}
 
 	.checkbox {
 		+ label {
-			margin-bottom: $padding-small;
+			margin-bottom: $spacing-small;
 		}
 	}
 
@@ -45,7 +45,7 @@ legend {
 				border-width: $form-border-width-large;
 			}
 			font-size: $font-size-large;
-			padding: $form-padding-vertical-large $form-padding-horizontal-large;
+			padding: $form-spacing-vertical-large $form-spacing-horizontal-large;
 		}
 
 		.button {
@@ -56,7 +56,7 @@ legend {
 				border-width: $form-border-width-large;
 			}
 			font-size: $font-size-large;
-			padding: $form-padding-vertical-large $form-padding-horizontal-large;
+			padding: $form-spacing-vertical-large $form-spacing-horizontal-large;
 		}
 
 		.radio + label:before {
@@ -88,7 +88,7 @@ legend {
 				border-width: $form-border-width-small;
 			}
 			font-size: $font-size-small;
-			padding: $form-padding-vertical-small $form-padding-horizontal-small;
+			padding: $form-spacing-vertical-small $form-spacing-horizontal-small;
 		}
 
 		.button {
@@ -99,7 +99,7 @@ legend {
 				border-width: $form-border-width-small;
 			}
 			font-size: $font-size-small;
-			padding: $form-padding-vertical-small $form-padding-horizontal-small;
+			padding: $form-spacing-vertical-small $form-spacing-horizontal-small;
 		}
 
 		.radio + label:before {
@@ -138,14 +138,14 @@ label {
   	@if $form-label-color != $color-default {
   		color: $form-label-color;
   	}
-    margin-bottom: $padding-extra-small;
+    margin-bottom: $spacing-extra-small;
     touch-action: manipulation;
     -webkit-user-select: none;
 
     &.required:after {
       color: $form-label-required-color;
       content: '*';
-      margin-left: $padding-extra-small;
+      margin-left: $spacing-extra-small;
     }
   }
 }
@@ -182,7 +182,7 @@ textarea {
 	font-size: $font-size;
 	line-height: $line-height;
 	margin: 0;
-	padding: $form-padding-vertical $form-padding-horizontal;
+	padding: $form-spacing-vertical $form-spacing-horizontal;
 	touch-action: manipulation;
 	@if $form-transition {
 		transition: border-color $form-transition-speed $form-transition-property, background-image $form-transition-speed $form-transition-property;
@@ -222,7 +222,7 @@ textarea {
 			border-width: $form-border-width-large;
 		}
 		font-size: $font-size-large;
-		padding: $form-padding-vertical-large $form-padding-horizontal-large;
+		padding: $form-spacing-vertical-large $form-spacing-horizontal-large;
 	}
 
 	&.small {
@@ -233,7 +233,7 @@ textarea {
 			border-width: $form-border-width-small;
 		}
 		font-size: $font-size-small;
-		padding: $form-padding-vertical-small $form-padding-horizontal-small;
+		padding: $form-spacing-vertical-small $form-spacing-horizontal-small;
 	}
 
 	option:disabled {
@@ -267,10 +267,10 @@ textarea {
 }
 
 select.input-field {
-	background: no-repeat right $padding-small center;
+	background: no-repeat right $spacing-small center;
 	background-image: url('data:image/svg+xml,<svg%20width%3D"10"%20height%3D"5"%20viewBox%3D"169%20177%2010%205"%20xmlns%3D"http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg"><path%20fill%3D"#{url-friendly-color($form-border-color)}"%20fill-rule%3D"evenodd"%20d%3D"M174%20182l5-5h-10"%2F><%2Fsvg>');
-	background-size: $padding-small $padding-extra-small;
-	padding-right: $padding + $padding-small;
+	background-size: $spacing-small $spacing-extra-small;
+	padding-right: $spacing + $spacing-small;
 
 	@if $form-hover {
 		&:hover {
@@ -287,8 +287,8 @@ select.input-field {
 
 .input-helper {
 	color: $form-helper-color;
-	margin-top: $padding-small;
-	margin-bottom: $padding;
+	margin-top: $spacing-small;
+	margin-bottom: $spacing;
 
 	&.error {
 		color: $form-helper-error-color;
@@ -330,7 +330,7 @@ button {
 	font-family: $font-family;
 	font-size: $font-size;
 	line-height: $line-height;
-	padding: $form-padding-vertical $form-padding-horizontal;
+	padding: $form-spacing-vertical $form-spacing-horizontal;
 	text-align: center;
 	text-decoration: none;
 	@if $form-transition {
@@ -347,7 +347,7 @@ button {
 			border-width: $form-border-width-large;
 		}
 		font-size: $font-size-large;
-		padding: $form-padding-vertical-large $form-padding-horizontal-large;
+		padding: $form-spacing-vertical-large $form-spacing-horizontal-large;
 	}
 
 	&.small {
@@ -358,7 +358,7 @@ button {
 			border-width: $form-border-width-small;
 		}
 		font-size: $font-size-small;
-		padding: $form-padding-vertical-small $form-padding-horizontal-small;
+		padding: $form-spacing-vertical-small $form-spacing-horizontal-small;
 	}
 
 	&.full {
@@ -487,8 +487,8 @@ button {
 			content: '';
 			display: inline-block;
 			height: $radio-size;
-			margin-bottom: -$padding-extra-small;
-			margin-right: $padding-extra-small;
+			margin-bottom: -$spacing-extra-small;
+			margin-right: $spacing-extra-small;
 			@if $form-transition {
 				transition: background-color $form-transition-speed $form-transition-property, border-color $form-transition-speed $form-transition-property, box-shadow $form-transition-speed $form-transition-property;
 			}
@@ -498,7 +498,7 @@ button {
 		&.required:after {
 			color: $form-error-color;
 			content: '*';
-			margin-left: $padding-extra-small;
+			margin-left: $spacing-extra-small;
 		}
 
 		@if $form-hover {
@@ -574,8 +574,8 @@ button {
 			content: '';
 			display: inline-block;
 			height: $checkbox-size;
-			margin-bottom: -$padding-extra-small;
-			margin-right: $padding-extra-small;
+			margin-bottom: -$spacing-extra-small;
+			margin-right: $spacing-extra-small;
 			@if $form-transition {
 				transition: background-color $form-transition-speed $form-transition-property, border-color $form-transition-speed $form-transition-property, box-shadow $form-transition-speed $form-transition-property;
 			}
@@ -591,7 +591,7 @@ button {
 		&.required:after {
 			color: $form-label-required-color;
 			content: '*';
-			margin-left: $padding-extra-small;
+			margin-left: $spacing-extra-small;
 		}
 	}
 

@@ -2,7 +2,7 @@
 h1, h2, h3, h4, h5, h6 {
 	font-family: $font-family-heading;
 	line-height: $line-height-heading;
-	margin-bottom: $padding-small;
+	margin-bottom: $spacing-small;
 	margin-top: 0;
 
 	span {
@@ -35,7 +35,7 @@ h6, .h6 {
 }
 
 p {
-	margin-bottom: $padding-small;
+	margin-bottom: $spacing-small;
 	margin-top: 0;
 }
 
@@ -48,8 +48,8 @@ hr {
 	border-top: none;
 	box-sizing: content-box;
 	height: 0;
-	margin-bottom: $padding;
-	margin-top: $padding;
+	margin-bottom: $spacing;
+	margin-top: $spacing;
 }
 
 abbr[title] {
@@ -89,7 +89,7 @@ sub {
 }
 
 ul, ol, dl {
-	margin: 0 0 $padding;
+	margin: 0 0 $spacing;
 
 	&.list-unstyled {
 		list-style: none;
@@ -104,15 +104,15 @@ ul, ol, dl {
 		}
 		list-style: none;
 		padding-left: 0;
-		margin-left: -$padding-extra-small;
-		margin-right: -$padding-extra-small;
+		margin-left: -$spacing-extra-small;
+		margin-right: -$spacing-extra-small;
 
 		li {
 			@if not $flex {
 				display: inline-block;
 			}
-			padding-left: $padding-extra-small;
-			padding-right: $padding-extra-small;
+			padding-left: $spacing-extra-small;
+			padding-right: $spacing-extra-small;
 		}
 	}
 }
@@ -122,7 +122,7 @@ ol ol, ul ul, ol ul, ul ol {
 }
 
 pre {
-	margin: 0 0 $padding;
+	margin: 0 0 $spacing;
 	overflow: auto;
 }
 
@@ -132,7 +132,7 @@ code, kbd, pre, samp {
 }
 
 blockquote {
-	margin: 0 0 $padding;
+	margin: 0 0 $spacing;
 
 	&.blockquote {
 		cite {
