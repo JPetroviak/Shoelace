@@ -225,7 +225,7 @@ img {
   border: 0;
 }
 img.responsive {
-  display: inline-block;
+  display: block;
   height: auto;
   max-width: 100%;
 }
@@ -1748,10 +1748,12 @@ button::-moz-focus-inner {
 .button:hover {
   background-color: #b3b3ba;
   border-color: #b3b3ba;
+  color: #000000;
 }
 .button:focus, .button:active {
   background-color: #9999a1;
   border-color: #9999a1;
+  color: #000000;
 }
 .button:disabled {
   background-color: #CECED2;
