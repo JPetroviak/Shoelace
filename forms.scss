@@ -365,18 +365,20 @@ button {
 		width: 100%;
 	}
 
-	@if $form-hover {
-		&:hover {
+	&:hover {
+		@if $form-hover {
 			background-color: darken($color-default-lighter, 10%);
 			border-color: darken($color-default-lighter, 10%);
 		}
+		color: $color-default;
 	}
 
-	@if $form-focus {
-		&:focus, &:active {
+	&:focus, &:active {
+		@if $form-focus {
 			background-color: darken($color-default-lighter, 20%);
 			border-color: darken($color-default-lighter, 20%);
 		}
+		color: $color-default;
 	}
 
 	&:disabled {
