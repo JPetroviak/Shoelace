@@ -140,7 +140,7 @@ label {
   	}
     margin-bottom: $spacing-extra-small;
     touch-action: manipulation;
-    -webkit-user-select: none;
+    user-select: none;
 
     &.required:after {
       color: $form-label-required-color;
@@ -247,7 +247,7 @@ textarea {
 		}
 		cursor: not-allowed;
 		opacity: 1;
-		-webkit-user-select: none;
+		user-select: none;
 	}
 
 	&.error {
@@ -337,7 +337,8 @@ button {
 		transition: background-color $form-transition-speed $form-transition-property, border-color $form-transition-speed $form-transition-property;
 	}
 	touch-action: manipulation;
-	-webkit-user-select: none;
+	user-select: none;
+	vertical-align: middle;
 
 	&.large {
 		@if $form-border-radius-large != $form-border-radius {
@@ -478,7 +479,7 @@ button {
 	+ label {
 		cursor: pointer;
 		touch-action: manipulation;
-		-webkit-user-select: none;
+		user-select: none;
 
 		&:before {
 			background-color: $form-background-color;
@@ -534,7 +535,7 @@ button {
 
 	&:disabled + label {
 		cursor: not-allowed;
-		-webkit-user-select: none;
+		user-select: none;
 
 		&:before {
 			background-color: $color-default-lightest;
@@ -563,7 +564,7 @@ button {
 	+ label {
 		cursor: pointer;
 		touch-action: manipulation;
-		-webkit-user-select: none;
+		user-select: none;
 
 		&:before {
 			background-color: $form-background-color;
@@ -627,7 +628,7 @@ button {
 
 	&:disabled + label {
 		cursor: not-allowed;
-		-webkit-user-select: none;
+		user-select: none;
 
 		&:before {
 			background-color: $color-default-lightest;

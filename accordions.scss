@@ -14,7 +14,7 @@
 			margin: 0;
 			padding: $accordion-spacing;
 			text-decoration: none;
-			-webkit-user-select: none;
+			user-select: none;
 		}
 
 		> .accordion-content {

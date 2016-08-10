@@ -42,7 +42,7 @@ table {
 
     > .table-row-link > tr:not(.table-row-hidden):hover > td:not(.table-cell-link-skip) {
       cursor: pointer;
-      -webkit-user-select: none;
+      user-select: none;
     }
 
     &.striped > tbody > tr {

@@ -1435,6 +1435,9 @@ table.table.small > thead > tr > th, table.table.small tbody > tr > td {
 table.table > .table-row-link > tr:not(.table-row-hidden):hover > td:not(.table-cell-link-skip) {
   cursor: pointer;
   -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 table.table.striped > tbody > tr:nth-child(odd) {
   background-color: #EFEFF4;
@@ -1579,6 +1582,9 @@ label.label {
   -ms-touch-action: manipulation;
       touch-action: manipulation;
   -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 label.label.required:after {
   color: #FF3B30;
@@ -1666,6 +1672,9 @@ textarea {
   cursor: not-allowed;
   opacity: 1;
   -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 .input-field.error {
   border-color: #FF3B30;
@@ -1729,6 +1738,10 @@ button::-moz-focus-inner {
   -ms-touch-action: manipulation;
       touch-action: manipulation;
   -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  vertical-align: middle;
 }
 .button.large {
   border-radius: 5px;
@@ -2021,6 +2034,9 @@ button::-moz-focus-inner {
   -ms-touch-action: manipulation;
       touch-action: manipulation;
   -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 .radio + label:before {
   background-color: #FFFFFF;
@@ -2061,6 +2077,9 @@ button::-moz-focus-inner {
 .radio:disabled + label {
   cursor: not-allowed;
   -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 .radio:disabled + label:before {
   background-color: #EFEFF4;
@@ -2078,6 +2097,9 @@ button::-moz-focus-inner {
   -ms-touch-action: manipulation;
       touch-action: manipulation;
   -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 .checkbox + label:before {
   background-color: #FFFFFF;
@@ -2120,6 +2142,9 @@ button::-moz-focus-inner {
 .checkbox:disabled + label {
   cursor: not-allowed;
   -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 .checkbox:disabled + label:before {
   background-color: #EFEFF4;
@@ -2338,6 +2363,9 @@ body.modal-open {
   padding: 10px;
   text-decoration: none;
   -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 .accordion-group > .accordion > .accordion-content {
   display: none;
