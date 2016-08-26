@@ -62,33 +62,3 @@
 		}
 	}
 }
-
-@if $flex {
-	.justify-left {
-		justify-content: flex-start;
-	}
-
-	.justify-right {
-		justify-content: flex-end;
-	}
-
-	.justify-center {
-		justify-content: center;
-	}
-
-	@each $breakpoint in map-keys($breakpoints) {
-		@include breakpoint-up($breakpoint) {
-			.justify-#{$breakpoint}-left {
-				justify-content: flex-start;
-			}
-
-			.justify-#{$breakpoint}-right {
-				justify-content: flex-end;
-			}
-
-			.justify-#{$breakpoint}-center {
-				justify-content: center;
-			}
-		}
-	}
-}
