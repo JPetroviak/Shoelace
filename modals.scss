@@ -8,8 +8,8 @@ body.modal-open {
   touch-action: none;
 }
 
-.modal-background {
-  background-color: rgba($color-default, .5);
+.modal-backdrop {
+  background-color: $modal-backdrop-background-color;
   bottom: 0;
   display: none;
   left: 0;

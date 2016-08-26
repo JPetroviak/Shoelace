@@ -199,6 +199,7 @@ $progress-border-radius-small: $border-radius-small;
 $progress-color: $color-default-lightest;
 
 // Modals
+$modal-backdrop-background-color: rgba($color-default, .5);
 $modal-background-color: $background-color-default;
 $modal-border: $border; // true | false
 $modal-border-color: $border-color;
