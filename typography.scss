@@ -101,15 +101,19 @@ ul, ol, dl {
 			display: flex;
 			flex-direction: row;
 			flex-wrap: wrap;
+		} @else {
+			display: block;
+			letter-spacing: -4px;
 		}
-		list-style: none;
-		padding-left: 0;
+		@extend .list-unstyled;
 		margin-left: -$spacing-extra-small;
 		margin-right: -$spacing-extra-small;
 
 		li {
 			@if not $flex {
 				display: inline-block;
+				letter-spacing: normal;
+				vertical-align: top;
 			}
 			padding-left: $spacing-extra-small;
 			padding-right: $spacing-extra-small;
