@@ -294,6 +294,10 @@ select.input-field {
 	background-repeat: no-repeat;
 	background-size: $spacing-small $spacing-extra-small;
 	padding-right: $spacing + $spacing-small;
+	
+	&::-ms-expand {
+    display: none;
+	}
 
 	@if $form-hover {
 		&:hover {
@@ -302,7 +306,6 @@ select.input-field {
 			}
 		}
 	}
-
 	
 	@if $form-focus {
 		&:focus {
@@ -312,6 +315,43 @@ select.input-field {
 		}
 	}
 }
+
+// input[type="color"].input-field {
+//   cursor: pointer;
+//   height: $spacing;
+//   padding: 0 !important;
+//   width: $spacing !important;
+  
+//   &::-webkit-color-swatch-wrapper {
+//     padding: 0;
+//   }
+//   &::-webkit-color-swatch {
+//     border: none;
+//     border-radius: $form-border-radius;
+//   }
+
+// 	&.large + label:before {
+// 		@if $form-border-radius-large != $form-border-radius {
+// 			border-radius: $form-border-radius-large;
+// 		}
+// 		@if $form-border-width-large != $form-border-width {
+// 			border-width: $form-border-width-large;
+// 		}
+// 		height: $checkbox-size-large;
+// 		width: $checkbox-size-large;
+// 	}
+	
+// 	&.small + label:before {
+// 		@if $form-border-radius-small != $form-border-radius {
+// 			border-radius: $form-border-radius-small;
+// 		}
+// 		@if $form-border-width-small != $form-border-width {
+// 			border-width: $form-border-width-small;
+// 		}
+// 		height: $checkbox-size-small;
+// 		width: $checkbox-size-small;
+// 	}
+// }
 
 .input-helper {
 	color: $form-helper-color;
