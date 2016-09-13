@@ -176,11 +176,7 @@ textarea {
 	@else {
 		border: none;
 	}
-	@if $form-border-radius {
-		border-radius: $form-border-radius;
-	} @else {
-		border-radius: 0;
-	}
+	border-radius: $form-border-radius;
 	color: $form-color;
 	font-family: $font-family;
 	font-size: $font-size;
@@ -200,24 +196,27 @@ textarea {
 
 	@if $form-hover {
 		&:hover {
-			@if $form-hover-background-color {
-				border-color: $form-hover-background-color;
+			@if $form-hover-background-color != $form-background-color {
+				background-color: $form-hover-background-color;
 			}
-			@if $form-hover-border-color {
+			@if $form-hover-border-color != $form-border-color {
 				border-color: $form-hover-border-color;
+			}
+			@if $form-hover-color != $form-color {
+				color: $form-hover-color;
 			}
 		}
 	}
 
 	&:focus {
 		@if $form-focus {
-			@if $form-focus-background-color {
+			@if $form-focus-background-color != $form-background-color {
 				background-color: $form-focus-background-color;
 			}
-			@if $form-focus-border-color {
+			@if $form-focus-border-color != $form-border-color {
 				border-color: $form-focus-border-color;
 			}
-			@if $form-focus-color {
+			@if $form-focus-color != $form-color {
 				color: $form-focus-color;
 			}
 		}
@@ -256,13 +255,13 @@ textarea {
 	}
 
 	&:disabled {
-		@if $form-disabled-background-color {
+		@if $form-disabled-background-color != $form-background-color {
 			background-color: $form-disabled-background-color;
 		}
-		@if $form-disabled-border-color {
+		@if $form-disabled-border-color != $form-border-color {
 			border-color: $form-disabled-border-color;
 		}
-		@if $form-disabled-color {
+		@if $form-disabled-color != $form-color {
 			color: $form-disabled-color;
 		}
 		cursor: not-allowed;
@@ -271,16 +270,16 @@ textarea {
 	}
 
 	&.error {
-		@if $form-error-background-color {
+		@if $form-error-background-color != $form-background-color {
 			background-color: $form-error-background-color;
 		}
 		@if $form-border {
-			@if $form-error-border-color {
+			@if $form-error-border-color != $form-border-color {
 				border-color: $form-error-border-color;
 			}
-			@if $form-error-color {
-				color: $form-error-color;
-			}
+		}
+		@if $form-error-border-color != $form-color {
+			color: $form-error-color;
 		}
 	}
 }
@@ -290,8 +289,9 @@ textarea {
 }
 
 select.input-field {
-	background: no-repeat right $spacing-small center;
 	background-image: url('data:image/svg+xml,<svg%20width%3D"10"%20height%3D"5"%20viewBox%3D"169%20177%2010%205"%20xmlns%3D"http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg"><path%20fill%3D"#{url-friendly-color($form-border-color)}"%20fill-rule%3D"evenodd"%20d%3D"M174%20182l5-5h-10"%2F><%2Fsvg>');
+	background-position: right $spacing-small center;
+	background-repeat: no-repeat;
 	background-size: $spacing-small $spacing-extra-small;
 	padding-right: $spacing + $spacing-small;
 
@@ -346,11 +346,7 @@ button {
 	@else {
 		border: none;
 	}
-	@if $form-border-radius {
-		border-radius: $form-border-radius;
-	} @else {
-		border-radius: 0;
-	}
+	border-radius: $form-border-radius;
 	color: $form-color;
 	cursor: pointer;
 	display: inline-block;
@@ -442,53 +438,55 @@ button {
 		}
 	}
 
-	&.inverted {
-		background-color: $form-background-color;
-		border-color: $color-default-lighter;
-		color: $color-default;
-		@if $form-transition {
-			transition: background-color $form-transition-speed $form-transition-property, color $form-transition-speed $form-transition-property;
-		}
-
-		@if $form-hover {
-			&:hover {
-				background-color: $color-default-lighter;
-			}
-		}
-
-		@if $form-focus {
-			&:focus, &:active {
-				background-color: $color-default-lighter;
-			}
-		}
-
-		&:disabled {
+	@if $form-border {
+		&.inverted {
 			background-color: $form-background-color;
+			border-color: $color-default-lighter;
 			color: $color-default;
-		}
+			@if $form-transition {
+				transition: background-color $form-transition-speed $form-transition-property, color $form-transition-speed $form-transition-property;
+			}
 
-		@each $class, $color in $colors {
-			&.#{$class} {
-				border-color: $color;
-				color: $color;
-
-				@if $form-hover {
-					&:hover {
-						background-color: $color;
-						color: $background-color-default;
-					}
+			@if $form-hover {
+				&:hover {
+					background-color: $color-default-lighter;
 				}
+			}
 
-				@if $form-focus {
-					&:focus, &:active {
-						background-color: $color;
-						color: $background-color-default;
-					}
+			@if $form-focus {
+				&:focus, &:active {
+					background-color: $color-default-lighter;
 				}
+			}
 
-				&:disabled {
-					background-color: $form-background-color;
+			&:disabled {
+				background-color: $form-background-color;
+				color: $color-default;
+			}
+
+			@each $class, $color in $colors {
+				&.#{$class} {
+					border-color: $color;
 					color: $color;
+
+					@if $form-hover {
+						&:hover {
+							background-color: $color;
+							color: $background-color-default;
+						}
+					}
+
+					@if $form-focus {
+						&:focus, &:active {
+							background-color: $color;
+							color: $background-color-default;
+						}
+					}
+
+					&:disabled {
+						background-color: $form-background-color;
+						color: $color;
+					}
 				}
 			}
 		}
@@ -533,7 +531,7 @@ button {
 
 		@if $form-hover {
 			&:hover:before {
-				@if $form-hover-border-color {
+				@if $form-hover-border-color != $form-border-color {
 					border-color: $form-hover-border-color;
 				}
 			}
@@ -600,7 +598,7 @@ button {
 			@if $form-border {
 				border: $form-border-width $form-border-style $form-border-color;
 			}
-			@if $form-border-radius {
+			@if $form-border-radius > 0 {
 				border-radius: $form-border-radius;
 			}
 			content: '';
@@ -616,7 +614,7 @@ button {
 
 		@if $form-hover {
 			&:hover:before {
-				@if $form-hover-border-color {
+				@if $form-hover-border-color != $form-border-color {
 					border-color: $form-hover-border-color;
 				}
 			}
