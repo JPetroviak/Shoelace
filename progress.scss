@@ -84,12 +84,14 @@ progress {
     
     @each $class, $color in $colors {
       &.#{$class} {
+        &[value]::-ms-fill {
+          background-color: $color;
+        }
+
         &[value]::-webkit-progress-value {
           background-color: $color;
         }
-      }
 
-      &.#{$class} {
         &[value]::-moz-progress-bar {
           background-color: $color;
         }
