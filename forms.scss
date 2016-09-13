@@ -176,8 +176,12 @@ textarea {
 	@else {
 		border: none;
 	}
-	border-radius: $form-border-radius;
-	color: $color-default;
+	@if $form-border-radius {
+		border-radius: $form-border-radius;
+	} @else {
+		border-radius: 0;
+	}
+	color: $form-color;
 	font-family: $font-family;
 	font-size: $font-size;
 	line-height: $line-height;
@@ -185,25 +189,36 @@ textarea {
 	padding: $form-spacing-vertical $form-spacing-horizontal;
 	touch-action: manipulation;
 	@if $form-transition {
-		transition: border-color $form-transition-speed $form-transition-property, background-image $form-transition-speed $form-transition-property;
+		transition: background-color $form-transition-speed $form-transition-property, border-color $form-transition-speed $form-transition-property, background-image $form-transition-speed $form-transition-property;
 	}
 	width: 100%;
 
 	&::placeholder {
-		color: $color-default-lighter;
+		color: $form-placeholder-color;
 		opacity: 1;
 	}
 
 	@if $form-hover {
 		&:hover {
-			border-color: $form-hover-color;
+			@if $form-hover-background-color {
+				border-color: $form-hover-background-color;
+			}
+			@if $form-hover-border-color {
+				border-color: $form-hover-border-color;
+			}
 		}
 	}
 
 	&:focus {
 		@if $form-focus {
-			@if $form-border {
-				border-color: $form-focus-color;
+			@if $form-focus-background-color {
+				background-color: $form-focus-background-color;
+			}
+			@if $form-focus-border-color {
+				border-color: $form-focus-border-color;
+			}
+			@if $form-focus-color {
+				color: $form-focus-color;
 			}
 		}
 		outline: 0;
@@ -241,9 +256,14 @@ textarea {
 	}
 
 	&:disabled {
-		background-color: $color-default-lightest;
-		@if $form-border {
-			border-color: $form-border-color;
+		@if $form-disabled-background-color {
+			background-color: $form-disabled-background-color;
+		}
+		@if $form-disabled-border-color {
+			border-color: $form-disabled-border-color;
+		}
+		@if $form-disabled-color {
+			color: $form-disabled-color;
 		}
 		cursor: not-allowed;
 		opacity: 1;
@@ -257,6 +277,9 @@ textarea {
 		@if $form-border {
 			@if $form-error-border-color {
 				border-color: $form-error-border-color;
+			}
+			@if $form-error-color {
+				color: $form-error-color;
 			}
 		}
 	}
@@ -323,8 +346,12 @@ button {
 	@else {
 		border: none;
 	}
-	border-radius: $form-border-radius;
-	color: $color-default;
+	@if $form-border-radius {
+		border-radius: $form-border-radius;
+	} @else {
+		border-radius: 0;
+	}
+	color: $form-color;
 	cursor: pointer;
 	display: inline-block;
 	font-family: $font-family;
@@ -499,14 +526,16 @@ button {
 		}
 
 		&.required:after {
-			color: $form-error-color;
+			color: $form-label-required-color;
 			content: '*';
 			margin-left: $spacing-extra-small;
 		}
 
 		@if $form-hover {
 			&:hover:before {
-				border-color: $form-hover-color;
+				@if $form-hover-border-color {
+					border-color: $form-hover-border-color;
+				}
 			}
 		}
 	}
@@ -571,7 +600,7 @@ button {
 			@if $form-border {
 				border: $form-border-width $form-border-style $form-border-color;
 			}
-			@if $form-border-radius > 0 {
+			@if $form-border-radius {
 				border-radius: $form-border-radius;
 			}
 			content: '';
@@ -587,7 +616,9 @@ button {
 
 		@if $form-hover {
 			&:hover:before {
-				border-color: $form-hover-color;
+				@if $form-hover-border-color {
+					border-color: $form-hover-border-color;
+				}
 			}
 		}
 

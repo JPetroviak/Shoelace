@@ -165,7 +165,7 @@ sub {
 ul, ol, dl {
   margin: 0 0 20px;
 }
-ul.list-unstyled, ol.list-unstyled, dl.list-unstyled {
+ul.list-unstyled, ul.list-inline, ol.list-unstyled, ol.list-inline, dl.list-unstyled, dl.list-inline {
   list-style: none;
   padding-left: 0;
 }
@@ -182,8 +182,6 @@ ul.list-inline, ol.list-inline, dl.list-inline {
   -webkit-flex-wrap: wrap;
       -ms-flex-wrap: wrap;
           flex-wrap: wrap;
-  list-style: none;
-  padding-left: 0;
   margin-left: -5px;
   margin-right: -5px;
 }
@@ -1697,8 +1695,8 @@ textarea {
   padding: 8.5px 10px;
   -ms-touch-action: manipulation;
       touch-action: manipulation;
-  -webkit-transition: border-color 200ms ease-in-out, background-image 200ms ease-in-out;
-  transition: border-color 200ms ease-in-out, background-image 200ms ease-in-out;
+  -webkit-transition: background-color 200ms ease-in-out, border-color 200ms ease-in-out, background-image 200ms ease-in-out;
+  transition: background-color 200ms ease-in-out, border-color 200ms ease-in-out, background-image 200ms ease-in-out;
   width: 100%;
 }
 .input-field::-webkit-input-placeholder {
@@ -1716,9 +1714,6 @@ textarea {
 .input-field::placeholder {
   color: #CECED2;
   opacity: 1;
-}
-.input-field:hover {
-  border-color: rgba(0, 122, 255, 0.25);
 }
 .input-field:focus {
   border-color: #007AFF;
@@ -1745,7 +1740,6 @@ textarea {
 }
 .input-field:disabled {
   background-color: #EFEFF4;
-  border-color: #CECED2;
   cursor: not-allowed;
   opacity: 1;
   -webkit-user-select: none;
@@ -1764,10 +1758,10 @@ select.input-field {
   padding-right: 30px;
 }
 select.input-field:hover {
-  background-image: url('data:image/svg+xml,<svg%20width%3D"10"%20height%3D"5"%20viewBox%3D"169%20177%2010%205"%20xmlns%3D"http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg"><path%20fill%3D"%23gba(0, 122, 255, 0.25)"%20fill-rule%3D"evenodd"%20d%3D"M174%20182l5-5h-10"%2F><%2Fsvg>');
+  background-image: url('data:image/svg+xml,<svg%20width%3D"10"%20height%3D"5"%20viewBox%3D"169%20177%2010%205"%20xmlns%3D"http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg"><path%20fill%3D"%23alse"%20fill-rule%3D"evenodd"%20d%3D"M174%20182l5-5h-10"%2F><%2Fsvg>');
 }
 select.input-field:focus {
-  background-image: url('data:image/svg+xml,<svg%20width%3D"10"%20height%3D"5"%20viewBox%3D"169%20177%2010%205"%20xmlns%3D"http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg"><path%20fill%3D"%23007AFF"%20fill-rule%3D"evenodd"%20d%3D"M174%20182l5-5h-10"%2F><%2Fsvg>');
+  background-image: url('data:image/svg+xml,<svg%20width%3D"10"%20height%3D"5"%20viewBox%3D"169%20177%2010%205"%20xmlns%3D"http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg"><path%20fill%3D"%23alse"%20fill-rule%3D"evenodd"%20d%3D"M174%20182l5-5h-10"%2F><%2Fsvg>');
 }
 
 .input-helper {
@@ -2133,9 +2127,6 @@ button::-moz-focus-inner {
   content: '*';
   margin-left: 5px;
 }
-.radio + label:hover:before {
-  border-color: rgba(0, 122, 255, 0.25);
-}
 .radio.large + label:before {
   border-width: 2px;
   height: 25px;
@@ -2190,9 +2181,6 @@ button::-moz-focus-inner {
   -webkit-transition: background-color 200ms ease-in-out, border-color 200ms ease-in-out, box-shadow 200ms ease-in-out;
   transition: background-color 200ms ease-in-out, border-color 200ms ease-in-out, box-shadow 200ms ease-in-out;
   width: 20px;
-}
-.checkbox + label:hover:before {
-  border-color: rgba(0, 122, 255, 0.25);
 }
 .checkbox + label.required:after {
   color: #FF3B30;
