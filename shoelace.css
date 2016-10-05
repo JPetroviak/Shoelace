@@ -1562,6 +1562,8 @@ textarea {
 
 .input-field {
   -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
   background-color: #FFFFFF;
   border: 1px solid #CECED2;
   border-radius: 4px;
@@ -2142,6 +2144,8 @@ progress.progress {
 }
 progress.progress[value] {
   -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
   background-color: #FFFFFF;
   border: 1px solid #CECED2;
   border-radius: 4px;
