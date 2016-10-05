@@ -10,7 +10,7 @@ progress {
     width: 100%;
 
     &[value] {
-      appearance: none;
+      -webkit-appearance: none;
       background-color: $progress-background-color;
       @if $progress-border {
         border: $progress-border-width $progress-border-style $progress-border-color;

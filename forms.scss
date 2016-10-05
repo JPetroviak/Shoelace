@@ -168,7 +168,7 @@ textarea {
 }
 
 .input-field {
-	appearance: none;
+	-webkit-appearance: none;
 	background-color: $form-background-color;
 	@if $form-border {
 		border: $form-border-width $form-border-style $form-border-color;
