@@ -88,3 +88,27 @@
 		}
 	}
 }
+
+// Mosaic
+@mixin mosaic($item-count, $item-width) {
+	@for $i from 1 through $item-count {
+		$min-width: (($item-width * ($i - 1)) + (($grid-spacing * ($i - 1)) + $grid-spacing)) + 1;
+		$max-width: ($item-width * $i) + (($grid-spacing * $i) + $grid-spacing);
+		$media-query: "(min-width: #{$min-width}) and (max-width: #{$max-width})";
+		
+		@if $i == 1 {
+			$media-query: "(max-width : #{$max-width})";
+		} @elseif $i == $item-count {
+			$media-query: "(min-width : #{$min-width})";
+		}
+
+		@media #{$media-query} {
+			@if $flex {
+				flex: 0 0 percentage(1 / $i);
+				max-width: percentage(1 / $i);
+			} @else {
+				width: percentage(1 / $i);
+			}
+		}
+	}
+}
