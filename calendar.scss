@@ -6,7 +6,7 @@
   
 	> tbody > tr > td {
     text-align: inherit;
-		width: (100% / 7);
+		width: percentage(1 / 7);
 
 		&:first-child, &:last-child {
 			background-color: $calendar-weekend-color;
