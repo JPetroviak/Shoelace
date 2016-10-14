@@ -5,11 +5,11 @@ fieldset {
 	margin: 0;
 	min-width: 0;
 	padding: 0;
-}
 
-legend {
-	border: 0;
-	padding: 0;
+	legend {
+		border: 0;
+		padding: 0;
+	}
 }
 
 .form-group {
@@ -304,44 +304,20 @@ legend {
 	width: auto;
 }
 
-optgroup {
-	font-weight: bold;
-}
-
-label {
+label.label {
 	display: inline-block;
-
-	&.label {
-		@if $form-label-color != $color-default {
-			color: $form-label-color;
-		}
-		margin-bottom: $spacing-extra-small;
-		touch-action: manipulation;
-		user-select: none;
-
-		&.required:after {
-			color: $form-label-required-color;
-			content: '*';
-			margin-left: $spacing-extra-small;
-		}
+	@if $form-label-color != $color-default {
+		color: $form-label-color;
 	}
-}
+	margin-bottom: $spacing-extra-small;
+	touch-action: manipulation;
+	user-select: none;
 
-input[type="number"] {
-	&::-webkit-inner-spin-button, &::-webkit-outer-spin-button {
-		height: auto;
+	&.required:after {
+		color: $form-label-required-color;
+		content: '*';
+		margin-left: $spacing-extra-small;
 	}
-}
-
-input[type="search"] {
-	&::-webkit-search-cancel-button, &::-webkit-search-decoration {
-		-webkit-appearance: none;
-	}
-}
-
-textarea {
-	overflow: auto;
-	resize: vertical;
 }
 
 .input-field {
@@ -457,6 +433,18 @@ textarea {
 	}
 }
 
+input[type="number"].input-field {
+	&::-webkit-inner-spin-button, &::-webkit-outer-spin-button {
+		height: auto;
+	}
+}
+
+input[type="search"].input-field {
+	&::-webkit-search-cancel-button, &::-webkit-search-decoration {
+		-webkit-appearance: none;
+	}
+}
+
 @function url-friendly-color($color) {
 	@return '%23' + str-slice('#{$color}', 2, -1);
 }
@@ -473,24 +461,38 @@ select.input-field {
 	}
 
 	@if $form-hover {
-		&:hover {
-			@if $form-hover-border-color != $form-border-color {
+		@if $form-hover-border-color != $form-border-color {
+			&:hover {
 				background-image: url('data:image/svg+xml,<svg%20width%3D"10"%20height%3D"5"%20viewBox%3D"169%20177%2010%205"%20xmlns%3D"http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg"><path%20fill%3D"#{url-friendly-color($form-hover-border-color)}"%20fill-rule%3D"evenodd"%20d%3D"M174%20182l5-5h-10"%2F><%2Fsvg>');
 			}
 		}
 	}
+	
+	&:focus {
+		&:-moz-focusring {
+	    color: transparent;
+	    text-shadow: 0 0 0 #000;
+		}
 
-	@if $form-focus {
-		&:focus {
+		@if $form-focus {
 			@if $form-focus-border-color != $form-border-color {
 				background-image: url('data:image/svg+xml,<svg%20width%3D"10"%20height%3D"5"%20viewBox%3D"169%20177%2010%205"%20xmlns%3D"http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg"><path%20fill%3D"#{url-friendly-color($form-focus-border-color)}"%20fill-rule%3D"evenodd"%20d%3D"M174%20182l5-5h-10"%2F><%2Fsvg>');
 			}
 		}
 	}
 
+	optgroup {
+		font-weight: bold;
+	}
+
 	option:disabled {
 		color: $form-disabled-color;
 	}
+}
+
+textarea.input-field {
+	overflow: auto;
+	resize: vertical;
 }
 
 // input[type="color"].input-field {
@@ -591,7 +593,7 @@ select.input-field {
 	}
 
 	&::-webkit-slider-thumb {
-		appearance: none;
+		-webkit-appearance: none;
 		background-color: $color-default-lightest;
 		border: $form-border-width $form-border-style $form-border-color;
 		border-radius: $form-border-radius;
@@ -689,6 +691,10 @@ select.input-field {
 	&:focus {
 		outline: none;
 
+		&::-moz-focus-outer {
+			border: 0;
+		}
+
 		@if $form-focus {
 			&::-webkit-slider-runnable-track {
 				@if $form-focus-background-color != $form-background-color {
@@ -743,10 +749,6 @@ select.input-field {
 					border-color: $form-focus-border-color;
 				}
 			}
-		}
-
-		&::-moz-focus-outer {
-			border: 0;
 		}
 	}
 
@@ -956,6 +958,7 @@ select.input-field {
 
 	+ label {
 		cursor: pointer;
+		display: inline-block;
 		touch-action: manipulation;
 		user-select: none;
 
@@ -1043,6 +1046,7 @@ select.input-field {
 
 	+ label {
 		cursor: pointer;
+		display: inline-block;
 		touch-action: manipulation;
 		user-select: none;
 
@@ -1144,22 +1148,6 @@ select.input-field {
 
 [role="button"] {
 	cursor: pointer;
-}
-
-button {
-	border-radius: 0;
-	margin: 0;
-	overflow: visible;
-
-	&:focus {
-		outline: 0;
-	}
-
-	&::-moz-focus-inner {
-		border: 0;
-		margin: 0;
-		padding: 0;
-	}
 }
 
 .button {
@@ -1319,5 +1307,20 @@ button {
 	&:disabled {
 		cursor: not-allowed;
 		opacity: .5;
+	}
+}
+
+button.button {
+	margin: 0;
+	overflow: visible;
+
+	&:focus {
+		outline: 0;
+	}
+
+	&::-moz-focus-inner {
+		border: 0;
+		margin: 0;
+		padding: 0;
 	}
 }
