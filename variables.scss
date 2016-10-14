@@ -179,6 +179,10 @@ $form-transition: $transition; // true | false
 $form-transition-speed: $transition-speed;
 $form-transition-property: $transition-property;
 
+$range-size: $spacing;
+$range-size-large: ($range-size * 1.25);
+$range-size-small: ($range-size * .85);
+
 $radio-size: $spacing;
 $radio-size-large: ($radio-size * 1.25);
 $radio-size-small: ($radio-size * .85);

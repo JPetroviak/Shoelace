@@ -353,7 +353,6 @@ select.input-field {
 // 	}
 // }
 
-// TODO Sizes Match Checkboxes & Radios
 .range {
   appearance: none;
   margin: 0 0 $spacing;
@@ -364,7 +363,7 @@ select.input-field {
     border-radius: $form-border-radius;
     background-color: $form-background-color;
     cursor: pointer;
-    height: $spacing;
+    height: $range-size;
     width: 100%;
   }
   
@@ -373,7 +372,7 @@ select.input-field {
     border: $form-border-width $form-border-style $form-border-color;
     border-radius: $form-border-radius;
     cursor: pointer;
-    height: $spacing;
+    height: $range-size;
     width: 100%;
   }
   
@@ -384,7 +383,7 @@ select.input-field {
     border-width: $spacing 0;
     color: transparent;
     cursor: pointer;
-    height: $spacing;
+    height: $range-size;
     width: 100%;
   }
 
@@ -394,9 +393,9 @@ select.input-field {
     border: $form-border-width $form-border-style $form-border-color;
     border-radius: $form-border-radius;
     cursor: pointer;
-    height: $spacing;
+    height: $range-size;
     margin-top: -$form-border-width;
-    width: $spacing;
+    width: $range-size;
   }
 
   &::-moz-range-thumb {
@@ -404,8 +403,8 @@ select.input-field {
     border: $form-border-width $form-border-style $form-border-color;
     border-radius: $form-border-radius;
     cursor: pointer;
-    height: $spacing;
-    width: $spacing;
+    height: $range-size;
+    width: $range-size;
   }
 
   &::-ms-fill-lower {
@@ -425,11 +424,17 @@ select.input-field {
     border: $form-border-width $form-border-style $form-border-color;
     border-radius: $form-border-radius;
     cursor: pointer;
-    height: $spacing;
-    width: $spacing;
+    height: $range-size;
+    width: $range-size;
   }
 
 	// TODO Hover & Focus
+  @if $form-hover {
+		@if $form-hover-border-color != $form-border-color {
+			
+		}
+  }
+
   &:focus {
     outline: none;
     
@@ -444,7 +449,15 @@ select.input-field {
     &::-ms-fill-upper {
       background-color: $form-background-color;
     }
+
+    @if $form-focus {
+  		@if $form-focus-border-color != $form-border-color {
+  			
+  		}
+    }
   }
+
+  // TODO Sizes
 }
 
 .radio {
