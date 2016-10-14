@@ -57,7 +57,7 @@ legend {
 			padding: $form-spacing-vertical-large $form-spacing-horizontal-large;
 		}
 
-		&.range {
+		.range {
 			&::-webkit-slider-runnable-track {
 				@if $form-border-radius-large != $form-border-radius {
 					border-radius: $form-border-radius-large;
@@ -184,7 +184,7 @@ legend {
 			padding: $form-spacing-vertical-small $form-spacing-horizontal-small;
 		}
 
-		&.range {
+		.range {
 			&::-webkit-slider-runnable-track {
 				@if $form-border-radius-small != $form-border-radius {
 					border-radius: $form-border-radius-small;
@@ -630,6 +630,33 @@ select.input-field {
 
 	@if $form-hover {
 		&:hover {
+			&::-webkit-slider-runnable-track {
+				@if $form-hover-background-color != $form-background-color {
+					background-color: $form-hover-background-color;
+				}
+				@if $form-hover-border-color != $form-border-color {
+					border-color: $form-hover-border-color;
+				}
+			}
+
+			&::-moz-range-track {
+				@if $form-hover-background-color != $form-background-color {
+					background-color: $form-hover-background-color;
+				}
+				@if $form-hover-border-color != $form-border-color {
+					border-color: $form-hover-border-color;
+				}
+			}
+
+			&::-ms-track {
+				@if $form-hover-background-color != $form-background-color {
+					background-color: $form-hover-background-color;
+				}
+				@if $form-hover-border-color != $form-border-color {
+					border-color: $form-hover-border-color;
+				}
+			}
+
 			&::-webkit-slider-thumb {
 				@if $form-hover-background-color != $form-background-color {
 					background-color: $form-hover-background-color;
@@ -663,32 +690,57 @@ select.input-field {
 		outline: none;
 
 		@if $form-focus {
-			@if $form-focus-border-color != $form-border-color {
-				&::-webkit-slider-thumb {
-					@if $form-focus-background-color != $form-background-color {
-						background-color: $form-focus-background-color;
-					}
-					@if $form-focus-border-color != $form-border-color {
-						border-color: $form-focus-border-color;
-					}
+			&::-webkit-slider-runnable-track {
+				@if $form-focus-background-color != $form-background-color {
+					background-color: $form-focus-background-color;
 				}
-
-				&::-moz-range-thumb {
-					@if $form-focus-background-color != $form-background-color {
-						background-color: $form-focus-background-color;
-					}
-					@if $form-focus-border-color != $form-border-color {
-						border-color: $form-focus-border-color;
-					}
+				@if $form-focus-border-color != $form-border-color {
+					border-color: $form-focus-border-color;
 				}
+			}
 
-				&::-ms-thumb {
-					@if $form-focus-background-color != $form-background-color {
-						background-color: $form-focus-background-color;
-					}
-					@if $form-focus-border-color != $form-border-color {
-						border-color: $form-focus-border-color;
-					}
+			&::-moz-range-track {
+				@if $form-focus-background-color != $form-background-color {
+					background-color: $form-focus-background-color;
+				}
+				@if $form-focus-border-color != $form-border-color {
+					border-color: $form-focus-border-color;
+				}
+			}
+
+			&::-ms-track {
+				@if $form-focus-background-color != $form-background-color {
+					background-color: $form-focus-background-color;
+				}
+				@if $form-focus-border-color != $form-border-color {
+					border-color: $form-focus-border-color;
+				}
+			}
+
+			&::-webkit-slider-thumb {
+				@if $form-focus-background-color != $form-background-color {
+					background-color: $form-focus-background-color;
+				}
+				@if $form-focus-border-color != $form-border-color {
+					border-color: $form-focus-border-color;
+				}
+			}
+
+			&::-moz-range-thumb {
+				@if $form-focus-background-color != $form-background-color {
+					background-color: $form-focus-background-color;
+				}
+				@if $form-focus-border-color != $form-border-color {
+					border-color: $form-focus-border-color;
+				}
+			}
+
+			&::-ms-thumb {
+				@if $form-focus-background-color != $form-background-color {
+					background-color: $form-focus-background-color;
+				}
+				@if $form-focus-border-color != $form-border-color {
+					border-color: $form-focus-border-color;
 				}
 			}
 		}
