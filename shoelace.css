@@ -1609,14 +1609,17 @@ legend {
 .form-group.large.range::-webkit-slider-runnable-track {
   border-radius: 5px;
   border-width: 2px;
+  height: 25px;
 }
 .form-group.large.range::-moz-range-track {
   border-radius: 5px;
   border-width: 2px;
+  height: 25px;
 }
 .form-group.large.range::-ms-track {
   border-radius: 5px;
   border-width: 2px;
+  height: 25px;
 }
 .form-group.large.range::-ms-fill-lower {
   border-radius: 5px;
@@ -1671,14 +1674,17 @@ legend {
 .form-group.small.range::-webkit-slider-runnable-track {
   border-radius: 3.4px;
   border-width: 0.5px;
+  height: 17px;
 }
 .form-group.small.range::-moz-range-track {
   border-radius: 3.4px;
   border-width: 0.5px;
+  height: 17px;
 }
 .form-group.small.range::-ms-track {
   border-radius: 3.4px;
   border-width: 0.5px;
+  height: 17px;
 }
 .form-group.small.range::-ms-fill-lower {
   border-radius: 3.4px;
@@ -1863,6 +1869,8 @@ select.input-field option:disabled {
   background-color: #FFFFFF;
   cursor: pointer;
   height: 20px;
+  -webkit-transition: background-color 200ms ease-in-out, border-color 200ms ease-in-out;
+  transition: background-color 200ms ease-in-out, border-color 200ms ease-in-out;
   width: 100%;
 }
 .range::-moz-range-track {
@@ -1871,6 +1879,8 @@ select.input-field option:disabled {
   border-radius: 4px;
   cursor: pointer;
   height: 20px;
+  -webkit-transition: background-color 200ms ease-in-out, border-color 200ms ease-in-out;
+  transition: background-color 200ms ease-in-out, border-color 200ms ease-in-out;
   width: 100%;
 }
 .range::-ms-track {
@@ -1880,17 +1890,23 @@ select.input-field option:disabled {
   color: transparent;
   cursor: pointer;
   height: 20px;
+  -webkit-transition: background-color 200ms ease-in-out, border-color 200ms ease-in-out;
+  transition: background-color 200ms ease-in-out, border-color 200ms ease-in-out;
   width: 100%;
 }
 .range::-ms-fill-lower {
   background-color: #FFFFFF;
   border: 1px solid #CECED2;
   border-radius: 4px;
+  -webkit-transition: background-color 200ms ease-in-out, border-color 200ms ease-in-out;
+  transition: background-color 200ms ease-in-out, border-color 200ms ease-in-out;
 }
 .range::-ms-fill-upper {
   background-color: #FFFFFF;
   border: 1px solid #CECED2;
   border-radius: 4px;
+  -webkit-transition: background-color 200ms ease-in-out, border-color 200ms ease-in-out;
+  transition: background-color 200ms ease-in-out, border-color 200ms ease-in-out;
 }
 .range::-webkit-slider-thumb {
   -webkit-appearance: none;
@@ -1901,6 +1917,8 @@ select.input-field option:disabled {
   cursor: pointer;
   height: 20px;
   margin-top: -1px;
+  -webkit-transition: background-color 200ms ease-in-out, border-color 200ms ease-in-out;
+  transition: background-color 200ms ease-in-out, border-color 200ms ease-in-out;
   width: 20px;
 }
 .range::-moz-range-thumb {
@@ -1909,6 +1927,8 @@ select.input-field option:disabled {
   border-radius: 4px;
   cursor: pointer;
   height: 20px;
+  -webkit-transition: background-color 200ms ease-in-out, border-color 200ms ease-in-out;
+  transition: background-color 200ms ease-in-out, border-color 200ms ease-in-out;
   width: 20px;
 }
 .range::-ms-thumb {
@@ -1917,19 +1937,12 @@ select.input-field option:disabled {
   border-radius: 4px;
   cursor: pointer;
   height: 20px;
+  -webkit-transition: background-color 200ms ease-in-out, border-color 200ms ease-in-out;
+  transition: background-color 200ms ease-in-out, border-color 200ms ease-in-out;
   width: 20px;
 }
 .range:focus {
   outline: none;
-}
-.range:focus::-webkit-slider-runnable-track {
-  background-color: #FFFFFF;
-}
-.range:focus::-ms-fill-lower {
-  background-color: #FFFFFF;
-}
-.range:focus::-ms-fill-upper {
-  background-color: #FFFFFF;
 }
 .range:focus::-webkit-slider-thumb {
   border-color: #007AFF;
@@ -1943,14 +1956,17 @@ select.input-field option:disabled {
 .range.large::-webkit-slider-runnable-track {
   border-radius: 5px;
   border-width: 2px;
+  height: 25px;
 }
 .range.large::-moz-range-track {
   border-radius: 5px;
   border-width: 2px;
+  height: 25px;
 }
 .range.large::-ms-track {
   border-radius: 5px;
   border-width: 2px;
+  height: 25px;
 }
 .range.large::-ms-fill-lower {
   border-radius: 5px;
@@ -1982,14 +1998,17 @@ select.input-field option:disabled {
 .range.small::-webkit-slider-runnable-track {
   border-radius: 3.4px;
   border-width: 0.5px;
+  height: 17px;
 }
 .range.small::-moz-range-track {
   border-radius: 3.4px;
   border-width: 0.5px;
+  height: 17px;
 }
 .range.small::-ms-track {
   border-radius: 3.4px;
   border-width: 0.5px;
+  height: 17px;
 }
 .range.small::-ms-fill-lower {
   border-radius: 3.4px;
@@ -2020,20 +2039,14 @@ select.input-field option:disabled {
 }
 .range:disabled::-webkit-slider-runnable-track {
   background-color: #EFEFF4;
+  cursor: not-allowed;
 }
 .range:disabled::-moz-range-track {
   background-color: #EFEFF4;
+  cursor: not-allowed;
 }
 .range:disabled::-ms-track {
   background-color: #EFEFF4;
-}
-.range:disabled::-webkit-slider-thumb {
-  cursor: not-allowed;
-}
-.range:disabled::-moz-range-thumb {
-  cursor: not-allowed;
-}
-.range:disabled::-ms-thumb {
   cursor: not-allowed;
 }
 

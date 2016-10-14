@@ -65,6 +65,7 @@ legend {
 				@if $form-border-width-large != $form-border-width {
 					border-width: $form-border-width-large;
 				}
+				height: $range-size-large;
 			}
 
 			&::-moz-range-track {
@@ -74,6 +75,7 @@ legend {
 				@if $form-border-width-large != $form-border-width {
 					border-width: $form-border-width-large;
 				}
+				height: $range-size-large;
 			}
 
 			&::-ms-track {
@@ -83,6 +85,7 @@ legend {
 				@if $form-border-width-large != $form-border-width {
 					border-width: $form-border-width-large;
 				}
+				height: $range-size-large;
 			}
 
 			&::-ms-fill-lower {
@@ -189,6 +192,7 @@ legend {
 				@if $form-border-width-small != $form-border-width {
 					border-width: $form-border-width-small;
 				}
+				height: $range-size-small;
 			}
 
 			&::-moz-range-track {
@@ -198,6 +202,7 @@ legend {
 				@if $form-border-width-small != $form-border-width {
 					border-width: $form-border-width-small;
 				}
+				height: $range-size-small;
 			}
 
 			&::-ms-track {
@@ -207,6 +212,7 @@ legend {
 				@if $form-border-width-small != $form-border-width {
 					border-width: $form-border-width-small;
 				}
+				height: $range-size-small;
 			}
 
 			&::-ms-fill-lower {
@@ -535,6 +541,9 @@ select.input-field {
 		background-color: $form-background-color;
 		cursor: pointer;
 		height: $range-size;
+		@if $form-transition {
+			transition: background-color $form-transition-speed $form-transition-property, border-color $form-transition-speed $form-transition-property;
+		}
 		width: 100%;
 	}
 
@@ -544,6 +553,9 @@ select.input-field {
 		border-radius: $form-border-radius;
 		cursor: pointer;
 		height: $range-size;
+		@if $form-transition {
+			transition: background-color $form-transition-speed $form-transition-property, border-color $form-transition-speed $form-transition-property;
+		}
 		width: 100%;
 	}
 
@@ -554,6 +566,9 @@ select.input-field {
 		color: transparent;
 		cursor: pointer;
 		height: $range-size;
+		@if $form-transition {
+			transition: background-color $form-transition-speed $form-transition-property, border-color $form-transition-speed $form-transition-property;
+		}
 		width: 100%;
 	}
 
@@ -561,12 +576,18 @@ select.input-field {
 		background-color: $form-background-color;
 		border: $form-border-width $form-border-style $form-border-color;
 		border-radius: $form-border-radius;
+		@if $form-transition {
+			transition: background-color $form-transition-speed $form-transition-property, border-color $form-transition-speed $form-transition-property;
+		}
 	}
 
 	&::-ms-fill-upper {
 		background-color: $form-background-color;
 		border: $form-border-width $form-border-style $form-border-color;
 		border-radius: $form-border-radius;
+		@if $form-transition {
+			transition: background-color $form-transition-speed $form-transition-property, border-color $form-transition-speed $form-transition-property;
+		}
 	}
 
 	&::-webkit-slider-thumb {
@@ -577,6 +598,9 @@ select.input-field {
 		cursor: pointer;
 		height: $range-size;
 		margin-top: -$form-border-width;
+		@if $form-transition {
+			transition: background-color $form-transition-speed $form-transition-property, border-color $form-transition-speed $form-transition-property;
+		}
 		width: $range-size;
 	}
 
@@ -586,6 +610,9 @@ select.input-field {
 		border-radius: $form-border-radius;
 		cursor: pointer;
 		height: $range-size;
+		@if $form-transition {
+			transition: background-color $form-transition-speed $form-transition-property, border-color $form-transition-speed $form-transition-property;
+		}
 		width: $range-size;
 	}
 
@@ -595,21 +622,39 @@ select.input-field {
 		border-radius: $form-border-radius;
 		cursor: pointer;
 		height: $range-size;
+		@if $form-transition {
+			transition: background-color $form-transition-speed $form-transition-property, border-color $form-transition-speed $form-transition-property;
+		}
 		width: $range-size;
 	}
 
 	@if $form-hover {
-		@if $form-hover-border-color != $form-border-color {
+		&:hover {
 			&::-webkit-slider-thumb {
-				border-color: $form-hover-border-color;
+				@if $form-hover-background-color != $form-background-color {
+					background-color: $form-hover-background-color;
+				}
+				@if $form-hover-border-color != $form-border-color {
+					border-color: $form-hover-border-color;
+				}
 			}
 
 			&::-moz-range-thumb {
-				border-color: $form-hover-border-color;
+				@if $form-hover-background-color != $form-background-color {
+					background-color: $form-hover-background-color;
+				}
+				@if $form-hover-border-color != $form-border-color {
+					border-color: $form-hover-border-color;
+				}
 			}
 
 			&::-ms-thumb {
-				border-color: $form-hover-border-color;
+				@if $form-hover-background-color != $form-background-color {
+					background-color: $form-hover-background-color;
+				}
+				@if $form-hover-border-color != $form-border-color {
+					border-color: $form-hover-border-color;
+				}
 			}
 		}
 	}
@@ -617,30 +662,33 @@ select.input-field {
 	&:focus {
 		outline: none;
 
-		&::-webkit-slider-runnable-track {
-			background-color: $form-background-color;
-		}
-
-		&::-ms-fill-lower {
-			background-color: $form-background-color;
-		}
-
-		&::-ms-fill-upper {
-			background-color: $form-background-color;
-		}
-
 		@if $form-focus {
 			@if $form-focus-border-color != $form-border-color {
 				&::-webkit-slider-thumb {
-					border-color: $form-focus-border-color;
+					@if $form-focus-background-color != $form-background-color {
+						background-color: $form-focus-background-color;
+					}
+					@if $form-focus-border-color != $form-border-color {
+						border-color: $form-focus-border-color;
+					}
 				}
 
 				&::-moz-range-thumb {
-					border-color: $form-focus-border-color;
+					@if $form-focus-background-color != $form-background-color {
+						background-color: $form-focus-background-color;
+					}
+					@if $form-focus-border-color != $form-border-color {
+						border-color: $form-focus-border-color;
+					}
 				}
 
 				&::-ms-thumb {
-					border-color: $form-focus-border-color;
+					@if $form-focus-background-color != $form-background-color {
+						background-color: $form-focus-background-color;
+					}
+					@if $form-focus-border-color != $form-border-color {
+						border-color: $form-focus-border-color;
+					}
 				}
 			}
 		}
@@ -654,6 +702,7 @@ select.input-field {
 			@if $form-border-width-large != $form-border-width {
 				border-width: $form-border-width-large;
 			}
+			height: $range-size-large;
 		}
 
 		&::-moz-range-track {
@@ -663,6 +712,7 @@ select.input-field {
 			@if $form-border-width-large != $form-border-width {
 				border-width: $form-border-width-large;
 			}
+			height: $range-size-large;
 		}
 
 		&::-ms-track {
@@ -672,6 +722,7 @@ select.input-field {
 			@if $form-border-width-large != $form-border-width {
 				border-width: $form-border-width-large;
 			}
+			height: $range-size-large;
 		}
 
 		&::-ms-fill-lower {
@@ -735,6 +786,7 @@ select.input-field {
 			@if $form-border-width-small != $form-border-width {
 				border-width: $form-border-width-small;
 			}
+			height: $range-size-small;
 		}
 
 		&::-moz-range-track {
@@ -744,6 +796,7 @@ select.input-field {
 			@if $form-border-width-small != $form-border-width {
 				border-width: $form-border-width-small;
 			}
+			height: $range-size-small;
 		}
 
 		&::-ms-track {
@@ -753,6 +806,7 @@ select.input-field {
 			@if $form-border-width-small != $form-border-width {
 				border-width: $form-border-width-small;
 			}
+			height: $range-size-small;
 		}
 
 		&::-ms-fill-lower {
@@ -816,6 +870,7 @@ select.input-field {
 			@if $form-disabled-border-color != $form-border-color {
 				border-color: $form-disabled-border-color;
 			}
+			cursor: not-allowed;
 		}
 
 		&::-moz-range-track {
@@ -825,6 +880,7 @@ select.input-field {
 			@if $form-disabled-border-color != $form-border-color {
 				border-color: $form-disabled-border-color;
 			}
+			cursor: not-allowed;
 		}
 
 		&::-ms-track {
@@ -834,17 +890,6 @@ select.input-field {
 			@if $form-disabled-border-color != $form-border-color {
 				border-color: $form-disabled-border-color;
 			}
-		}
-
-		&::-webkit-slider-thumb {
-			cursor: not-allowed;
-		}
-
-		&::-moz-range-thumb {
-			cursor: not-allowed;
-		}
-
-		&::-ms-thumb {
 			cursor: not-allowed;
 		}
 	}
