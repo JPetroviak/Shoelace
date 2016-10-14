@@ -1,4 +1,5 @@
 // Forms
+// TODO Test IE Ranges
 fieldset {
 	border: none;
 	margin: 0;
@@ -20,8 +21,12 @@ legend {
 		}
 	}
 
-	.button {
+	.range {
 		margin-bottom: $spacing;
+
+		+ .input-helper {
+			margin-top: -$spacing-small;
+		}
 	}
 
 	.radio {
@@ -36,6 +41,10 @@ legend {
 		}
 	}
 
+	.button {
+		margin-bottom: $spacing;
+	}
+
 	&.large {
 		.input-field {
 			@if $form-border-radius-large != $form-border-radius {
@@ -48,15 +57,95 @@ legend {
 			padding: $form-spacing-vertical-large $form-spacing-horizontal-large;
 		}
 
-		.button {
-			@if $form-border-radius-large != $form-border-radius {
-				border-radius: $form-border-radius-large;
+		.range {
+			&::-webkit-slider-runnable-track {
+				@if $form-border-radius-large != $form-border-radius {
+					border-radius: $form-border-radius-large;
+				}
+				@if $form-border-width-large != $form-border-width {
+					border-width: $form-border-width-large;
+				}
+				height: $range-size-large;
+				width: $range-size-large;
 			}
-			@if $form-border-width-large != $form-border-width {
-				border-width: $form-border-width-large;
+			
+			&::-moz-range-track {
+				@if $form-border-radius-large != $form-border-radius {
+					border-radius: $form-border-radius-large;
+				}
+				@if $form-border-width-large != $form-border-width {
+					border-width: $form-border-width-large;
+				}
+				height: $range-size-large;
+				width: $range-size-large;
 			}
-			font-size: $font-size-large;
-			padding: $form-spacing-vertical-large $form-spacing-horizontal-large;
+
+			&::-ms-track {
+			  @if $form-border-radius-large != $form-border-radius {
+			  	border-radius: $form-border-radius-large;
+			  }
+			  @if $form-border-width-large != $form-border-width {
+			  	border-width: $form-border-width-large;
+			  }
+			  height: $range-size-large;
+			  width: $range-size-large;
+			}
+
+			&::-webkit-slider-thumb {
+			  @if $form-border-radius-large != $form-border-radius {
+			  	border-radius: $form-border-radius-large;
+			  }
+			  @if $form-border-width-large != $form-border-width {
+			  	border-width: $form-border-width-large;
+			  	margin-top: -$form-border-width-large;
+			  }
+			  height: $range-size-large;
+			  width: $range-size-large;
+			}
+
+			&::-moz-range-thumb {
+			  @if $form-border-radius-large != $form-border-radius {
+			  	border-radius: $form-border-radius-large;
+			  }
+			  @if $form-border-width-large != $form-border-width {
+			  	border-width: $form-border-width-large;
+			  }
+			  height: $range-size-large;
+			  width: $range-size-large;
+			}
+
+			&::-ms-fill-lower {
+			  @if $form-border-radius-large != $form-border-radius {
+			  	border-radius: $form-border-radius-large;
+			  }
+			  @if $form-border-width-large != $form-border-width {
+			  	border-width: $form-border-width-large;
+			  }
+			  height: $range-size-large;
+			  width: $range-size-large;
+			}
+
+			&::-ms-fill-upper {
+			  @if $form-border-radius-large != $form-border-radius {
+			  	border-radius: $form-border-radius-large;
+			  }
+			  @if $form-border-width-large != $form-border-width {
+			  	border-width: $form-border-width-large;
+			  }
+			  height: $range-size-large;
+			  width: $range-size-large;
+			}
+
+			&::-ms-thumb {
+				@if $form-border-radius-large != $form-border-radius {
+					border-radius: $form-border-radius-large;
+				}
+				@if $form-border-width-large != $form-border-width {
+					border-width: $form-border-width-large;
+				}
+				height: $range-size-large;
+				width: $range-size-large;
+			}
 		}
 
 		.radio + label:before {
@@ -77,6 +166,17 @@ legend {
 			height: $checkbox-size-large;
 			width: $checkbox-size-large;
 		}
+
+		.button {
+			@if $form-border-radius-large != $form-border-radius {
+				border-radius: $form-border-radius-large;
+			}
+			@if $form-border-width-large != $form-border-width {
+				border-width: $form-border-width-large;
+			}
+			font-size: $font-size-large;
+			padding: $form-spacing-vertical-large $form-spacing-horizontal-large;
+		}
 	}
 
 	&.small {
@@ -91,15 +191,95 @@ legend {
 			padding: $form-spacing-vertical-small $form-spacing-horizontal-small;
 		}
 
-		.button {
-			@if $form-border-radius-small != $form-border-radius {
-				border-radius: $form-border-radius-small;
+		.range {
+			&::-webkit-slider-runnable-track {
+				@if $form-border-radius-small != $form-border-radius {
+					border-radius: $form-border-radius-small;
+				}
+				@if $form-border-width-small != $form-border-width {
+					border-width: $form-border-width-small;
+				}
+				height: $range-size-small;
+				width: $range-size-small;
 			}
-			@if $form-border-width-small != $form-border-width {
-				border-width: $form-border-width-small;
+			
+			&::-moz-range-track {
+				@if $form-border-radius-small != $form-border-radius {
+					border-radius: $form-border-radius-small;
+				}
+				@if $form-border-width-small != $form-border-width {
+					border-width: $form-border-width-small;
+				}
+				height: $range-size-small;
+				width: $range-size-small;
 			}
-			font-size: $font-size-small;
-			padding: $form-spacing-vertical-small $form-spacing-horizontal-small;
+			
+			&::-ms-track {
+			  @if $form-border-radius-small != $form-border-radius {
+			  	border-radius: $form-border-radius-small;
+			  }
+			  @if $form-border-width-small != $form-border-width {
+			  	border-width: $form-border-width-small;
+			  }
+			  height: $range-size-small;
+			  width: $range-size-small;
+			}
+
+			&::-webkit-slider-thumb {
+			  @if $form-border-radius-small != $form-border-radius {
+			  	border-radius: $form-border-radius-small;
+			  }
+			  @if $form-border-width-small != $form-border-width {
+			  	border-width: $form-border-width-small;
+			  	margin-top: -$form-border-width-small;
+			  }
+			  height: $range-size-small;
+			  width: $range-size-small;
+			}
+
+			&::-moz-range-thumb {
+			  @if $form-border-radius-small != $form-border-radius {
+			  	border-radius: $form-border-radius-small;
+			  }
+			  @if $form-border-width-small != $form-border-width {
+			  	border-width: $form-border-width-small;
+			  }
+			  height: $range-size-small;
+			  width: $range-size-small;
+			}
+
+			&::-ms-fill-lower {
+			  @if $form-border-radius-small != $form-border-radius {
+			  	border-radius: $form-border-radius-small;
+			  }
+			  @if $form-border-width-small != $form-border-width {
+			  	border-width: $form-border-width-small;
+			  }
+			  height: $range-size-small;
+			  width: $range-size-small;
+			}
+
+			&::-ms-fill-upper {
+			  @if $form-border-radius-small != $form-border-radius {
+			  	border-radius: $form-border-radius-small;
+			  }
+			  @if $form-border-width-small != $form-border-width {
+			  	border-width: $form-border-width-small;
+			  }
+			  height: $range-size-small;
+			  width: $range-size-small;
+			}
+
+			&::-ms-thumb {
+				@if $form-border-radius-small != $form-border-radius {
+					border-radius: $form-border-radius-small;
+				}
+				@if $form-border-width-small != $form-border-width {
+					border-width: $form-border-width-small;
+				}
+				height: $range-size-small;
+				width: $range-size-small;
+			}
 		}
 
 		.radio + label:before {
@@ -119,6 +299,17 @@ legend {
 			}
 			height: $checkbox-size-small;
 			width: $checkbox-size-small;
+		}
+
+		.button {
+			@if $form-border-radius-small != $form-border-radius {
+				border-radius: $form-border-radius-small;
+			}
+			@if $form-border-width-small != $form-border-width {
+				border-width: $form-border-width-small;
+			}
+			font-size: $font-size-small;
+			padding: $form-spacing-vertical-small $form-spacing-horizontal-small;
 		}
 	}
 }
@@ -250,10 +441,6 @@ textarea {
 		padding: $form-spacing-vertical-small $form-spacing-horizontal-small;
 	}
 
-	option:disabled {
-		color: $color-default-lighter;
-	}
-
 	&:disabled {
 		@if $form-disabled-background-color != $form-background-color {
 			background-color: $form-disabled-background-color;
@@ -314,6 +501,10 @@ select.input-field {
 			}
 		}
 	}
+
+	option:disabled {
+		color: $form-disabled-color;
+	}
 }
 
 // input[type="color"].input-field {
@@ -355,7 +546,7 @@ select.input-field {
 
 .range {
   appearance: none;
-  margin: 0 0 $spacing;
+  margin: 0;
   width: 100%;
 
   &::-webkit-slider-runnable-track {
@@ -376,7 +567,6 @@ select.input-field {
     width: 100%;
   }
   
-  // TODO Test this
   &::-ms-track {
     background-color: transparent;
     border-color: transparent;
@@ -428,10 +618,27 @@ select.input-field {
     width: $range-size;
   }
 
-	// TODO Hover & Focus
   @if $form-hover {
 		@if $form-hover-border-color != $form-border-color {
-			
+			&::-webkit-slider-thumb {
+			  border-color: $form-hover-border-color;
+			}
+
+			&::-moz-range-thumb {
+				border-color: $form-hover-border-color;
+			}
+
+			&::-ms-fill-lower {
+				border-color: $form-hover-border-color;
+			}
+
+			&::-ms-fill-upper {
+				border-color: $form-hover-border-color;
+			}
+
+			&::-ms-thumb {
+				border-color: $form-hover-border-color;
+			}
 		}
   }
 
@@ -452,12 +659,242 @@ select.input-field {
 
     @if $form-focus {
   		@if $form-focus-border-color != $form-border-color {
-  			
+  			&::-webkit-slider-thumb {
+  			  border-color: $form-focus-border-color;
+  			}
+
+  			&::-moz-range-thumb {
+  				border-color: $form-focus-border-color;
+  			}
+
+  			&::-ms-fill-lower {
+  				border-color: $form-focus-border-color;
+  			}
+
+  			&::-ms-fill-upper {
+  				border-color: $form-focus-border-color;
+  			}
+
+  			&::-ms-thumb {
+  				border-color: $form-focus-border-color;
+  			}
   		}
     }
   }
 
-  // TODO Sizes
+  &.large {
+  	&::-webkit-slider-runnable-track {
+  		@if $form-border-radius-large != $form-border-radius {
+  			border-radius: $form-border-radius-large;
+  		}
+  		@if $form-border-width-large != $form-border-width {
+  			border-width: $form-border-width-large;
+  		}
+  		height: $range-size-large;
+  		width: $range-size-large;
+  	}
+  	
+  	&::-moz-range-track {
+  		@if $form-border-radius-large != $form-border-radius {
+  			border-radius: $form-border-radius-large;
+  		}
+  		@if $form-border-width-large != $form-border-width {
+  			border-width: $form-border-width-large;
+  		}
+  		height: $range-size-large;
+  		width: $range-size-large;
+  	}
+  	
+  	&::-ms-track {
+  	  @if $form-border-radius-large != $form-border-radius {
+  	  	border-radius: $form-border-radius-large;
+  	  }
+  	  @if $form-border-width-large != $form-border-width {
+  	  	border-width: $form-border-width-large;
+  	  }
+  	  height: $range-size-large;
+  	  width: $range-size-large;
+  	}
+
+  	&::-webkit-slider-thumb {
+  	  @if $form-border-radius-large != $form-border-radius {
+  	  	border-radius: $form-border-radius-large;
+  	  }
+  	  @if $form-border-width-large != $form-border-width {
+  	  	border-width: $form-border-width-large;
+  	  	margin-top: -$form-border-width-large;
+  	  }
+  	  height: $range-size-large;
+  	  width: $range-size-large;
+  	}
+
+  	&::-moz-range-thumb {
+  	  @if $form-border-radius-large != $form-border-radius {
+  	  	border-radius: $form-border-radius-large;
+  	  }
+  	  @if $form-border-width-large != $form-border-width {
+  	  	border-width: $form-border-width-large;
+  	  }
+  	  height: $range-size-large;
+  	  width: $range-size-large;
+  	}
+
+  	&::-ms-fill-lower {
+  	  @if $form-border-radius-large != $form-border-radius {
+  	  	border-radius: $form-border-radius-large;
+  	  }
+  	  @if $form-border-width-large != $form-border-width {
+  	  	border-width: $form-border-width-large;
+  	  }
+  	  height: $range-size-large;
+  	  width: $range-size-large;
+  	}
+
+  	&::-ms-fill-upper {
+  	  @if $form-border-radius-large != $form-border-radius {
+  	  	border-radius: $form-border-radius-large;
+  	  }
+  	  @if $form-border-width-large != $form-border-width {
+  	  	border-width: $form-border-width-large;
+  	  }
+  	  height: $range-size-large;
+  	  width: $range-size-large;
+  	}
+
+  	&::-ms-thumb {
+  		@if $form-border-radius-large != $form-border-radius {
+  			border-radius: $form-border-radius-large;
+  		}
+  		@if $form-border-width-large != $form-border-width {
+  			border-width: $form-border-width-large;
+  		}
+  		height: $range-size-large;
+  		width: $range-size-large;
+  	}
+  }
+
+  &.small {
+  	&::-webkit-slider-runnable-track {
+  		@if $form-border-radius-small != $form-border-radius {
+  			border-radius: $form-border-radius-small;
+  		}
+  		@if $form-border-width-small != $form-border-width {
+  			border-width: $form-border-width-small;
+  		}
+  		height: $range-size-small;
+  		width: $range-size-small;
+  	}
+  	
+  	&::-moz-range-track {
+  		@if $form-border-radius-small != $form-border-radius {
+  			border-radius: $form-border-radius-small;
+  		}
+  		@if $form-border-width-small != $form-border-width {
+  			border-width: $form-border-width-small;
+  		}
+  		height: $range-size-small;
+  		width: $range-size-small;
+  	}
+  	
+  	&::-ms-track {
+  	  @if $form-border-radius-small != $form-border-radius {
+  	  	border-radius: $form-border-radius-small;
+  	  }
+  	  @if $form-border-width-small != $form-border-width {
+  	  	border-width: $form-border-width-small;
+  	  }
+  	  height: $range-size-small;
+  	  width: $range-size-small;
+  	}
+
+  	&::-webkit-slider-thumb {
+  	  @if $form-border-radius-small != $form-border-radius {
+  	  	border-radius: $form-border-radius-small;
+  	  }
+  	  @if $form-border-width-small != $form-border-width {
+  	  	border-width: $form-border-width-small;
+  	  	margin-top: -$form-border-width-small;
+  	  }
+  	  height: $range-size-small;
+  	  width: $range-size-small;
+  	}
+
+  	&::-moz-range-thumb {
+  	  @if $form-border-radius-small != $form-border-radius {
+  	  	border-radius: $form-border-radius-small;
+  	  }
+  	  @if $form-border-width-small != $form-border-width {
+  	  	border-width: $form-border-width-small;
+  	  }
+  	  height: $range-size-small;
+  	  width: $range-size-small;
+  	}
+
+  	&::-ms-fill-lower {
+  	  @if $form-border-radius-small != $form-border-radius {
+  	  	border-radius: $form-border-radius-small;
+  	  }
+  	  @if $form-border-width-small != $form-border-width {
+  	  	border-width: $form-border-width-small;
+  	  }
+  	  height: $range-size-small;
+  	  width: $range-size-small;
+  	}
+
+  	&::-ms-fill-upper {
+  	  @if $form-border-radius-small != $form-border-radius {
+  	  	border-radius: $form-border-radius-small;
+  	  }
+  	  @if $form-border-width-small != $form-border-width {
+  	  	border-width: $form-border-width-small;
+  	  }
+  	  height: $range-size-small;
+  	  width: $range-size-small;
+  	}
+
+  	&::-ms-thumb {
+  		@if $form-border-radius-small != $form-border-radius {
+  			border-radius: $form-border-radius-small;
+  		}
+  		@if $form-border-width-small != $form-border-width {
+  			border-width: $form-border-width-small;
+  		}
+  		height: $range-size-small;
+  		width: $range-size-small;
+  	}
+  }
+
+  &:disabled {
+		&::-webkit-slider-runnable-track {
+			@if $form-disabled-background-color != $form-background-color {
+				background-color: $form-disabled-background-color;
+			}
+			@if $form-disabled-border-color != $form-border-color {
+				border-color: $form-disabled-border-color;
+			}
+			cursor: not-allowed;
+		}
+		
+		&::-moz-range-track {
+			@if $form-disabled-background-color != $form-background-color {
+				background-color: $form-disabled-background-color;
+			}
+			@if $form-disabled-border-color != $form-border-color {
+				border-color: $form-disabled-border-color;
+			}
+			cursor: not-allowed;
+		}
+		
+		&::-ms-track {
+			@if $form-disabled-background-color != $form-background-color {
+				background-color: $form-disabled-background-color;
+			}
+			@if $form-disabled-border-color != $form-border-color {
+				border-color: $form-disabled-border-color;
+			}
+			cursor: not-allowed;
+		}
+  }
 }
 
 .radio {
