@@ -744,6 +744,10 @@ select.input-field {
 				}
 			}
 		}
+
+		&::-moz-focus-outer {
+			border: 0;
+		}
 	}
 
 	&.large {

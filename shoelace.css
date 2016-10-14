@@ -1962,6 +1962,9 @@ select.input-field option:disabled {
 .range:focus::-ms-thumb {
   border-color: #007AFF;
 }
+.range:focus::-moz-focus-outer {
+  border: 0;
+}
 .range.large::-webkit-slider-runnable-track {
   border-radius: 5px;
   border-width: 2px;
