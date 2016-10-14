@@ -353,94 +353,83 @@ select.input-field {
 // 	}
 // }
 
+// TODO Sizes Match Checkboxes & Radios
 .range {
   appearance: none;
   margin: 0 0 $spacing;
   width: 100%;
 
   &::-webkit-slider-runnable-track {
-  	@if $form-border {
-    	border: $form-border-width $form-border-style $form-border-color;
-  	}
+    border: $form-border-width $form-border-style $form-border-color;
     border-radius: $form-border-radius;
     background-color: $form-background-color;
     cursor: pointer;
-    height: $spacing-small;
+    height: $spacing;
     width: 100%;
   }
-
-  &::-webkit-slider-thumb {
-    appearance: none;
-    background-color: $color-default-lightest;
-    @if $form-border {
-    	border: $form-border-width $form-border-style $form-border-color;
-  	}
-    border-radius: $form-border-radius;
-    cursor: pointer;
-    height: $spacing;
-    margin-top: -6px;
-    width: $spacing;
-  }
-
+  
   &::-moz-range-track {
     background-color: $form-background-color;
-    @if $form-border {
-    	border: $form-border-width $form-border-style $form-border-color;
-  	}
-    border-radius: $form-border-radius;
-    cursor: pointer;
-    height: $spacing-small;
-    width: 100%;
-  }
-
-  &::-moz-range-thumb {
-    background-color: $color-default-lightest;
-    @if $form-border {
-    	border: $form-border-width $form-border-style $form-border-color;
-  	}
+    border: $form-border-width $form-border-style $form-border-color;
     border-radius: $form-border-radius;
     cursor: pointer;
     height: $spacing;
-    width: $spacing;
+    width: 100%;
   }
-
+  
+  // TODO Test this
   &::-ms-track {
     background-color: transparent;
     border-color: transparent;
     border-width: $spacing 0;
     color: transparent;
     cursor: pointer;
-    height: $spacing-small;
+    height: $spacing;
     width: 100%;
   }
 
-  &::-ms-fill-lower {
-    background-color: $form-background-color;
-    @if $form-border {
-    	border: $form-border-width $form-border-style $form-border-color;
-  	}
-    border-radius: $form-border-radius;
-  }
-
-  &::-ms-fill-upper {
-    background-color: $form-background-color;
-    @if $form-border {
-    	border: $form-border-width $form-border-style $form-border-color;
-  	}
-    border-radius: $form-border-radius;
-  }
-
-  &::-ms-thumb {
+  &::-webkit-slider-thumb {
+    appearance: none;
     background-color: $color-default-lightest;
-    @if $form-border {
-    	border: $form-border-width $form-border-style $form-border-color;
-  	}
+    border: $form-border-width $form-border-style $form-border-color;
+    border-radius: $form-border-radius;
+    cursor: pointer;
+    height: $spacing;
+    margin-top: -$form-border-width;
+    width: $spacing;
+  }
+
+  &::-moz-range-thumb {
+    background-color: $color-default-lightest;
+    border: $form-border-width $form-border-style $form-border-color;
     border-radius: $form-border-radius;
     cursor: pointer;
     height: $spacing;
     width: $spacing;
   }
 
+  &::-ms-fill-lower {
+    background-color: $form-background-color;
+    border: $form-border-width $form-border-style $form-border-color;
+    border-radius: $form-border-radius;
+  }
+
+  &::-ms-fill-upper {
+    background-color: $form-background-color;
+    border: $form-border-width $form-border-style $form-border-color;
+    border-radius: $form-border-radius;
+  }
+
+  &::-ms-thumb {
+    background-color: $color-default-lightest;
+    border: $form-border-width $form-border-style $form-border-color;
+    border-radius: $form-border-radius;
+    cursor: pointer;
+    height: $spacing;
+    width: $spacing;
+  }
+
+	// TODO Hover & Focus
   &:focus {
     outline: none;
     
