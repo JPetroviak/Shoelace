@@ -30,13 +30,13 @@ fieldset {
 	}
 
 	.radio {
-		+ label {
+		+ .label {
 			margin-bottom: $spacing-small;
 		}
 	}
 
 	.checkbox {
-		+ label {
+		+ .label {
 			margin-bottom: $spacing-small;
 		}
 	}
@@ -141,7 +141,7 @@ fieldset {
 			}
 		}
 
-		.radio + label:before {
+		.radio + .label:before {
 			@if $form-border-width-large != $form-border-width {
 				border-width: $form-border-width-large;
 			}
@@ -149,7 +149,7 @@ fieldset {
 			width: $radio-size-large;
 		}
 
-		.checkbox + label:before {
+		.checkbox + .label:before {
 			@if $form-border-radius-large != $form-border-radius {
 				border-radius: $form-border-radius-large;
 			}
@@ -268,7 +268,7 @@ fieldset {
 			}
 		}
 
-		.radio + label:before {
+		.radio + .label:before {
 			@if $form-border-width-small != $form-border-width {
 				border-width: $form-border-width-small;
 			}
@@ -276,7 +276,7 @@ fieldset {
 			width: $radio-size-small;
 		}
 
-		.checkbox + label:before {
+		.checkbox + .label:before {
 			@if $form-border-radius-small != $form-border-radius {
 				border-radius: $form-border-radius-small;
 			}
@@ -956,11 +956,8 @@ textarea.input-field {
 .radio {
 	display: none;
 
-	+ label {
+	+ .label {
 		cursor: pointer;
-		display: inline-block;
-		touch-action: manipulation;
-		user-select: none;
 
 		&:before {
 			background-color: $form-background-color;
@@ -994,7 +991,7 @@ textarea.input-field {
 		}
 	}
 
-	&.large + label:before {
+	&.large + .label:before {
 		@if $form-border-width-large != $form-border-width {
 			border-width: $form-border-width-large;
 		}
@@ -1002,7 +999,7 @@ textarea.input-field {
 		width: $radio-size-large;
 	}
 
-	&.small + label:before {
+	&.small + .label:before {
 		@if $form-border-width-small != $form-border-width {
 			border-width: $form-border-width-small;
 		}
@@ -1010,15 +1007,14 @@ textarea.input-field {
 		width: $radio-size-small;
 	}
 
-	&:checked + label:before {
+	&:checked + .label:before {
 		background-color: $form-checked-color;
 		border-color: $form-checked-color;
 		box-shadow: inset 0 0 0 2px $form-background-color;
 	}
 
-	&:disabled + label {
+	&:disabled + .label {
 		cursor: not-allowed;
-		user-select: none;
 
 		&:before {
 			background-color: $color-default-lightest;
@@ -1029,7 +1025,7 @@ textarea.input-field {
 		}
 	}
 
-	&.error + label:before {
+	&.error + .label:before {
 		@if $form-error-background-color {
 			background-color: $form-error-background-color;
 		}
@@ -1044,11 +1040,8 @@ textarea.input-field {
 .checkbox {
 	display: none;
 
-	+ label {
+	+ .label {
 		cursor: pointer;
-		display: inline-block;
-		touch-action: manipulation;
-		user-select: none;
 
 		&:before {
 			background-color: $form-background-color;
@@ -1084,7 +1077,7 @@ textarea.input-field {
 		}
 	}
 
-	&.large + label:before {
+	&.large + .label:before {
 		@if $form-border-radius-large != $form-border-radius {
 			border-radius: $form-border-radius-large;
 		}
@@ -1095,7 +1088,7 @@ textarea.input-field {
 		width: $checkbox-size-large;
 	}
 
-	&.small + label:before {
+	&.small + .label:before {
 		@if $form-border-radius-small != $form-border-radius {
 			border-radius: $form-border-radius-small;
 		}
@@ -1106,15 +1099,14 @@ textarea.input-field {
 		width: $checkbox-size-small;
 	}
 
-	&:checked + label:before {
+	&:checked + .label:before {
 		background-color: $form-checked-color;
 		border-color: $form-checked-color;
 		box-shadow: inset 0 0 0 2px $form-background-color;
 	}
 
-	&:disabled + label {
+	&:disabled + .label {
 		cursor: not-allowed;
-		user-select: none;
 
 		&:before {
 			background-color: $color-default-lightest;
@@ -1124,7 +1116,7 @@ textarea.input-field {
 		}
 	}
 
-	&.error + label:before {
+	&.error + .label:before {
 		@if $form-error-background-color {
 			background-color: $form-error-background-color;
 		}
