@@ -126,12 +126,12 @@ $table-border-color: $border-color;
 $table-border-style: $border-style;
 $table-border-width: $border-width;
 $table-spacing: $spacing-small;
-$table-spacing-vertical: ($table-spacing * .9);
-$table-spacing-vertical-large: ($table-spacing-vertical * 1.25);
-$table-spacing-vertical-small: ($table-spacing-vertical * .85);
 $table-spacing-horizontal: $table-spacing;
 $table-spacing-horizontal-large: ($table-spacing-horizontal * 1.25);
 $table-spacing-horizontal-small: ($table-spacing-horizontal * .85);
+$table-spacing-vertical: ($table-spacing * .9);
+$table-spacing-vertical-large: ($table-spacing-vertical * 1.25);
+$table-spacing-vertical-small: ($table-spacing-vertical * .85);
 $table-transition: $transition; // true | false
 $table-transition-speed: $transition-speed;
 $table-transition-property: $transition-property;
@@ -222,7 +222,10 @@ $modal-border-radius: $border-radius;
 $modal-spacing: $spacing;
 
 // Accordions
+$accordion-background-color: transparent;
 $accordion-background-color-hover: $background-color-primary;
+$accordion-background-color-odd: $color-default-lightest;
+$accordion-background-color-even: $accordion-background-color-background-color;
 $accordion-border: $border;
 $accordion-border-color: $border-color;
 $accordion-border-style: $border-style;

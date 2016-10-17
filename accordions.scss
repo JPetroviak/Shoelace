@@ -1,4 +1,5 @@
 // Accordions
+// TODO Accordion Background Color
 .accordion-group {
 	margin-bottom: $spacing;
 
@@ -26,13 +27,13 @@
 	&.striped > .accordion {
     &:nth-child(odd) > {
       .accordion-toggle, .accordion-content {
-        background-color: $table-background-color-odd;
+        background-color: $accordion-background-color-odd;
       }
     }
 
     &:nth-child(even) > {
       .accordion-toggle, .accordion-content {
-        background-color: $table-background-color-even;
+        background-color: $accordion-background-color-even;
       }
     }
 	}
