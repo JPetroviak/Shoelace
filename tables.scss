@@ -105,7 +105,9 @@ table {
           display: block;
 
           > tr {
-            border-top: $table-border-width $table-border-style $table-border-color;
+            @if $table-border {
+              border-top: $table-border-width $table-border-style $table-border-color;
+            }
             display: block;
             padding: $table-spacing;
 
