@@ -2,7 +2,7 @@
 @mixin make-modal-sizes($breakpoints: $breakpoints) {
 	@each $class, $breakpoint in $breakpoints {
 	  &.#{$class} .modal-content {
-			max-width: $breakpoint;
+			max-width: ($breakpoint - ($container-spacing * 2));
 		}
 	}
 }
