@@ -53,7 +53,9 @@ fieldset {
 			@if $form-border-width-large != $form-border-width {
 				border-width: $form-border-width-large;
 			}
-			font-size: $font-size-large;
+			@if $form-font-size-large != $form-font-size {
+				font-size: $form-font-size-large;
+			}
 			padding: $form-spacing-vertical-large $form-spacing-horizontal-large;
 		}
 
@@ -167,7 +169,9 @@ fieldset {
 			@if $form-border-width-large != $form-border-width {
 				border-width: $form-border-width-large;
 			}
-			font-size: $font-size-large;
+			@if $form-font-size-large != $form-font-size {
+				font-size: $form-font-size-large;
+			}
 			padding: $form-spacing-vertical-large $form-spacing-horizontal-large;
 		}
 	}
@@ -180,7 +184,9 @@ fieldset {
 			@if $form-border-width-small != $form-border-width {
 				border-width: $form-border-width-small;
 			}
-			font-size: $font-size-small;
+			@if $form-font-size-small != $form-font-size {
+				font-size: $form-font-size-small;
+			}
 			padding: $form-spacing-vertical-small $form-spacing-horizontal-small;
 		}
 
@@ -294,7 +300,9 @@ fieldset {
 			@if $form-border-width-small != $form-border-width {
 				border-width: $form-border-width-small;
 			}
-			font-size: $font-size-small;
+			@if $form-font-size-small != $form-font-size {
+				font-size: $form-font-size-small;
+			}
 			padding: $form-spacing-vertical-small $form-spacing-horizontal-small;
 		}
 	}
@@ -332,7 +340,7 @@ label.label {
 	border-radius: $form-border-radius;
 	color: $form-color;
 	font-family: $font-family;
-	font-size: $font-size;
+	font-size: $form-font-size;
 	line-height: $line-height;
 	margin: 0;
 	padding: $form-spacing-vertical $form-spacing-horizontal;
@@ -388,7 +396,9 @@ label.label {
 		@if $form-border-width-large != $form-border-width {
 			border-width: $form-border-width-large;
 		}
-		font-size: $font-size-large;
+		@if $form-font-size-large != $form-font-size {
+			font-size: $form-font-size-large;
+		}
 		padding: $form-spacing-vertical-large $form-spacing-horizontal-large;
 	}
 
@@ -399,7 +409,9 @@ label.label {
 		@if $form-border-width-small != $form-border-width {
 			border-width: $form-border-width-small;
 		}
-		font-size: $font-size-small;
+		@if $form-font-size-small != $form-font-size {
+			font-size: $form-font-size-small;
+		}
 		padding: $form-spacing-vertical-small $form-spacing-horizontal-small;
 	}
 
@@ -1174,7 +1186,9 @@ textarea.input-field {
 		@if $form-border-width-large != $form-border-width {
 			border-width: $form-border-width-large;
 		}
-		font-size: $font-size-large;
+		@if $form-font-size-large != $form-font-size {
+			font-size: $form-font-size-large;
+		}
 		padding: $form-spacing-vertical-large $form-spacing-horizontal-large;
 	}
 
@@ -1185,7 +1199,9 @@ textarea.input-field {
 		@if $form-border-width-small != $form-border-width {
 			border-width: $form-border-width-small;
 		}
-		font-size: $font-size-small;
+		@if $form-font-size-small != $form-font-size {
+			font-size: $form-font-size-small;
+		}
 		padding: $form-spacing-vertical-small $form-spacing-horizontal-small;
 	}
 
