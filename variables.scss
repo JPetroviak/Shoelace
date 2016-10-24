@@ -129,7 +129,7 @@ $table-spacing: $spacing-small;
 $table-spacing-horizontal: $table-spacing;
 $table-spacing-horizontal-large: ($table-spacing-horizontal * 1.25);
 $table-spacing-horizontal-small: ($table-spacing-horizontal * .85);
-$table-spacing-vertical: ($table-spacing * .9);
+$table-spacing-vertical: $spacing-small;
 $table-spacing-vertical-large: ($table-spacing-vertical * 1.25);
 $table-spacing-vertical-small: ($table-spacing-vertical * .85);
 $table-transition: $transition; // true | false

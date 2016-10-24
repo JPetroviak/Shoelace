@@ -12,37 +12,36 @@ table {
     margin-bottom: $spacing;
     width: 100%;
 
-    caption, th, td {
+    > caption, > thead > th {
+      color: $table-header-color;
+      font-weight: normal;
+      text-align: left;
       padding: $table-spacing-vertical $table-spacing-horizontal;
       vertical-align: top;
     }
 
-    caption, th {
-      color: $table-header-color;
-      font-weight: normal;
-    }
-
-    @if $table-border {
-      > tbody > tr > td {
-        border-top: $table-border-width $table-border-style $table-border-color;
+    > tbody {
+      > tr > td {
+        @if $table-border {
+          border-top: $table-border-width $table-border-style $table-border-color;
+        }
+        padding: $table-spacing-vertical $table-spacing-horizontal;
+        vertical-align: top;
       }
     }
 
     &.large {
       > thead > tr > th, tbody > tr > td {
+        font-size: $font-size-large;
         padding: $table-spacing-vertical-large $table-spacing-horizontal-large;
       }
     }
 
     &.small {
       > thead > tr > th, tbody > tr > td {
+        font-size: $font-size-small;
         padding: $table-spacing-vertical-small $table-spacing-horizontal-small;
       }
-    }
-
-    > .table-row-link > tr:not(.table-row-hidden):hover > td:not(.table-cell-link-skip) {
-      cursor: pointer;
-      user-select: none;
     }
 
     &.striped > tbody > tr {
@@ -56,13 +55,20 @@ table {
     }
 
     &.toggle-row {
-      > tbody > tr.table-row-hidden > td {
-        border-top: none;
-        padding: 0;
+      > tbody {
+        &.table-row-link > tr:not(.table-row-hidden):hover > td:not(.table-cell-link-skip) {
+          cursor: pointer;
+          user-select: none;
+        }
 
-        > * {
-          display: none;
-          padding: $table-spacing;
+        > tr.table-row-hidden > td {
+          border-top: none;
+          padding: 0;
+
+          > * {
+            display: none;
+            padding: $table-spacing-vertical $table-spacing-horizontal;
+          }
         }
       }
 
@@ -104,12 +110,12 @@ table {
         > tbody {
           display: block;
 
-          > tr {
+          > tr:not(.table-row-hidden) {
             @if $table-border {
               border-top: $table-border-width $table-border-style $table-border-color;
             }
             display: block;
-            padding: $table-spacing;
+            padding: $table-spacing-vertical $table-spacing-horizontal;
 
             > td {
               border-top: none;
