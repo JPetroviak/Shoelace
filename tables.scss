@@ -15,6 +15,9 @@ table {
     > caption, > thead > th {
       color: $table-header-color;
       font-weight: normal;
+      @if $table-font-size != $font-size {
+        font-size: $table-font-size;
+      }
       text-align: left;
       padding: $table-spacing-vertical $table-spacing-horizontal;
       vertical-align: top;
@@ -25,6 +28,9 @@ table {
         @if $table-border {
           border-top: $table-border-width $table-border-style $table-border-color;
         }
+        @if $table-font-size != $font-size {
+          font-size: $table-font-size;
+        }
         padding: $table-spacing-vertical $table-spacing-horizontal;
         vertical-align: top;
       }
@@ -32,14 +38,18 @@ table {
 
     &.large {
       > thead > tr > th, tbody > tr > td {
-        font-size: $font-size-large;
+        @if $table-font-size-large != $table-font-size {
+          font-size: $table-font-size-large;
+        }
         padding: $table-spacing-vertical-large $table-spacing-horizontal-large;
       }
     }
 
     &.small {
       > thead > tr > th, tbody > tr > td {
-        font-size: $font-size-small;
+        @if $table-font-size-small != $table-font-size {
+          font-size: $table-font-size-small;
+        }
         padding: $table-spacing-vertical-small $table-spacing-horizontal-small;
       }
     }
