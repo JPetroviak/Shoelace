@@ -84,7 +84,7 @@ $colors: (
 }
 
 // Global
-$body-background-color: #FFFFFF;
+$body-background-color: $background-color-default;
 $body-color: $color-default;
 $link-color: $color-primary;
 $link-hover-color: $color-secondary;
