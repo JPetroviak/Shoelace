@@ -17,23 +17,17 @@
     margin-top: $spacing-small;
   }
   
-  &.success {
-    background-color: $background-color-success;
-    border-color: $color-success;
-  }
-  
-  &.information {
-    background-color: $background-color-information;
-    border-color: $color-information;
-  }
-  
-  &.warning {
-    background-color: $background-color-warning;
-    border-color: $color-warning;
-  }
-  
-  &.danger {
-    background-color: $background-color-danger;
-    border-color: $color-danger;
+  @each $color-key, $color-value in $colors {
+    @each $tone-key, $tone-value in $color-value {
+      &.#{$color-key} {
+        @if $tone-key == light {
+          background-color: $tone-value;
+        }
+        @if $tone-key == dark {
+          border-color: $tone-value;
+          color: $tone-value;
+        }
+      }
+    }
   }
 }

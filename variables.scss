@@ -16,12 +16,6 @@ $color-information: #5AC8FA;
 $color-warning: #FFCC00;
 $color-danger: #FF3B30;
 $background-color-default: #FFFFFF;
-$background-color-primary: rgba($color-primary, .25);
-$background-color-secondary: rgba($color-secondary, .25);
-$background-color-success: rgba($color-success, .25);
-$background-color-information: rgba($color-information, .25);
-$background-color-warning: rgba($color-warning, .25);
-$background-color-danger: rgba($color-danger, .25);
 
 @if $theme-dark {
 	$color-default: #FFFFFF;
@@ -38,23 +32,42 @@ $background-color-danger: rgba($color-danger, .25);
 }
 
 $colors: (
-	default: $color-default,
-	primary: $color-primary,
-	secondary: $color-secondary,
-	success: $color-success,
-  information: $color-information,
-	warning: $color-warning,
-	danger: $color-danger
-);
-
-$background-colors: (
-	default: $background-color-default,
-	primary: $background-color-primary,
-	secondary: $background-color-secondary,
-	success: $background-color-success,
-  information: $background-color-information,
-	warning: $background-color-warning,
-	danger: $background-color-danger
+  primary: (
+    base: $color-primary,
+    light: rgba($color-primary, .25),
+    dark: darken($color-primary, 10%),
+    darker: darken($color-primary, 20%)
+  ),
+  secondary: (
+    base: $color-secondary,
+    light: rgba($color-secondary, .25),
+    dark: darken($color-secondary, 10%),
+    darker: darken($color-secondary, 20%)
+  ),
+  success: (
+    base: $color-success,
+    light: rgba($color-success, .25),
+    dark: darken($color-success, 10%),
+    darker: darken($color-success, 20%)
+  ),
+  information: (
+    base: $color-information,
+    light: rgba($color-information, .25),
+    dark: darken($color-information, 10%),
+    darker: darken($color-information, 20%)
+  ),
+  warning: (
+    base: $color-warning,
+    light: rgba($color-warning, .25),
+    dark: darken($color-warning, 10%),
+    darker: darken($color-warning, 20%)
+  ),
+  danger: (
+    base: $color-danger,
+    light: rgba($color-danger, .25),
+    dark: darken($color-danger, 10%),
+    darker: darken($color-danger, 20%)
+  )
 );
 
 // Global
@@ -111,13 +124,13 @@ $breakpoints: (
 );
 
 // Grid System
+$container-spacing: $spacing;
 $grid-count: 12;
 $grid-spacing: $spacing;
-$container-spacing: $spacing;
 
 // Tables
 $table-background-color: transparent;
-$table-background-color-hover: $background-color-primary;
+$table-background-color-hover: map-get(map-get($colors, primary), light);;
 $table-background-color-odd: $color-default-lightest;
 $table-background-color-even: $table-background-color;
 $table-header-color: $color-default-light;
@@ -229,7 +242,7 @@ $modal-spacing: $spacing;
 
 // Accordions
 $accordion-background-color: transparent;
-$accordion-background-color-hover: $background-color-primary;
+$accordion-background-color-hover: map-get(map-get($colors, primary), light);;
 $accordion-background-color-odd: $color-default-lightest;
 $accordion-background-color-even: $accordion-background-color;
 $accordion-border: $border;

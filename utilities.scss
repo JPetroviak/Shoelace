@@ -1,14 +1,22 @@
 // Utilities
-@each $class, $background-color in $background-colors {
-  .background-color-#{$class} {
-		background-color: $background-color;
-	}
+@each $color-key, $color-value in $colors {
+  @each $tone-key, $tone-value in $color-value {
+  	@if $tone-key == light {
+  		.background-color-#{$color-key} {
+  			background-color: $tone-value;
+  		}
+  	}
+  }
 }
 
-@each $class, $color in $colors {
-  .color-#{$class} {
-		color: $color;
-	}
+@each $color-key, $color-value in $colors {
+  @each $tone-key, $tone-value in $color-value {
+		@if $tone-key == base {
+			.color-#{$color-key} {
+				color: $tone-value;
+			}
+		}
+  }
 }
 
 .hidden, [hidden], template {
