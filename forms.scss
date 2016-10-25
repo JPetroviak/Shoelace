@@ -481,11 +481,11 @@ select.input-field {
 			}
 		}
 	}
-	
+
 	&:focus {
 		&:-moz-focusring {
-	    color: transparent;
-	    text-shadow: 0 0 0 #000;
+			color: transparent;
+			text-shadow: 0 0 0 #000;
 		}
 
 		@if $form-focus {
@@ -1235,25 +1235,28 @@ textarea.input-field {
 		color: $form-color;
 	}
 
-	@each $color-key, $color-value in $colors {    
-	  &.#{$color-key} {
-	  	background-color: color($color-key, base);
-	  	border-color: color($color-key, base);
-	  	color: $form-background-color;
+	@each $color-key, $color-value in $colors {
+		&.#{$color-key} {
+			background-color: color($color-key, base);
+			border-color: color($color-key, base);
+			color: $background-color-default;
 
-	  	@if $form-hover {
-	  	  &:hover:enabled {
-  	      background-color: color($color-key, dark);
-  	      border-color: color($color-key, dark);
-	  	  }
-	  	}
+			&:hover:enabled {
+				@if $form-hover {
+					background-color: color($color-key, dark);
+					border-color: color($color-key, dark);
+				}
+				color: $background-color-default;
+			}
 
-	  	@if $form-focus {
-	  	  &:focus, &:active {
-	  	    background-color: color($color-key, darker);
-  	      border-color: color($color-key, darker);
-	  	  }
-	  	}
+			&:focus, &:active {
+				@if $form-focus {
+					background-color: color($color-key, darker);
+					border-color: color($color-key, darker);
+
+				}
+				color: $background-color-default;
+			}
 		}
 	}
 
@@ -1278,28 +1281,29 @@ textarea.input-field {
 				}
 			}
 
-			@each $color-key, $color-value in $colors {    
-			  &.#{$color-key} {
-			  	border-color: color($color-key, base);
-			  	color: color($color-key, base);
+			@each $color-key, $color-value in $colors {
+				&.#{$color-key} {
+					border-color: color($color-key, base);
+					color: color($color-key, base);
 
-		      @if $form-hover {
-		        &:hover:enabled {
-	            background-color: color($color-key, base);
-	            border-color: color($color-key, base);
-	            color: $form-background-color;
-		        }
-		      }
+					&:hover:enabled {
+						@if $form-hover {
+							background-color: color($color-key, base);
+							border-color: color($color-key, base);
 
-		      @if $form-focus {
-		        &:focus, &:active {
-	            background-color: color($color-key, base);
-	            border-color: color($color-key, base);
-	            color: $form-background-color;
-		        }
-		      }
-		  	}
-	  	}
+						}
+						color: $background-color-default;
+					}
+
+					&:focus, &:active {
+						@if $form-focus {
+							background-color: color($color-key, base);
+							border-color: color($color-key, base);
+						}
+						color: $background-color-default;
+					}
+				}
+			}
 		}
 	}
 
