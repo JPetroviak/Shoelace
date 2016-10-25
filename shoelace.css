@@ -2219,96 +2219,91 @@ textarea.input-field {
 .button.full {
   width: 100%;
 }
-.button:hover {
+.button:hover:enabled {
   background-color: #b3b3ba;
   border-color: #b3b3ba;
   color: #000000;
 }
-.button:focus, .button:active {
+.button:focus:enabled, .button:active:enabled {
   background-color: #9999a1;
   border-color: #9999a1;
-  color: #000000;
-}
-.button:disabled {
-  background-color: #CECED2;
-  border-color: #CECED2;
   color: #000000;
 }
 .button.primary {
   background-color: #007AFF;
   border-color: #007AFF;
-  color: #007AFF;
+  color: #FFFFFF;
 }
 .button.primary:hover:enabled {
   background-color: #0062cc;
   border-color: #0062cc;
 }
-.button.primary:focus:enabled, .button.primary:active:enabled {
+.button.primary:focus, .button.primary:active {
   background-color: #004999;
   border-color: #004999;
 }
 .button.secondary {
   background-color: #5856D9;
   border-color: #5856D9;
-  color: #5856D9;
+  color: #FFFFFF;
 }
 .button.secondary:hover:enabled {
   background-color: #312ece;
   border-color: #312ece;
 }
-.button.secondary:focus:enabled, .button.secondary:active:enabled {
+.button.secondary:focus, .button.secondary:active {
   background-color: #2725a4;
   border-color: #2725a4;
 }
 .button.success {
   background-color: #4CD964;
   border-color: #4CD964;
-  color: #4CD964;
+  color: #FFFFFF;
 }
 .button.success:hover:enabled {
   background-color: #2ac845;
   border-color: #2ac845;
 }
-.button.success:focus:enabled, .button.success:active:enabled {
+.button.success:focus, .button.success:active {
   background-color: #219e37;
   border-color: #219e37;
 }
 .button.information {
   background-color: #5AC8FA;
   border-color: #5AC8FA;
-  color: #5AC8FA;
+  color: #FFFFFF;
 }
 .button.information:hover:enabled {
   background-color: #29b8f9;
   border-color: #29b8f9;
 }
-.button.information:focus:enabled, .button.information:active:enabled {
+.button.information:focus, .button.information:active {
   background-color: #07a1e7;
   border-color: #07a1e7;
 }
 .button.warning {
   background-color: #FFCC00;
   border-color: #FFCC00;
-  color: #FFCC00;
+  color: #FFFFFF;
 }
 .button.warning:hover:enabled {
   background-color: #cca300;
   border-color: #cca300;
 }
-.button.warning:focus:enabled, .button.warning:active:enabled {
+.button.warning:focus, .button.warning:active {
   background-color: #997a00;
   border-color: #997a00;
 }
 .button.danger {
   background-color: #FF3B30;
   border-color: #FF3B30;
-  color: #FF3B30;
+  color: #FFFFFF;
 }
 .button.danger:hover:enabled {
   background-color: #fc0d00;
   border-color: #fc0d00;
 }
-.button.danger:focus:enabled, .button.danger:active:enabled {
+.button.danger:focus, .button.danger:active {
   background-color: #c90b00;
   border-color: #c90b00;
 }
@@ -2322,7 +2317,7 @@ textarea.input-field {
 .button.inverted:hover:enabled {
   background-color: #CECED2;
 }
-.button.inverted:focus:enabled, .button.inverted:active:enabled {
+.button.inverted:focus, .button.inverted:active {
   background-color: #CECED2;
 }
 .button.inverted.primary {
@@ -2334,7 +2329,7 @@ textarea.input-field {
   border-color: #007AFF;
   color: #FFFFFF;
 }
-.button.inverted.primary:focus:enabled, .button.inverted.primary:active:enabled {
+.button.inverted.primary:focus, .button.inverted.primary:active {
   background-color: #007AFF;
   border-color: #007AFF;
   color: #FFFFFF;
@@ -2348,7 +2343,7 @@ textarea.input-field {
   border-color: #5856D9;
   color: #FFFFFF;
 }
-.button.inverted.secondary:focus:enabled, .button.inverted.secondary:active:enabled {
+.button.inverted.secondary:focus, .button.inverted.secondary:active {
   background-color: #5856D9;
   border-color: #5856D9;
   color: #FFFFFF;
@@ -2362,7 +2357,7 @@ textarea.input-field {
   border-color: #4CD964;
   color: #FFFFFF;
 }
-.button.inverted.success:focus:enabled, .button.inverted.success:active:enabled {
+.button.inverted.success:focus, .button.inverted.success:active {
   background-color: #4CD964;
   border-color: #4CD964;
   color: #FFFFFF;
@@ -2376,7 +2371,7 @@ textarea.input-field {
   border-color: #5AC8FA;
   color: #FFFFFF;
 }
-.button.inverted.information:focus:enabled, .button.inverted.information:active:enabled {
+.button.inverted.information:focus, .button.inverted.information:active {
   background-color: #5AC8FA;
   border-color: #5AC8FA;
   color: #FFFFFF;
@@ -2390,7 +2385,7 @@ textarea.input-field {
   border-color: #FFCC00;
   color: #FFFFFF;
 }
-.button.inverted.warning:focus:enabled, .button.inverted.warning:active:enabled {
+.button.inverted.warning:focus, .button.inverted.warning:active {
   background-color: #FFCC00;
   border-color: #FFCC00;
   color: #FFFFFF;
@@ -2404,7 +2399,7 @@ textarea.input-field {
   border-color: #FF3B30;
   color: #FFFFFF;
 }
-.button.inverted.danger:focus:enabled, .button.inverted.danger:active:enabled {
+.button.inverted.danger:focus, .button.inverted.danger:active {
   background-color: #FF3B30;
   border-color: #FF3B30;
   color: #FFFFFF;
