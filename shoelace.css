@@ -1831,7 +1831,7 @@ input[type="search"].input-field::-webkit-search-cancel-button, input[type="sear
 }
 
 select.input-field {
-  background-image: url('data:image/svg+xml,<svg%20width%3D"10"%20height%3D"5"%20viewBox%3D"169%20177%2010%205"%20xmlns%3D"http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg"><path%20fill%3D"%23CECED2"%20fill-rule%3D"evenodd"%20d%3D"M174%20182l5-5h-10"%2F><%2Fsvg>');
+  background-image: url('data:image/svg+xml,<svg%20width%3D"10"%20height%3D"5"%20viewBox%3D"169%20177%2010%205"%20xmlns%3D"http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg"><path%20fill%3D"%23000000"%20fill-rule%3D"evenodd"%20d%3D"M174%20182l5-5h-10"%2F><%2Fsvg>');
   background-position: right 10px center;
   background-repeat: no-repeat;
   background-size: 10px 5px;
@@ -1841,7 +1841,7 @@ select.input-field::-ms-expand {
   display: none;
 }
 select.input-field:focus {
-  background-image: url('data:image/svg+xml,<svg%20width%3D"10"%20height%3D"5"%20viewBox%3D"169%20177%2010%205"%20xmlns%3D"http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg"><path%20fill%3D"%23007AFF"%20fill-rule%3D"evenodd"%20d%3D"M174%20182l5-5h-10"%2F><%2Fsvg>');
+  background-image: url('data:image/svg+xml,<svg%20width%3D"10"%20height%3D"5"%20viewBox%3D"169%20177%2010%205"%20xmlns%3D"http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg"><path%20fill%3D"%23000000"%20fill-rule%3D"evenodd"%20d%3D"M174%20182l5-5h-10"%2F><%2Fsvg>');
 }
 select.input-field:focus:-moz-focusring {
   color: transparent;
@@ -2487,12 +2487,12 @@ progress.progress[value] {
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
-  background-color: #FFFFFF;
+  background-color: transparent;
   border: 1px solid #CECED2;
   border-radius: 4px;
 }
 progress.progress[value]::-webkit-progress-bar {
-  background-color: #FFFFFF;
+  background-color: transparent;
   border-radius: 4px;
 }
 progress.progress[value]::-webkit-progress-value {
