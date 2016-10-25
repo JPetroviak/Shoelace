@@ -419,8 +419,10 @@ label.label {
 		@if $form-disabled-background-color != $form-background-color {
 			background-color: $form-disabled-background-color;
 		}
-		@if $form-disabled-border-color != $form-border-color {
-			border-color: $form-disabled-border-color;
+		@if $form-border {
+			@if $form-disabled-border-color != $form-border-color {
+				border-color: $form-disabled-border-color;
+			}
 		}
 		@if $form-disabled-color != $form-color {
 			color: $form-disabled-color;
@@ -1029,10 +1031,13 @@ textarea.input-field {
 		cursor: not-allowed;
 
 		&:before {
-			background-color: $color-default-lightest;
-
+			@if $form-disabled-background-color != $form-background-color {
+				background-color: $form-disabled-background-color;
+			}
 			@if $form-border {
-				border-color: $form-border-color;
+				@if $form-disabled-border-color != $form-border-color {
+					border-color: $form-disabled-border-color;
+				}
 			}
 		}
 	}
@@ -1121,9 +1126,13 @@ textarea.input-field {
 		cursor: not-allowed;
 
 		&:before {
-			background-color: $color-default-lightest;
+			@if $form-disabled-background-color != $form-background-color {
+				background-color: $form-disabled-background-color;
+			}
 			@if $form-border {
-				border-color: $form-border-color;
+				@if $form-disabled-border-color != $form-border-color {
+					border-color: $form-disabled-border-color;
+				}
 			}
 		}
 	}
@@ -1214,7 +1223,7 @@ textarea.input-field {
 			background-color: darken($color-default-lighter, 10%);
 			border-color: darken($color-default-lighter, 10%);
 		}
-		color: $color-default;
+		color: $form-color;
 	}
 
 	&:focus:enabled, &:active:enabled {
@@ -1222,7 +1231,7 @@ textarea.input-field {
 			background-color: darken($color-default-lighter, 20%);
 			border-color: darken($color-default-lighter, 20%);
 		}
-		color: $color-default;
+		color: $form-color;
 	}
 
 	@each $color-key, $color-value in $colors {    
@@ -1250,8 +1259,8 @@ textarea.input-field {
 	@if $form-border {
 		&.inverted {
 			background-color: $form-background-color;
-			border-color: $color-default-lighter;
-			color: $color-default;
+			border-color: $form-border-color;
+			color: $form-color;
 			@if $form-transition {
 				transition: background-color $form-transition-speed $form-transition-property, color $form-transition-speed $form-transition-property;
 			}

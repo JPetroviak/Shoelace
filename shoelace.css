@@ -2108,7 +2108,6 @@ textarea.input-field {
 }
 .radio:disabled + .label:before {
   background-color: #EFEFF4;
-  border-color: #CECED2;
 }
 .radio.error + .label:before {
   background-color: #FFFFFF;
@@ -2161,7 +2160,6 @@ textarea.input-field {
 }
 .checkbox:disabled + .label:before {
   background-color: #EFEFF4;
-  border-color: #CECED2;
 }
 .checkbox.error + .label:before {
   background-color: #FFFFFF;
