@@ -25,7 +25,7 @@
 			.date {
 				background-color: $color-default;
 				border-radius: 50%;
-				color: $background-color-default;
+				color: $body-background-color;
 			}
 
 			.event-list {
@@ -47,7 +47,7 @@
 		&.today .date {
 			background-color: $color-primary;
 			border-radius: 50%;
-			color: $background-color-default;
+			color: $body-background-color;
 		}
 
 		&.off .date {

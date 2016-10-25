@@ -1237,7 +1237,7 @@ textarea.input-field {
 	      @if $tone-key == base {
 	        background-color: $tone-value;
 	        border-color: $tone-value;
-	        color: $background-color-default;
+	        color: $body-background-color;
 	      }
 	      
 	      @if $form-hover {

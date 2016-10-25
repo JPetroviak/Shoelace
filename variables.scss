@@ -15,7 +15,6 @@ $color-success: #4CD964;
 $color-information: #5AC8FA;
 $color-warning: #FFCC00;
 $color-danger: #FF3B30;
-$background-color-default: #FFFFFF;
 
 @if $theme-dark {
 	$color-default: #FFFFFF;
@@ -71,12 +70,12 @@ $colors: (
 );
 
 // Global
-$body-background-color: $background-color-default;
+$body-background-color: #FFFFFF;
 $body-color: $color-default;
 $link-color: $color-primary;
 $link-hover-color: $color-secondary;
 $selection-background-color: $color-primary;
-$selection-color: $background-color-default;
+$selection-color: $body-background-color;
 
 // Components
 $border: true; // true | false
@@ -153,7 +152,7 @@ $table-transition-speed: $transition-speed;
 $table-transition-property: $transition-property;
 
 // Forms
-$form-background-color: $background-color-default;
+$form-background-color: $body-background-color;
 $form-border: $border; // true | false
 $form-border-color: $border-color;
 $form-border-style: $border-style;
@@ -218,7 +217,7 @@ $alert-border-radius: $border-radius;
 $alert-spacing: $spacing-small;
 
 // Progress
-$progress-background-color: $background-color-default;
+$progress-background-color: $body-background-color;
 $progress-border: $border; // true | false
 $progress-border-color: $border-color;
 $progress-border-style: $border-style;
@@ -232,7 +231,7 @@ $progress-color: $color-default-lightest;
 
 // Modals
 $modal-backdrop-background-color: rgba($color-default, .5);
-$modal-background-color: $background-color-default;
+$modal-background-color: $body-background-color;
 $modal-border: $border; // true | false
 $modal-border-color: $border-color;
 $modal-border-style: $border-style;
