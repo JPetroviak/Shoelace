@@ -65,7 +65,7 @@ dfn {
 }
 
 mark {
-	background-color: map-get(map-get($colors, warning), light);
+	background-color: color(warning, light);
 	color: $color-default;
 }
 
