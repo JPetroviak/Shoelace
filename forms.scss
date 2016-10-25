@@ -1231,34 +1231,26 @@ textarea.input-field {
 		color: $color-default;
 	}
 
-	@each $color-key, $color-value in $colors {
-	  @each $tone-key, $tone-value in $color-value {
-	    &.#{$color-key} {
-	      @if $tone-key == base {
-	        background-color: $tone-value;
-	        border-color: $tone-value;
-	        color: $body-background-color;
-	      }
-	      
-	      @if $form-hover {
-	        &:hover:enabled {
-	          @if $tone-key == dark {
-	            background-color: $tone-value;
-	            border-color: $tone-value;
-	          }
-	        }
-	      }
+	@each $color-key, $color-value in $colors {    
+	  &.#{$color-key} {
+	  	background-color: color($color-key, base);
+	  	border-color: color($color-key, base);
+	  	color: color($color-key, base);
 
-	      @if $form-focus {
-	        &:focus:enabled, &:active:enabled {
-	          @if $tone-key == darker {
-	            background-color: $tone-value;
-	            border-color: $tone-value;
-	          }
-	        }
-	      }
-	    }
-	  }
+	  	@if $form-hover {
+	  	  &:hover:enabled {
+  	      background-color: color($color-key, dark);
+  	      border-color: color($color-key, dark);
+	  	  }
+	  	}
+
+	  	@if $form-focus {
+	  	  &:focus:enabled, &:active:enabled {
+	  	    background-color: color($color-key, darker);
+  	      border-color: color($color-key, darker);
+	  	  }
+	  	}
+		}
 	}
 
 	@if $form-border {
@@ -1282,32 +1274,28 @@ textarea.input-field {
 				}
 			}
 
-			@each $color-key, $color-value in $colors {
-			  @each $tone-key, $tone-value in $color-value {
-			    &.#{$color-key} {
-			      @if $tone-key == base {
-			        border-color: $tone-value;
-			        color: $tone-value;
+			@each $color-key, $color-value in $colors {    
+			  &.#{$color-key} {
+			  	border-color: color($color-key, base);
+			  	color: color($color-key, base);
 
-      	      @if $form-hover {
-      	        &:hover:enabled {
-                  background-color: $tone-value;
-                  border-color: $tone-value;
-                  color: $form-background-color;
-      	        }
-      	      }
+		      @if $form-hover {
+		        &:hover:enabled {
+	            background-color: color($color-key, base);
+	            border-color: color($color-key, base);
+	            color: $form-background-color;
+		        }
+		      }
 
-      	      @if $form-focus {
-      	        &:focus:enabled, &:active:enabled {
-                  background-color: $tone-value;
-                  border-color: $tone-value;
-                  color: $form-background-color;
-      	        }
-      	      }
-			      }
-			    }
-			  }
-			}
+		      @if $form-focus {
+		        &:focus:enabled, &:active:enabled {
+	            background-color: color($color-key, base);
+	            border-color: color($color-key, base);
+	            color: $form-background-color;
+		        }
+		      }
+		  	}
+	  	}
 		}
 	}
 

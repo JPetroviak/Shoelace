@@ -2237,7 +2237,7 @@ textarea.input-field {
 .button.primary {
   background-color: #007AFF;
   border-color: #007AFF;
-  color: #FFFFFF;
+  color: #007AFF;
 }
 .button.primary:hover:enabled {
   background-color: #0062cc;
@@ -2250,7 +2250,7 @@ textarea.input-field {
 .button.secondary {
   background-color: #5856D9;
   border-color: #5856D9;
-  color: #FFFFFF;
+  color: #5856D9;
 }
 .button.secondary:hover:enabled {
   background-color: #312ece;
@@ -2263,7 +2263,7 @@ textarea.input-field {
 .button.success {
   background-color: #4CD964;
   border-color: #4CD964;
-  color: #FFFFFF;
+  color: #4CD964;
 }
 .button.success:hover:enabled {
   background-color: #2ac845;
@@ -2276,7 +2276,7 @@ textarea.input-field {
 .button.information {
   background-color: #5AC8FA;
   border-color: #5AC8FA;
-  color: #FFFFFF;
+  color: #5AC8FA;
 }
 .button.information:hover:enabled {
   background-color: #29b8f9;
@@ -2289,7 +2289,7 @@ textarea.input-field {
 .button.warning {
   background-color: #FFCC00;
   border-color: #FFCC00;
-  color: #FFFFFF;
+  color: #FFCC00;
 }
 .button.warning:hover:enabled {
   background-color: #cca300;
@@ -2302,7 +2302,7 @@ textarea.input-field {
 .button.danger {
   background-color: #FF3B30;
   border-color: #FF3B30;
-  color: #FFFFFF;
+  color: #FF3B30;
 }
 .button.danger:hover:enabled {
   background-color: #fc0d00;
@@ -2441,43 +2441,31 @@ button.button::-moz-focus-inner {
 }
 .alert.primary {
   background-color: rgba(0, 122, 255, 0.25);
-}
-.alert.primary {
   border-color: #0062cc;
   color: #0062cc;
 }
 .alert.secondary {
   background-color: rgba(88, 86, 217, 0.25);
-}
-.alert.secondary {
   border-color: #312ece;
   color: #312ece;
 }
 .alert.success {
   background-color: rgba(76, 217, 100, 0.25);
-}
-.alert.success {
   border-color: #2ac845;
   color: #2ac845;
 }
 .alert.information {
   background-color: rgba(90, 200, 250, 0.25);
-}
-.alert.information {
   border-color: #29b8f9;
   color: #29b8f9;
 }
 .alert.warning {
   background-color: rgba(255, 204, 0, 0.25);
-}
-.alert.warning {
   border-color: #cca300;
   color: #cca300;
 }
 .alert.danger {
   background-color: rgba(255, 59, 48, 0.25);
-}
-.alert.danger {
   border-color: #fc0d00;
   color: #fc0d00;
 }

@@ -17,17 +17,11 @@
     margin-top: $spacing-small;
   }
   
-  @each $color-key, $color-value in $colors {
-    @each $tone-key, $tone-value in $color-value {
-      &.#{$color-key} {
-        @if $tone-key == light {
-          background-color: $tone-value;
-        }
-        @if $tone-key == dark {
-          border-color: $tone-value;
-          color: $tone-value;
-        }
-      }
+  @each $color-key, $color-value in $colors {    
+    &.#{$color-key} {
+      background-color: color($color-key, light);
+      border-color: color($color-key, dark);
+      color: color($color-key, dark);
     }
   }
 }
