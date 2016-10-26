@@ -2218,105 +2218,161 @@ textarea.input-field {
 .button.full {
   width: 100%;
 }
-.button:hover:not([disabled]) {
+.button:hover {
   background-color: #b3b3ba;
   border-color: #b3b3ba;
   color: #000000;
+}
+.button:hover:disabled {
+  background-color: #CECED2;
+  border-color: #CECED2;
 }
 .button:focus, .button:active {
   background-color: #9999a1;
   border-color: #9999a1;
   color: #000000;
 }
+.button:focus:disabled, .button:active:disabled {
+  background-color: #CECED2;
+  border-color: #CECED2;
+}
 .button.primary {
   background-color: #007AFF;
   border-color: #007AFF;
   color: #FFFFFF;
 }
-.button.primary:hover:not([disabled]) {
+.button.primary:hover {
   background-color: #0062cc;
   border-color: #0062cc;
   color: #FFFFFF;
+}
+.button.primary:hover:disabled {
+  background-color: #007AFF;
+  border-color: #007AFF;
 }
 .button.primary:focus, .button.primary:active {
   background-color: #004999;
   border-color: #004999;
   color: #FFFFFF;
 }
+.button.primary:focus:disabled, .button.primary:active:disabled {
+  background-color: #007AFF;
+  border-color: #007AFF;
+}
 .button.secondary {
   background-color: #5856D9;
   border-color: #5856D9;
   color: #FFFFFF;
 }
-.button.secondary:hover:not([disabled]) {
+.button.secondary:hover {
   background-color: #312ece;
   border-color: #312ece;
   color: #FFFFFF;
+}
+.button.secondary:hover:disabled {
+  background-color: #5856D9;
+  border-color: #5856D9;
 }
 .button.secondary:focus, .button.secondary:active {
   background-color: #2725a4;
   border-color: #2725a4;
   color: #FFFFFF;
 }
+.button.secondary:focus:disabled, .button.secondary:active:disabled {
+  background-color: #5856D9;
+  border-color: #5856D9;
+}
 .button.success {
   background-color: #4CD964;
   border-color: #4CD964;
   color: #FFFFFF;
 }
-.button.success:hover:not([disabled]) {
+.button.success:hover {
   background-color: #2ac845;
   border-color: #2ac845;
   color: #FFFFFF;
+}
+.button.success:hover:disabled {
+  background-color: #4CD964;
+  border-color: #4CD964;
 }
 .button.success:focus, .button.success:active {
   background-color: #219e37;
   border-color: #219e37;
   color: #FFFFFF;
 }
+.button.success:focus:disabled, .button.success:active:disabled {
+  background-color: #4CD964;
+  border-color: #4CD964;
+}
 .button.information {
   background-color: #5AC8FA;
   border-color: #5AC8FA;
   color: #FFFFFF;
 }
-.button.information:hover:not([disabled]) {
+.button.information:hover {
   background-color: #29b8f9;
   border-color: #29b8f9;
   color: #FFFFFF;
+}
+.button.information:hover:disabled {
+  background-color: #5AC8FA;
+  border-color: #5AC8FA;
 }
 .button.information:focus, .button.information:active {
   background-color: #07a1e7;
   border-color: #07a1e7;
   color: #FFFFFF;
 }
+.button.information:focus:disabled, .button.information:active:disabled {
+  background-color: #5AC8FA;
+  border-color: #5AC8FA;
+}
 .button.warning {
   background-color: #FFCC00;
   border-color: #FFCC00;
   color: #FFFFFF;
 }
-.button.warning:hover:not([disabled]) {
+.button.warning:hover {
   background-color: #cca300;
   border-color: #cca300;
   color: #FFFFFF;
+}
+.button.warning:hover:disabled {
+  background-color: #FFCC00;
+  border-color: #FFCC00;
 }
 .button.warning:focus, .button.warning:active {
   background-color: #997a00;
   border-color: #997a00;
   color: #FFFFFF;
 }
+.button.warning:focus:disabled, .button.warning:active:disabled {
+  background-color: #FFCC00;
+  border-color: #FFCC00;
+}
 .button.danger {
   background-color: #FF3B30;
   border-color: #FF3B30;
   color: #FFFFFF;
 }
-.button.danger:hover:not([disabled]) {
+.button.danger:hover {
   background-color: #fc0d00;
   border-color: #fc0d00;
   color: #FFFFFF;
+}
+.button.danger:hover:disabled {
+  background-color: #FF3B30;
+  border-color: #FF3B30;
 }
 .button.danger:focus, .button.danger:active {
   background-color: #c90b00;
   border-color: #c90b00;
   color: #FFFFFF;
+}
+.button.danger:focus:disabled, .button.danger:active:disabled {
+  background-color: #FF3B30;
+  border-color: #FF3B30;
 }
 .button.inverted {
   background-color: transparent;
@@ -2325,95 +2381,161 @@ textarea.input-field {
   -webkit-transition: background-color 200ms ease-in-out, color 200ms ease-in-out;
   transition: background-color 200ms ease-in-out, color 200ms ease-in-out;
 }
-.button.inverted:hover:not([disabled]) {
+.button.inverted:hover {
   background-color: #CECED2;
+}
+.button.inverted:hover:disabled {
+  background-color: transparent;
 }
 .button.inverted:focus, .button.inverted:active {
   background-color: #CECED2;
+}
+.button.inverted:focus:disabled, .button.inverted:active:disabled {
+  background-color: transparent;
 }
 .button.inverted.primary {
   border-color: #007AFF;
   color: #007AFF;
 }
-.button.inverted.primary:hover:not([disabled]) {
+.button.inverted.primary:hover {
   background-color: #007AFF;
   border-color: #007AFF;
   color: #FFFFFF;
+}
+.button.inverted.primary:hover:disabled {
+  background-color: transparent;
+  border-color: #007AFF;
+  color: #007AFF;
 }
 .button.inverted.primary:focus, .button.inverted.primary:active {
   background-color: #007AFF;
   border-color: #007AFF;
   color: #FFFFFF;
 }
+.button.inverted.primary:focus:disabled, .button.inverted.primary:active:disabled {
+  background-color: transparent;
+  border-color: #007AFF;
+  color: #007AFF;
+}
 .button.inverted.secondary {
   border-color: #5856D9;
   color: #5856D9;
 }
-.button.inverted.secondary:hover:not([disabled]) {
+.button.inverted.secondary:hover {
   background-color: #5856D9;
   border-color: #5856D9;
   color: #FFFFFF;
+}
+.button.inverted.secondary:hover:disabled {
+  background-color: transparent;
+  border-color: #5856D9;
+  color: #5856D9;
 }
 .button.inverted.secondary:focus, .button.inverted.secondary:active {
   background-color: #5856D9;
   border-color: #5856D9;
   color: #FFFFFF;
 }
+.button.inverted.secondary:focus:disabled, .button.inverted.secondary:active:disabled {
+  background-color: transparent;
+  border-color: #5856D9;
+  color: #5856D9;
+}
 .button.inverted.success {
   border-color: #4CD964;
   color: #4CD964;
 }
-.button.inverted.success:hover:not([disabled]) {
+.button.inverted.success:hover {
   background-color: #4CD964;
   border-color: #4CD964;
   color: #FFFFFF;
+}
+.button.inverted.success:hover:disabled {
+  background-color: transparent;
+  border-color: #4CD964;
+  color: #4CD964;
 }
 .button.inverted.success:focus, .button.inverted.success:active {
   background-color: #4CD964;
   border-color: #4CD964;
   color: #FFFFFF;
 }
+.button.inverted.success:focus:disabled, .button.inverted.success:active:disabled {
+  background-color: transparent;
+  border-color: #4CD964;
+  color: #4CD964;
+}
 .button.inverted.information {
   border-color: #5AC8FA;
   color: #5AC8FA;
 }
-.button.inverted.information:hover:not([disabled]) {
+.button.inverted.information:hover {
   background-color: #5AC8FA;
   border-color: #5AC8FA;
   color: #FFFFFF;
+}
+.button.inverted.information:hover:disabled {
+  background-color: transparent;
+  border-color: #5AC8FA;
+  color: #5AC8FA;
 }
 .button.inverted.information:focus, .button.inverted.information:active {
   background-color: #5AC8FA;
   border-color: #5AC8FA;
   color: #FFFFFF;
 }
+.button.inverted.information:focus:disabled, .button.inverted.information:active:disabled {
+  background-color: transparent;
+  border-color: #5AC8FA;
+  color: #5AC8FA;
+}
 .button.inverted.warning {
   border-color: #FFCC00;
   color: #FFCC00;
 }
-.button.inverted.warning:hover:not([disabled]) {
+.button.inverted.warning:hover {
   background-color: #FFCC00;
   border-color: #FFCC00;
   color: #FFFFFF;
+}
+.button.inverted.warning:hover:disabled {
+  background-color: transparent;
+  border-color: #FFCC00;
+  color: #FFCC00;
 }
 .button.inverted.warning:focus, .button.inverted.warning:active {
   background-color: #FFCC00;
   border-color: #FFCC00;
   color: #FFFFFF;
 }
+.button.inverted.warning:focus:disabled, .button.inverted.warning:active:disabled {
+  background-color: transparent;
+  border-color: #FFCC00;
+  color: #FFCC00;
+}
 .button.inverted.danger {
   border-color: #FF3B30;
   color: #FF3B30;
 }
-.button.inverted.danger:hover:not([disabled]) {
+.button.inverted.danger:hover {
   background-color: #FF3B30;
   border-color: #FF3B30;
   color: #FFFFFF;
+}
+.button.inverted.danger:hover:disabled {
+  background-color: transparent;
+  border-color: #FF3B30;
+  color: #FF3B30;
 }
 .button.inverted.danger:focus, .button.inverted.danger:active {
   background-color: #FF3B30;
   border-color: #FF3B30;
   color: #FFFFFF;
+}
+.button.inverted.danger:focus:disabled, .button.inverted.danger:active:disabled {
+  background-color: transparent;
+  border-color: #FF3B30;
+  color: #FF3B30;
 }
 .button:disabled {
   cursor: not-allowed;

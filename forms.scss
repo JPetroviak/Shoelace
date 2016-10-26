@@ -356,7 +356,7 @@ label.label {
 	}
 
 	@if $form-hover {
-		&:hover:not([disabled]) {
+		&:hover:enabled {
 			@if $form-hover-background-color != $form-background-color {
 				background-color: $form-hover-background-color;
 			}
@@ -998,7 +998,10 @@ textarea.input-field {
 		}
 
 		@if $form-hover {
-			&:hover:before {
+			&:hover:enabled:before {
+				@if $form-hover-background-color != $form-background-color {
+					background-color: $form-hover-background-color;
+				}
 				@if $form-hover-border-color != $form-border-color {
 					border-color: $form-hover-border-color;
 				}
@@ -1081,7 +1084,10 @@ textarea.input-field {
 		}
 
 		@if $form-hover {
-			&:hover:before {
+			&:hover:enabled:before {
+				@if $form-hover-background-color != $form-background-color {
+					background-color: $form-hover-background-color;
+				}
 				@if $form-hover-border-color != $form-border-color {
 					border-color: $form-hover-border-color;
 				}
@@ -1219,20 +1225,34 @@ textarea.input-field {
 		width: 100%;
 	}
 
-	&:hover:not([disabled]) {
+	&:hover {
 		@if $form-hover {
 			background-color: darken($color-default-lighter, 10%);
-			border-color: darken($color-default-lighter, 10%);
+			border-color: darken($form-border-color, 10%);
 		}
 		color: $form-color;
+
+		@if $form-hover {
+			&:disabled {
+				background-color: $color-default-lighter;
+				border-color: $form-border-color;
+			}
+		}
 	}
 
 	&:focus, &:active {
 		@if $form-focus {
 			background-color: darken($color-default-lighter, 20%);
-			border-color: darken($color-default-lighter, 20%);
+			border-color: darken($form-border-color, 20%);
 		}
 		color: $form-color;
+
+		@if $form-focus {
+			&:disabled {
+				background-color: $color-default-lighter;
+				border-color: $form-border-color;
+			}
+		}
 	}
 
 	@each $color-key, $color-value in $colors {
@@ -1241,12 +1261,19 @@ textarea.input-field {
 			border-color: color($color-key, base);
 			color: $background-color-default;
 
-			&:hover:not([disabled]) {
+			&:hover {
 				@if $form-hover {
 					background-color: color($color-key, dark);
 					border-color: color($color-key, dark);
 				}
-				color: $background-color-default;
+				color: $background-color-default;		
+
+				@if $form-hover {
+					&:disabled {
+						background-color: color($color-key, base);
+						border-color: color($color-key, base);
+					}
+				}
 			}
 
 			&:focus, &:active {
@@ -1256,6 +1283,13 @@ textarea.input-field {
 
 				}
 				color: $background-color-default;
+
+				@if $form-focus {
+					&:disabled {
+						background-color: color($color-key, base);
+						border-color: color($color-key, base);
+					}
+				}
 			}
 		}
 	}
@@ -1270,14 +1304,22 @@ textarea.input-field {
 			}
 
 			@if $form-hover {
-				&:hover:not([disabled]) {
+				&:hover {
 					background-color: $color-default-lighter;
+
+					&:disabled {
+						background-color: $form-background-color;
+					}
 				}
 			}
 
 			@if $form-focus {
 				&:focus, &:active {
 					background-color: $color-default-lighter;
+
+					&:disabled {
+						background-color: $form-background-color;
+					}
 				}
 			}
 
@@ -1286,13 +1328,21 @@ textarea.input-field {
 					border-color: color($color-key, base);
 					color: color($color-key, base);
 
-					&:hover:not([disabled]) {
+					&:hover {
 						@if $form-hover {
 							background-color: color($color-key, base);
 							border-color: color($color-key, base);
 
 						}
 						color: $background-color-default;
+
+						@if $form-hover {
+							&:disabled {
+								background-color: $form-background-color;
+								border-color: color($color-key, base);
+								color: color($color-key, base);
+							}
+						}
 					}
 
 					&:focus, &:active {
@@ -1301,6 +1351,14 @@ textarea.input-field {
 							border-color: color($color-key, base);
 						}
 						color: $background-color-default;
+
+						@if $form-focus {
+							&:disabled {
+								background-color: $form-background-color;
+								border-color: color($color-key, base);
+								color: color($color-key, base);
+							}
+						}
 					}
 				}
 			}
