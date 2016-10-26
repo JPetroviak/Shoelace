@@ -462,7 +462,7 @@ input[type="search"].input-field {
 	@return '%23' + str-slice('#{$color}', 2, -1);
 }
 
-select.input-field {
+select.input-field:not([multiple]) {
 	background-image: url('data:image/svg+xml,<svg%20width%3D"10"%20height%3D"5"%20viewBox%3D"169%20177%2010%205"%20xmlns%3D"http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg"><path%20fill%3D"#{url-friendly-color($form-color)}"%20fill-rule%3D"evenodd"%20d%3D"M174%20182l5-5h-10"%2F><%2Fsvg>');
 	background-position: right $spacing-small center;
 	background-repeat: no-repeat;
