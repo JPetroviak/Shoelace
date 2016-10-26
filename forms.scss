@@ -498,8 +498,10 @@ select.input-field:not([multiple]) {
 		font-weight: bold;
 	}
 
-	option:disabled {
-		color: $form-disabled-color;
+	@if $form-disabled-color != $form-color {
+		option:disabled {
+			color: $form-disabled-color;
+		}
 	}
 }
 
@@ -1031,6 +1033,9 @@ textarea.input-field {
 	}
 
 	&:disabled + .label {
+		@if $form-disabled-color != $form-color {
+			color: $form-disabled-color;
+		}
 		cursor: not-allowed;
 
 		&:before {
@@ -1129,6 +1134,9 @@ textarea.input-field {
 	}
 
 	&:disabled + .label {
+		@if $form-disabled-color != $form-color {
+			color: $form-disabled-color;
+		}
 		cursor: not-allowed;
 
 		&:before {
