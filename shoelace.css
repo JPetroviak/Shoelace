@@ -1490,10 +1490,9 @@ table.table {
   margin-bottom: 20px;
   width: 100%;
 }
-table.table > caption, table.table > thead > th {
+table.table > caption, table.table > thead > tr > th {
   color: #8E8E93;
   font-weight: normal;
-  text-align: left;
   padding: 10px 10px;
   vertical-align: top;
 }

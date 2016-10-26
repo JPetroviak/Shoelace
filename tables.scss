@@ -12,13 +12,12 @@ table {
     margin-bottom: $spacing;
     width: 100%;
 
-    > caption, > thead > th {
+    > caption, > thead > tr > th {
       color: $table-header-color;
       font-weight: normal;
       @if $table-font-size != $font-size {
         font-size: $table-font-size;
       }
-      text-align: left;
       padding: $table-spacing-vertical $table-spacing-horizontal;
       vertical-align: top;
     }
