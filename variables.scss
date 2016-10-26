@@ -242,6 +242,9 @@ $progress-border-radius: $border-radius;
 $progress-border-radius-large: $border-radius-large;
 $progress-border-radius-small: $border-radius-small;
 $progress-color: $color-default-lightest;
+$progress-size: $spacing;
+$progress-size-large: ($progress-size * 1.25);
+$progress-size-small: ($progress-size * .85);
 
 // Modals
 $modal-backdrop-background-color: rgba($color-default, .5);

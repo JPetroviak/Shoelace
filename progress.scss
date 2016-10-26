@@ -1,8 +1,7 @@
 // Progress
-// TODO Sizes Match Checkboxes & Radios
 progress.progress {
   display: block;
-  height: $spacing;
+  height: $progress-size;
   margin-bottom: $spacing;
   vertical-align: baseline;
   width: 100%;
@@ -69,7 +68,7 @@ progress.progress {
     @if $progress-border-width-large != $progress-border-width {
       border-width: $progress-border-width-large;
     }
-    height: $spacing-large;
+    height: $progress-size-large;
 
     &[value] {
       @if $progress-border-radius-large != $progress-border-radius {
@@ -121,7 +120,7 @@ progress.progress {
     @if $progress-border-width-small != $progress-border-width {
       border-width: $progress-border-width-small;
     }
-    height: $spacing-small;
+    height: $progress-size-small;
 
     &[value] {
       @if $progress-border-radius-small != $progress-border-radius {
