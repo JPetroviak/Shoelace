@@ -356,7 +356,7 @@ label.label {
 	}
 
 	@if $form-hover {
-		&:hover:enabled {
+		&:hover:not([disabled]) {
 			@if $form-hover-background-color != $form-background-color {
 				background-color: $form-hover-background-color;
 			}
@@ -1219,7 +1219,7 @@ textarea.input-field {
 		width: 100%;
 	}
 
-	&:hover:enabled {
+	&:hover:not([disabled]) {
 		@if $form-hover {
 			background-color: darken($color-default-lighter, 10%);
 			border-color: darken($color-default-lighter, 10%);
@@ -1227,7 +1227,7 @@ textarea.input-field {
 		color: $form-color;
 	}
 
-	&:focus:enabled, &:active:enabled {
+	&:focus, &:active {
 		@if $form-focus {
 			background-color: darken($color-default-lighter, 20%);
 			border-color: darken($color-default-lighter, 20%);
@@ -1241,7 +1241,7 @@ textarea.input-field {
 			border-color: color($color-key, base);
 			color: $background-color-default;
 
-			&:hover:enabled {
+			&:hover:not([disabled]) {
 				@if $form-hover {
 					background-color: color($color-key, dark);
 					border-color: color($color-key, dark);
@@ -1270,7 +1270,7 @@ textarea.input-field {
 			}
 
 			@if $form-hover {
-				&:hover:enabled {
+				&:hover:not([disabled]) {
 					background-color: $color-default-lighter;
 				}
 			}
@@ -1286,7 +1286,7 @@ textarea.input-field {
 					border-color: color($color-key, base);
 					color: color($color-key, base);
 
-					&:hover:enabled {
+					&:hover:not([disabled]) {
 						@if $form-hover {
 							background-color: color($color-key, base);
 							border-color: color($color-key, base);

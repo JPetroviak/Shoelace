@@ -2218,12 +2218,12 @@ textarea.input-field {
 .button.full {
   width: 100%;
 }
-.button:hover:enabled {
+.button:hover:not([disabled]) {
   background-color: #b3b3ba;
   border-color: #b3b3ba;
   color: #000000;
 }
-.button:focus:enabled, .button:active:enabled {
+.button:focus, .button:active {
   background-color: #9999a1;
   border-color: #9999a1;
   color: #000000;
@@ -2233,7 +2233,7 @@ textarea.input-field {
   border-color: #007AFF;
   color: #FFFFFF;
 }
-.button.primary:hover:enabled {
+.button.primary:hover:not([disabled]) {
   background-color: #0062cc;
   border-color: #0062cc;
   color: #FFFFFF;
@@ -2248,7 +2248,7 @@ textarea.input-field {
   border-color: #5856D9;
   color: #FFFFFF;
 }
-.button.secondary:hover:enabled {
+.button.secondary:hover:not([disabled]) {
   background-color: #312ece;
   border-color: #312ece;
   color: #FFFFFF;
@@ -2263,7 +2263,7 @@ textarea.input-field {
   border-color: #4CD964;
   color: #FFFFFF;
 }
-.button.success:hover:enabled {
+.button.success:hover:not([disabled]) {
   background-color: #2ac845;
   border-color: #2ac845;
   color: #FFFFFF;
@@ -2278,7 +2278,7 @@ textarea.input-field {
   border-color: #5AC8FA;
   color: #FFFFFF;
 }
-.button.information:hover:enabled {
+.button.information:hover:not([disabled]) {
   background-color: #29b8f9;
   border-color: #29b8f9;
   color: #FFFFFF;
@@ -2293,7 +2293,7 @@ textarea.input-field {
   border-color: #FFCC00;
   color: #FFFFFF;
 }
-.button.warning:hover:enabled {
+.button.warning:hover:not([disabled]) {
   background-color: #cca300;
   border-color: #cca300;
   color: #FFFFFF;
@@ -2308,7 +2308,7 @@ textarea.input-field {
   border-color: #FF3B30;
   color: #FFFFFF;
 }
-.button.danger:hover:enabled {
+.button.danger:hover:not([disabled]) {
   background-color: #fc0d00;
   border-color: #fc0d00;
   color: #FFFFFF;
@@ -2325,7 +2325,7 @@ textarea.input-field {
   -webkit-transition: background-color 200ms ease-in-out, color 200ms ease-in-out;
   transition: background-color 200ms ease-in-out, color 200ms ease-in-out;
 }
-.button.inverted:hover:enabled {
+.button.inverted:hover:not([disabled]) {
   background-color: #CECED2;
 }
 .button.inverted:focus, .button.inverted:active {
@@ -2335,7 +2335,7 @@ textarea.input-field {
   border-color: #007AFF;
   color: #007AFF;
 }
-.button.inverted.primary:hover:enabled {
+.button.inverted.primary:hover:not([disabled]) {
   background-color: #007AFF;
   border-color: #007AFF;
   color: #FFFFFF;
@@ -2349,7 +2349,7 @@ textarea.input-field {
   border-color: #5856D9;
   color: #5856D9;
 }
-.button.inverted.secondary:hover:enabled {
+.button.inverted.secondary:hover:not([disabled]) {
   background-color: #5856D9;
   border-color: #5856D9;
   color: #FFFFFF;
@@ -2363,7 +2363,7 @@ textarea.input-field {
   border-color: #4CD964;
   color: #4CD964;
 }
-.button.inverted.success:hover:enabled {
+.button.inverted.success:hover:not([disabled]) {
   background-color: #4CD964;
   border-color: #4CD964;
   color: #FFFFFF;
@@ -2377,7 +2377,7 @@ textarea.input-field {
   border-color: #5AC8FA;
   color: #5AC8FA;
 }
-.button.inverted.information:hover:enabled {
+.button.inverted.information:hover:not([disabled]) {
   background-color: #5AC8FA;
   border-color: #5AC8FA;
   color: #FFFFFF;
@@ -2391,7 +2391,7 @@ textarea.input-field {
   border-color: #FFCC00;
   color: #FFCC00;
 }
-.button.inverted.warning:hover:enabled {
+.button.inverted.warning:hover:not([disabled]) {
   background-color: #FFCC00;
   border-color: #FFCC00;
   color: #FFFFFF;
@@ -2405,7 +2405,7 @@ textarea.input-field {
   border-color: #FF3B30;
   color: #FF3B30;
 }
-.button.inverted.danger:hover:enabled {
+.button.inverted.danger:hover:not([disabled]) {
   background-color: #FF3B30;
   border-color: #FF3B30;
   color: #FFFFFF;
