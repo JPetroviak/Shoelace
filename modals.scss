@@ -56,9 +56,9 @@ body.modal-open {
     }
     display: inline-block;
     letter-spacing: normal;
-    @if $modal-spacing > 0 {
-      margin-bottom: $spacing;
-      margin-top: $spacing;
+    @if $container-spacing > 0 {
+      margin-bottom: $container-spacing;
+      margin-top: $container-spacing;
     }
     @if $modal-spacing > 0 {
       padding: $modal-spacing;
