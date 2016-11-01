@@ -13,6 +13,9 @@ body.modal-open {
   bottom: 0;
   display: none;
   left: 0;
+  @if $modal-backdrop-background-opacity < 1 {
+    opacity: $modal-backdrop-background-opacity;
+  }
   position: fixed;
   right: 0;
   top: 0;

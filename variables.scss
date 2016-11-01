@@ -247,7 +247,8 @@ $progress-size-large: ($progress-size * 1.25);
 $progress-size-small: ($progress-size * .85);
 
 // Modals
-$modal-backdrop-background-color: rgba($color-default, .5);
+$modal-backdrop-background-color: $color-default;
+$modal-backdrop-background-opacity: .5;
 $modal-background-color: $background-color-default;
 $modal-border: $border; // true | false
 $modal-border-color: $border-color;
