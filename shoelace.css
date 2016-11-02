@@ -1914,8 +1914,8 @@ textarea.input-field {
 }
 .range::-webkit-slider-thumb {
   -webkit-appearance: none;
-  background-color: #EFEFF4;
-  border: 1px solid #CECED2;
+  background-color: #CECED2;
+  border: 1px solid #8E8E93;
   border-radius: 4px;
   cursor: pointer;
   height: 20px;
@@ -1925,8 +1925,8 @@ textarea.input-field {
   width: 20px;
 }
 .range::-moz-range-thumb {
-  background-color: #EFEFF4;
-  border: 1px solid #CECED2;
+  background-color: #CECED2;
+  border: 1px solid #8E8E93;
   border-radius: 4px;
   cursor: pointer;
   height: 20px;
@@ -1935,8 +1935,8 @@ textarea.input-field {
   width: 20px;
 }
 .range::-ms-thumb {
-  background-color: #EFEFF4;
-  border: 1px solid #CECED2;
+  background-color: #CECED2;
+  border: 1px solid #8E8E93;
   border-radius: 4px;
   cursor: pointer;
   height: 20px;
@@ -2062,6 +2062,15 @@ textarea.input-field {
 }
 .range:disabled::-ms-track {
   background-color: #EFEFF4;
+  cursor: not-allowed;
+}
+.range:disabled::-webkit-slider-thumb {
+  cursor: not-allowed;
+}
+.range:disabled::-moz-range-thumb {
+  cursor: not-allowed;
+}
+.range:disabled::-ms-thumb {
   cursor: not-allowed;
 }
 

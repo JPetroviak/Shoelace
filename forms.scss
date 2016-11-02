@@ -610,8 +610,8 @@ textarea.input-field {
 
 	&::-webkit-slider-thumb {
 		-webkit-appearance: none;
-		background-color: $color-default-lightest;
-		border: $form-border-width $form-border-style $form-border-color;
+		background-color: $color-default-lighter;
+		border: $form-border-width $form-border-style $color-default-light;
 		border-radius: $form-border-radius;
 		cursor: pointer;
 		height: $range-size;
@@ -623,8 +623,8 @@ textarea.input-field {
 	}
 
 	&::-moz-range-thumb {
-		background-color: $color-default-lightest;
-		border: $form-border-width $form-border-style $form-border-color;
+		background-color: $color-default-lighter;
+		border: $form-border-width $form-border-style $color-default-light;
 		border-radius: $form-border-radius;
 		cursor: pointer;
 		height: $range-size;
@@ -635,8 +635,8 @@ textarea.input-field {
 	}
 
 	&::-ms-thumb {
-		background-color: $color-default-lightest;
-		border: $form-border-width $form-border-style $form-border-color;
+		background-color: $color-default-lighter;
+		border: $form-border-width $form-border-style $color-default-light;
 		border-radius: $form-border-radius;
 		cursor: pointer;
 		height: $range-size;
@@ -964,6 +964,18 @@ textarea.input-field {
 			@if $form-disabled-border-color != $form-border-color {
 				border-color: $form-disabled-border-color;
 			}
+			cursor: not-allowed;
+		}
+
+		&::-webkit-slider-thumb {
+			cursor: not-allowed;
+		}
+
+		&::-moz-range-thumb {
+			cursor: not-allowed;
+		}
+
+		&::-ms-thumb {
 			cursor: not-allowed;
 		}
 	}
