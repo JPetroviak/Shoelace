@@ -398,7 +398,14 @@ label.label {
 		@if $form-font-size-large != $form-font-size {
 			font-size: $form-font-size-large;
 		}
-		padding: $form-spacing-vertical-large $form-spacing-horizontal-large;
+		@if $form-spacing-horizontal-large != $form-spacing-horizontal {
+			padding-left: $form-spacing-horizontal-large;
+			padding-right: $form-spacing-horizontal-large;
+		}
+		@if $form-spacing-vertical-large != $form-spacing-vertical {
+			padding-bottom: $form-spacing-vertical-large;
+			padding-top: $form-spacing-vertical-large;
+		}
 	}
 
 	&.small {
@@ -411,7 +418,14 @@ label.label {
 		@if $form-font-size-small != $form-font-size {
 			font-size: $form-font-size-small;
 		}
-		padding: $form-spacing-vertical-small $form-spacing-horizontal-small;
+		@if $form-spacing-horizontal-small != $form-spacing-horizontal {
+			padding-left: $form-spacing-horizontal-small;
+			padding-right: $form-spacing-horizontal-small;
+		}
+		@if $form-spacing-vertical-small != $form-spacing-vertical {
+			padding-bottom: $form-spacing-vertical-small;
+			padding-top: $form-spacing-vertical-small;
+		}
 	}
 
 	&:disabled {
@@ -467,7 +481,7 @@ select.input-field:not([multiple]) {
 	background-position: right $spacing-small center;
 	background-repeat: no-repeat;
 	background-size: $spacing-small $spacing-extra-small;
-	padding-right: $spacing + $spacing-small;
+	padding-right: ($form-spacing-horizontal * 2) + $spacing-small;
 
 	&::-ms-expand {
 		display: none;
@@ -491,6 +505,18 @@ select.input-field:not([multiple]) {
 			@if $form-focus-border-color != $form-border-color {
 				background-image: url('data:image/svg+xml,<svg%20width%3D"10"%20height%3D"5"%20viewBox%3D"169%20177%2010%205"%20xmlns%3D"http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg"><path%20fill%3D"#{url-friendly-color($form-focus-color)}"%20fill-rule%3D"evenodd"%20d%3D"M174%20182l5-5h-10"%2F><%2Fsvg>');
 			}
+		}
+	}
+
+	&.large {
+		@if $form-spacing-horizontal-large != $form-spacing-horizontal {
+			padding-right: ($form-spacing-horizontal-large * 2) + $spacing-small;
+		}
+	}
+
+	&.small {
+		@if $form-spacing-horizontal-small != $form-spacing-horizontal {
+			padding-right: ($form-spacing-horizontal-small * 2) + $spacing-small;
 		}
 	}
 
@@ -1224,7 +1250,14 @@ textarea.input-field {
 		@if $form-font-size-large != $form-font-size {
 			font-size: $form-font-size-large;
 		}
-		padding: $form-spacing-vertical-large $form-spacing-horizontal-large;
+		@if $form-spacing-horizontal-large != $form-spacing-horizontal {
+			padding-left: $form-spacing-horizontal-large;
+			padding-right: $form-spacing-horizontal-large;
+		}
+		@if $form-spacing-vertical-large != $form-spacing-vertical {
+			padding-bottom: $form-spacing-vertical-large;
+			padding-top: $form-spacing-vertical-large;
+		}
 	}
 
 	&.small {
@@ -1237,7 +1270,14 @@ textarea.input-field {
 		@if $form-font-size-small != $form-font-size {
 			font-size: $form-font-size-small;
 		}
-		padding: $form-spacing-vertical-small $form-spacing-horizontal-small;
+		@if $form-spacing-horizontal-small != $form-spacing-horizontal {
+			padding-left: $form-spacing-horizontal-small;
+			padding-right: $form-spacing-horizontal-small;
+		}
+		@if $form-spacing-vertical-small != $form-spacing-vertical {
+			padding-bottom: $form-spacing-vertical-small;
+			padding-top: $form-spacing-vertical-small;
+		}
 	}
 
 	&.full {
