@@ -22,34 +22,42 @@ table {
       vertical-align: top;
     }
 
-    > tbody {
-      > tr > td {
-        @if $table-border {
-          border-top: $table-border-width $table-border-style $table-border-color;
-        }
-        @if $table-font-size != $font-size {
-          font-size: $table-font-size;
-        }
-        padding: $table-spacing-vertical $table-spacing-horizontal;
-        vertical-align: top;
+    > tbody > tr > td {
+      @if $table-border {
+        border-top: $table-border-width $table-border-style $table-border-color;
+      }
+      @if $table-font-size != $font-size {
+        font-size: $table-font-size;
+      }
+      padding: $table-spacing-vertical $table-spacing-horizontal;
+      vertical-align: top;
+    }
+
+    &.large > thead > tr > th, tbody > tr > td {
+      @if $table-font-size-large != $table-font-size {
+        font-size: $table-font-size-large;
+      }
+      @if $table-spacing-horizontal-large != $table-spacing-horizontal {
+        padding-left: $table-spacing-horizontal-large;
+        padding-right: $table-spacing-horizontal-large;
+      }
+      @if $table-spacing-vertical-large != $table-spacing-vertical {
+        padding-bottom: $table-spacing-vertical-large;
+        padding-top: $table-spacing-vertical-large;
       }
     }
 
-    &.large {
-      > thead > tr > th, tbody > tr > td {
-        @if $table-font-size-large != $table-font-size {
-          font-size: $table-font-size-large;
-        }
-        padding: $table-spacing-vertical-large $table-spacing-horizontal-large;
+    &.small > thead > tr > th, tbody > tr > td {
+      @if $table-font-size-small != $table-font-size {
+        font-size: $table-font-size-small;
       }
-    }
-
-    &.small {
-      > thead > tr > th, tbody > tr > td {
-        @if $table-font-size-small != $table-font-size {
-          font-size: $table-font-size-small;
-        }
-        padding: $table-spacing-vertical-small $table-spacing-horizontal-small;
+      @if $table-spacing-horizontal-small != $table-spacing-horizontal {
+        padding-left: $table-spacing-horizontal-small;
+        padding-right: $table-spacing-horizontal-small;
+      }
+      @if $table-spacing-vertical-small != $table-spacing-vertical {
+        padding-bottom: $table-spacing-vertical-small;
+        padding-top: $table-spacing-vertical-small;
       }
     }
 
