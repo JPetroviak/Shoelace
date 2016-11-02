@@ -647,7 +647,7 @@ textarea.input-field {
 	}
 
 	@if $form-hover {
-		&:hover {
+		&:hover:enabled {
 			&::-webkit-slider-runnable-track {
 				@if $form-hover-background-color != $form-background-color {
 					background-color: $form-hover-background-color;
