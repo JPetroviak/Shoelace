@@ -1451,6 +1451,11 @@ table.table > caption, table.table > thead > tr > th {
   vertical-align: top;
 }
 
+table.table > tbody > tr {
+  -webkit-transition: background-color 200ms ease-in-out;
+  transition: background-color 200ms ease-in-out;
+}
+
 table.table > tbody > tr > td {
   border-top: 1px solid #CECED2;
   padding: 10px 10px;
@@ -1515,12 +1520,7 @@ table.table.toggle-row.striped > tbody > tr:nth-child(4n+4) {
   background-color: transparent;
 }
 
-table.table.hover > tbody > tr:not(.table-row-hidden) {
-  -webkit-transition: background-color 200ms ease-in-out;
-  transition: background-color 200ms ease-in-out;
-}
-
-table.table.hover > tbody > tr:not(.table-row-hidden):hover {
+table.table.hover > tbody > tr:not(.table-row-hidden) table.table:hover {
   background-color: rgba(0, 122, 255, 0.25);
 }
 

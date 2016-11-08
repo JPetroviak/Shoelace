@@ -22,15 +22,21 @@ table {
       vertical-align: top;
     }
 
-    > tbody > tr > td {
-      @if $table-border {
-        border-top: $table-border-width $table-border-style $table-border-color;
+    > tbody > tr {
+      @if $table-transition {
+        transition: background-color $table-transition-speed $table-transition-property;
       }
-      @if $table-font-size != $font-size {
-        font-size: $table-font-size;
+      
+      > td {
+        @if $table-border {
+          border-top: $table-border-width $table-border-style $table-border-color;
+        }
+        @if $table-font-size != $font-size {
+          font-size: $table-font-size;
+        }
+        padding: $table-spacing-vertical $table-spacing-horizontal;
+        vertical-align: top;
       }
-      padding: $table-spacing-vertical $table-spacing-horizontal;
-      vertical-align: top;
     }
 
     &.large > thead > tr > th, tbody > tr > td {
@@ -108,14 +114,8 @@ table {
       }
     }
 
-    &.hover > tbody > tr:not(.table-row-hidden) {
-      @if $table-transition {
-        transition: background-color $table-transition-speed $table-transition-property;
-      }
-
-      &:hover {
-        background-color: $table-background-color-hover;
-      }
+    &.hover > tbody > tr:not(.table-row-hidden) &:hover {
+      background-color: $table-background-color-hover;
     }
 
     &.responsive {
