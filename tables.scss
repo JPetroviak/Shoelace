@@ -114,7 +114,7 @@ table {
       }
     }
 
-    &.hover > tbody > tr:not(.table-row-hidden) &:hover {
+    &.hover > tbody > tr:not(.table-row-hidden):hover {
       background-color: $table-background-color-hover;
     }
 
