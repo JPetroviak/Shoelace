@@ -354,6 +354,20 @@ label.label {
 		opacity: 1;
 	}
 
+	&.error {
+		@if $form-error-background-color != $form-background-color {
+			background-color: $form-error-background-color;
+		}
+		@if $form-border {
+			@if $form-error-border-color != $form-border-color {
+				border-color: $form-error-border-color;
+			}
+		}
+		@if $form-error-border-color != $form-color {
+			color: $form-error-color;
+		}
+	}
+
 	@if $form-hover {
 		&:hover:enabled {
 			@if $form-hover-background-color != $form-background-color {
@@ -443,20 +457,6 @@ label.label {
 		cursor: not-allowed;
 		opacity: 1;
 		user-select: none;
-	}
-
-	&.error {
-		@if $form-error-background-color != $form-background-color {
-			background-color: $form-error-background-color;
-		}
-		@if $form-border {
-			@if $form-error-border-color != $form-border-color {
-				border-color: $form-error-border-color;
-			}
-		}
-		@if $form-error-border-color != $form-color {
-			color: $form-error-color;
-		}
 	}
 }
 
@@ -1048,6 +1048,17 @@ textarea.input-field {
 		}
 	}
 
+	&.error + .label:before {
+		@if $form-error-background-color {
+			background-color: $form-error-background-color;
+		}
+		@if $form-border {
+			@if $form-error-border-color {
+				border-color: $form-error-border-color;
+			}
+		}
+	}
+
 	&.large + .label:before {
 		@if $form-border-width-large != $form-border-width {
 			border-width: $form-border-width-large;
@@ -1084,17 +1095,6 @@ textarea.input-field {
 				@if $form-disabled-border-color != $form-border-color {
 					border-color: $form-disabled-border-color;
 				}
-			}
-		}
-	}
-
-	&.error + .label:before {
-		@if $form-error-background-color {
-			background-color: $form-error-background-color;
-		}
-		@if $form-border {
-			@if $form-error-border-color {
-				border-color: $form-error-border-color;
 			}
 		}
 	}
@@ -1143,6 +1143,17 @@ textarea.input-field {
 		}
 	}
 
+	&.error + .label:before {
+		@if $form-error-background-color {
+			background-color: $form-error-background-color;
+		}
+		@if $form-border {
+			@if $form-error-border-color {
+				border-color: $form-error-border-color;
+			}
+		}
+	}
+
 	&.large + .label:before {
 		@if $form-border-radius-large != $form-border-radius {
 			border-radius: $form-border-radius-large;
@@ -1185,17 +1196,6 @@ textarea.input-field {
 				@if $form-disabled-border-color != $form-border-color {
 					border-color: $form-disabled-border-color;
 				}
-			}
-		}
-	}
-
-	&.error + .label:before {
-		@if $form-error-background-color {
-			background-color: $form-error-background-color;
-		}
-		@if $form-border {
-			@if $form-error-border-color {
-				border-color: $form-error-border-color;
 			}
 		}
 	}
