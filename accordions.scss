@@ -1,5 +1,8 @@
 // Accordions
 .accordion-group {
+	@if $accordion-background-color != transparent {
+	  background-color: $accordion-background-color;
+	}
 	margin-bottom: $spacing;
 
 	> .accordion {
@@ -26,13 +29,17 @@
 	&.striped > .accordion {
     &:nth-child(odd) > {
       .accordion-toggle, .accordion-content {
-        background-color: $accordion-background-color-odd;
+        @if $accordion-background-color-odd != $accordion-background-color {
+          background-color: $accordion-background-color-odd;
+        }
       }
     }
 
     &:nth-child(even) > {
       .accordion-toggle, .accordion-content {
-        background-color: $accordion-background-color-even;
+        @if $accordion-background-color-even != $accordion-background-color {
+          background-color: $accordion-background-color-even;
+        }
       }
     }
 	}
