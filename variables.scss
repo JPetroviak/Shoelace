@@ -158,7 +158,7 @@ $table-spacing: $spacing-small;
 $table-spacing-horizontal: $table-spacing;
 $table-spacing-horizontal-large: ($table-spacing-horizontal * 1.25);
 $table-spacing-horizontal-small: ($table-spacing-horizontal * .85);
-$table-spacing-vertical: $spacing-small;
+$table-spacing-vertical: $table-spacing;
 $table-spacing-vertical-large: ($table-spacing-vertical * 1.25);
 $table-spacing-vertical-small: ($table-spacing-vertical * .85);
 $table-transition: $transition; // true | false
@@ -267,6 +267,8 @@ $accordion-border-color: $border-color;
 $accordion-border-style: $border-style;
 $accordion-border-width: $border-width;
 $accordion-spacing: $spacing-small;
+$accordion-spacing-horizontal: $accordion-spacing;
+$accordion-spacing-vertical: $accordion-spacing;
 $accordion-transition: $transition; // true | false
 $accordion-transition-speed: $transition-speed;
 $accordion-transition-property: $transition-property;

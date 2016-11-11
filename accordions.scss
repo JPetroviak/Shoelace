@@ -15,14 +15,14 @@
 		> .accordion-toggle {
 			cursor: pointer;
 			margin: 0;
-			padding: $accordion-spacing;
+			padding: $accordion-spacing-vertical $accordion-spacing-horizontal;
 			text-decoration: none;
 			user-select: none;
 		}
 
 		> .accordion-content {
 			display: none;
-			padding: $accordion-spacing;
+			padding: $accordion-spacing-vertical $accordion-spacing-horizontal;
 		}
 	}
 

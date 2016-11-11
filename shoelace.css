@@ -2915,7 +2915,7 @@ body.modal-open {
 .accordion-group > .accordion > .accordion-toggle {
   cursor: pointer;
   margin: 0;
-  padding: 10px;
+  padding: 10px 10px;
   text-decoration: none;
   -webkit-user-select: none;
      -moz-user-select: none;
@@ -2925,7 +2925,7 @@ body.modal-open {
 
 .accordion-group > .accordion > .accordion-content {
   display: none;
-  padding: 10px;
+  padding: 10px 10px;
 }
 
 .accordion-group.striped > .accordion:nth-child(odd) > .accordion-toggle, .accordion-group.striped > .accordion:nth-child(odd) > .accordion-content {
