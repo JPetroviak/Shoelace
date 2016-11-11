@@ -11,6 +11,8 @@ progress.progress {
     background-color: $progress-background-color;
     @if $progress-border {
       border: $progress-border-width $progress-border-style $progress-border-color;
+    } @else {
+      border: none;
     }
     @if $progress-border-radius > 0 {
       border-radius: $progress-border-radius;
