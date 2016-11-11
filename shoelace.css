@@ -1,5 +1,5 @@
 /*
-* Shoelace Alpha v3
+* Shoelace Alpha v3.1
 * Copyright 2016 John Petroviak
 */
 html {
@@ -2114,6 +2114,7 @@ textarea.input-field {
 
 .input-helper {
   color: #8E8E93;
+  font-size: 11.9px;
   margin-top: 5px;
   margin-bottom: 20px;
 }
