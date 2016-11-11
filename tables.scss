@@ -8,7 +8,9 @@ table {
   }
 
   &.table {
-    background-color: $table-background-color;
+    @if $table-background-color != transparent {
+      background-color: $table-background-color;
+    }
     margin-bottom: $spacing;
     width: 100%;
 
@@ -73,11 +75,15 @@ table {
 
     &.striped > tbody > tr {
       &:nth-child(odd) {
-        background-color: $table-background-color-odd;
+        @if $table-background-color-odd != $table-background-color {
+          background-color: $table-background-color-odd;
+        }
       }
 
       &:nth-child(even) {
-        background-color: $table-background-color-even;
+        @if $table-background-color-even != $table-background-color {
+          background-color: $table-background-color-even;
+        }
       }
     }
 
