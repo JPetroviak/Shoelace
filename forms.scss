@@ -43,268 +43,6 @@ fieldset {
 	.button {
 		margin-bottom: $spacing;
 	}
-
-	&.large {
-		.input-field {
-			@if $form-border-radius-large != $form-border-radius {
-				border-radius: $form-border-radius-large;
-			}
-			@if $form-border-width-large != $form-border-width {
-				border-width: $form-border-width-large;
-			}
-			@if $form-font-size-large != $form-font-size {
-				font-size: $form-font-size-large;
-			}
-			padding: $form-spacing-vertical-large $form-spacing-horizontal-large;
-		}
-
-		.range {
-			&::-webkit-slider-runnable-track {
-				@if $form-border-radius-large != $form-border-radius {
-					border-radius: $form-border-radius-large;
-				}
-				@if $form-border-width-large != $form-border-width {
-					border-width: $form-border-width-large;
-				}
-				height: $range-size-large;
-			}
-
-			&::-moz-range-track {
-				@if $form-border-radius-large != $form-border-radius {
-					border-radius: $form-border-radius-large;
-				}
-				@if $form-border-width-large != $form-border-width {
-					border-width: $form-border-width-large;
-				}
-				height: $range-size-large;
-			}
-
-			&::-ms-track {
-				@if $form-border-radius-large != $form-border-radius {
-					border-radius: $form-border-radius-large;
-				}
-				@if $form-border-width-large != $form-border-width {
-					border-width: $form-border-width-large;
-				}
-				height: $range-size-large;
-			}
-
-			&::-ms-fill-lower {
-				@if $form-border-radius-large != $form-border-radius {
-					border-radius: $form-border-radius-large;
-				}
-				@if $form-border-width-large != $form-border-width {
-					border-width: $form-border-width-large;
-				}
-			}
-
-			&::-ms-fill-upper {
-				@if $form-border-radius-large != $form-border-radius {
-					border-radius: $form-border-radius-large;
-				}
-				@if $form-border-width-large != $form-border-width {
-					border-width: $form-border-width-large;
-				}
-			}
-
-			&::-webkit-slider-thumb {
-				@if $form-border-radius-large != $form-border-radius {
-					border-radius: $form-border-radius-large;
-				}
-				@if $form-border-width-large != $form-border-width {
-					border-width: $form-border-width-large;
-					margin-top: -$form-border-width-large;
-				}
-				height: $range-size-large;
-				width: $range-size-large;
-			}
-
-			&::-moz-range-thumb {
-				@if $form-border-radius-large != $form-border-radius {
-					border-radius: $form-border-radius-large;
-				}
-				@if $form-border-width-large != $form-border-width {
-					border-width: $form-border-width-large;
-				}
-				height: $range-size-large;
-				width: $range-size-large;
-			}
-
-			&::-ms-thumb {
-				@if $form-border-radius-large != $form-border-radius {
-					border-radius: $form-border-radius-large;
-				}
-				@if $form-border-width-large != $form-border-width {
-					border-width: $form-border-width-large;
-				}
-				height: $range-size-large;
-				width: $range-size-large;
-			}
-		}
-
-		.radio + .label:before {
-			@if $form-border-width-large != $form-border-width {
-				border-width: $form-border-width-large;
-			}
-			height: $radio-size-large;
-			width: $radio-size-large;
-		}
-
-		.checkbox + .label:before {
-			@if $form-border-radius-large != $form-border-radius {
-				border-radius: $form-border-radius-large;
-			}
-			@if $form-border-width-large != $form-border-width {
-				border-width: $form-border-width-large;
-			}
-			height: $checkbox-size-large;
-			width: $checkbox-size-large;
-		}
-
-		.button {
-			@if $form-border-radius-large != $form-border-radius {
-				border-radius: $form-border-radius-large;
-			}
-			@if $form-border-width-large != $form-border-width {
-				border-width: $form-border-width-large;
-			}
-			@if $form-font-size-large != $form-font-size {
-				font-size: $form-font-size-large;
-			}
-			padding: $form-spacing-vertical-large $form-spacing-horizontal-large;
-		}
-	}
-
-	&.small {
-		.input-field {
-			@if $form-border-radius-small != $form-border-radius {
-				border-radius: $form-border-radius-small;
-			}
-			@if $form-border-width-small != $form-border-width {
-				border-width: $form-border-width-small;
-			}
-			@if $form-font-size-small != $form-font-size {
-				font-size: $form-font-size-small;
-			}
-			padding: $form-spacing-vertical-small $form-spacing-horizontal-small;
-		}
-
-		.range {
-			&::-webkit-slider-runnable-track {
-				@if $form-border-radius-small != $form-border-radius {
-					border-radius: $form-border-radius-small;
-				}
-				@if $form-border-width-small != $form-border-width {
-					border-width: $form-border-width-small;
-				}
-				height: $range-size-small;
-			}
-
-			&::-moz-range-track {
-				@if $form-border-radius-small != $form-border-radius {
-					border-radius: $form-border-radius-small;
-				}
-				@if $form-border-width-small != $form-border-width {
-					border-width: $form-border-width-small;
-				}
-				height: $range-size-small;
-			}
-
-			&::-ms-track {
-				@if $form-border-radius-small != $form-border-radius {
-					border-radius: $form-border-radius-small;
-				}
-				@if $form-border-width-small != $form-border-width {
-					border-width: $form-border-width-small;
-				}
-				height: $range-size-small;
-			}
-
-			&::-ms-fill-lower {
-				@if $form-border-radius-small != $form-border-radius {
-					border-radius: $form-border-radius-small;
-				}
-				@if $form-border-width-small != $form-border-width {
-					border-width: $form-border-width-small;
-				}
-			}
-
-			&::-ms-fill-upper {
-				@if $form-border-radius-small != $form-border-radius {
-					border-radius: $form-border-radius-small;
-				}
-				@if $form-border-width-small != $form-border-width {
-					border-width: $form-border-width-small;
-				}
-			}
-
-			&::-webkit-slider-thumb {
-				@if $form-border-radius-small != $form-border-radius {
-					border-radius: $form-border-radius-small;
-				}
-				@if $form-border-width-small != $form-border-width {
-					border-width: $form-border-width-small;
-					margin-top: -$form-border-width-small;
-				}
-				height: $range-size-small;
-				width: $range-size-small;
-			}
-
-			&::-moz-range-thumb {
-				@if $form-border-radius-small != $form-border-radius {
-					border-radius: $form-border-radius-small;
-				}
-				@if $form-border-width-small != $form-border-width {
-					border-width: $form-border-width-small;
-				}
-				height: $range-size-small;
-				width: $range-size-small;
-			}
-
-			&::-ms-thumb {
-				@if $form-border-radius-small != $form-border-radius {
-					border-radius: $form-border-radius-small;
-				}
-				@if $form-border-width-small != $form-border-width {
-					border-width: $form-border-width-small;
-				}
-				height: $range-size-small;
-				width: $range-size-small;
-			}
-		}
-
-		.radio + .label:before {
-			@if $form-border-width-small != $form-border-width {
-				border-width: $form-border-width-small;
-			}
-			height: $radio-size-small;
-			width: $radio-size-small;
-		}
-
-		.checkbox + .label:before {
-			@if $form-border-radius-small != $form-border-radius {
-				border-radius: $form-border-radius-small;
-			}
-			@if $form-border-width-small != $form-border-width {
-				border-width: $form-border-width-small;
-			}
-			height: $checkbox-size-small;
-			width: $checkbox-size-small;
-		}
-
-		.button {
-			@if $form-border-radius-small != $form-border-radius {
-				border-radius: $form-border-radius-small;
-			}
-			@if $form-border-width-small != $form-border-width {
-				border-width: $form-border-width-small;
-			}
-			@if $form-font-size-small != $form-font-size {
-				font-size: $form-font-size-small;
-			}
-			padding: $form-spacing-vertical-small $form-spacing-horizontal-small;
-		}
-	}
 }
 
 .form-inline .input-field {
@@ -573,6 +311,124 @@ textarea.input-field {
 // 	}
 // }
 
+@mixin range-track() {
+	background-color: $form-background-color;
+	border: $form-border-width $form-border-style $form-border-color;
+	border-radius: $form-border-radius;
+	cursor: pointer;
+	height: $range-size;
+	@if $form-transition {
+		transition: background-color $form-transition-speed $form-transition-property, border-color $form-transition-speed $form-transition-property;
+	}
+	width: 100%;
+}
+
+@mixin range-thumb() {
+  appearance: none;
+	background-color: $color-default-lighter;
+	border: $form-border-width $form-border-style $color-default-light;
+	border-radius: $form-border-radius;
+	cursor: pointer;
+	height: $range-size;
+  margin-top: -$form-border-width;
+	@if $form-transition {
+		transition: background-color $form-transition-speed $form-transition-property, border-color $form-transition-speed $form-transition-property;
+	}
+	width: $range-size;
+}
+
+@mixin range-track-hover() {
+	@if $form-hover-background-color != $form-background-color {
+		background-color: $form-hover-background-color;
+	}
+	@if $form-hover-border-color != $form-border-color {
+		border-color: $form-hover-border-color;
+	}
+}
+
+@mixin range-thumb-hover() {
+	@if $form-hover-background-color != $form-background-color {
+		background-color: $form-hover-background-color;
+	}
+	@if $form-hover-border-color != $form-border-color {
+		border-color: $form-hover-border-color;
+	}
+}
+
+@mixin range-track-focus() {
+	@if $form-focus-background-color != $form-background-color {
+		background-color: $form-focus-background-color;
+	}
+	@if $form-focus-border-color != $form-border-color {
+		border-color: $form-focus-border-color;
+	}
+}
+
+@mixin range-thumb-focus() {
+	@if $form-focus-background-color != $form-background-color {
+		background-color: $form-focus-background-color;
+	}
+	@if $form-focus-border-color != $form-border-color {
+		border-color: $form-focus-border-color;
+	}
+}
+
+@mixin range-track-large() {
+	@if $form-border-radius-large != $form-border-radius {
+		border-radius: $form-border-radius-large;
+	}
+	@if $form-border-width-large != $form-border-width {
+		border-width: $form-border-width-large;
+	}
+	height: $range-size-large;
+}
+
+@mixin range-thumb-large() {
+	@if $form-border-radius-large != $form-border-radius {
+		border-radius: $form-border-radius-large;
+	}
+	@if $form-border-width-large != $form-border-width {
+		border-width: $form-border-width-large;
+	}
+	height: $range-size-large;
+	width: $range-size-large;
+}
+
+@mixin range-track-small() {
+	@if $form-border-radius-small != $form-border-radius {
+		border-radius: $form-border-radius-small;
+	}
+	@if $form-border-width-small != $form-border-width {
+		border-width: $form-border-width-small;
+	}
+	height: $range-size-small;
+}
+
+@mixin range-thumb-small() {
+	@if $form-border-radius-small != $form-border-radius {
+		border-radius: $form-border-radius-small;
+	}
+	@if $form-border-width-small != $form-border-width {
+		border-width: $form-border-width-small;
+	}
+	height: $range-size-small;
+	width: $range-size-small;
+}
+
+@mixin range-track-disabled {
+	@if $form-disabled-background-color != $form-background-color {
+		background-color: $form-disabled-background-color;
+	}
+	@if $form-disabled-border-color != $form-border-color {
+		border-color: $form-disabled-border-color;
+	}
+	cursor: not-allowed;
+}
+
+@mixin range-thumb-disabled {
+	cursor: not-allowed;
+}
+
 .range {
 	appearance: none;
 	background-color: transparent;
@@ -580,40 +436,15 @@ textarea.input-field {
 	width: 100%;
 
 	&::-webkit-slider-runnable-track {
-		border: $form-border-width $form-border-style $form-border-color;
-		border-radius: $form-border-radius;
-		background-color: $form-background-color;
-		cursor: pointer;
-		height: $range-size;
-		@if $form-transition {
-			transition: background-color $form-transition-speed $form-transition-property, border-color $form-transition-speed $form-transition-property;
-		}
-		width: 100%;
+		@include range-track();
 	}
 
 	&::-moz-range-track {
-		background-color: $form-background-color;
-		border: $form-border-width $form-border-style $form-border-color;
-		border-radius: $form-border-radius;
-		cursor: pointer;
-		height: $range-size;
-		@if $form-transition {
-			transition: background-color $form-transition-speed $form-transition-property, border-color $form-transition-speed $form-transition-property;
-		}
-		width: 100%;
+		@include range-track();
 	}
 
 	&::-ms-track {
-		background-color: transparent;
-		border-color: transparent;
-		border-width: $spacing 0;
-		color: transparent;
-		cursor: pointer;
-		height: $range-size;
-		@if $form-transition {
-			transition: background-color $form-transition-speed $form-transition-property, border-color $form-transition-speed $form-transition-property;
-		}
-		width: 100%;
+		@include range-track();
 	}
 
 	&::-ms-fill-lower {
@@ -635,97 +466,41 @@ textarea.input-field {
 	}
 
 	&::-webkit-slider-thumb {
-		-webkit-appearance: none;
-		background-color: $color-default-lighter;
-		border: $form-border-width $form-border-style $color-default-light;
-		border-radius: $form-border-radius;
-		cursor: pointer;
-		height: $range-size;
-		margin-top: -$form-border-width;
-		@if $form-transition {
-			transition: background-color $form-transition-speed $form-transition-property, border-color $form-transition-speed $form-transition-property;
-		}
-		width: $range-size;
+		@include range-thumb();
 	}
 
 	&::-moz-range-thumb {
-		background-color: $color-default-lighter;
-		border: $form-border-width $form-border-style $color-default-light;
-		border-radius: $form-border-radius;
-		cursor: pointer;
-		height: $range-size;
-		@if $form-transition {
-			transition: background-color $form-transition-speed $form-transition-property, border-color $form-transition-speed $form-transition-property;
-		}
-		width: $range-size;
+		@include range-thumb();
 	}
 
 	&::-ms-thumb {
-		background-color: $color-default-lighter;
-		border: $form-border-width $form-border-style $color-default-light;
-		border-radius: $form-border-radius;
-		cursor: pointer;
-		height: $range-size;
-		@if $form-transition {
-			transition: background-color $form-transition-speed $form-transition-property, border-color $form-transition-speed $form-transition-property;
-		}
-		width: $range-size;
+		@include range-thumb();
 	}
 
 	@if $form-hover {
 		&:hover:enabled {
 			&::-webkit-slider-runnable-track {
-				@if $form-hover-background-color != $form-background-color {
-					background-color: $form-hover-background-color;
-				}
-				@if $form-hover-border-color != $form-border-color {
-					border-color: $form-hover-border-color;
-				}
+				@include range-track-hover();
 			}
 
 			&::-moz-range-track {
-				@if $form-hover-background-color != $form-background-color {
-					background-color: $form-hover-background-color;
-				}
-				@if $form-hover-border-color != $form-border-color {
-					border-color: $form-hover-border-color;
-				}
+				@include range-track-hover();
 			}
 
 			&::-ms-track {
-				@if $form-hover-background-color != $form-background-color {
-					background-color: $form-hover-background-color;
-				}
-				@if $form-hover-border-color != $form-border-color {
-					border-color: $form-hover-border-color;
-				}
+				@include range-track-hover();
 			}
 
 			&::-webkit-slider-thumb {
-				@if $form-hover-background-color != $form-background-color {
-					background-color: $form-hover-background-color;
-				}
-				@if $form-hover-border-color != $form-border-color {
-					border-color: $form-hover-border-color;
-				}
+				@include range-thumb-hover();
 			}
 
 			&::-moz-range-thumb {
-				@if $form-hover-background-color != $form-background-color {
-					background-color: $form-hover-background-color;
-				}
-				@if $form-hover-border-color != $form-border-color {
-					border-color: $form-hover-border-color;
-				}
+				@include range-thumb-hover();
 			}
 
 			&::-ms-thumb {
-				@if $form-hover-background-color != $form-background-color {
-					background-color: $form-hover-background-color;
-				}
-				@if $form-hover-border-color != $form-border-color {
-					border-color: $form-hover-border-color;
-				}
+				@include range-thumb-hover();
 			}
 		}
 	}
@@ -739,90 +514,42 @@ textarea.input-field {
 
 		@if $form-focus {
 			&::-webkit-slider-runnable-track {
-				@if $form-focus-background-color != $form-background-color {
-					background-color: $form-focus-background-color;
-				}
-				@if $form-focus-border-color != $form-border-color {
-					border-color: $form-focus-border-color;
-				}
+				@include range-track-focus();
 			}
 
 			&::-moz-range-track {
-				@if $form-focus-background-color != $form-background-color {
-					background-color: $form-focus-background-color;
-				}
-				@if $form-focus-border-color != $form-border-color {
-					border-color: $form-focus-border-color;
-				}
+				@include range-track-focus();
 			}
 
 			&::-ms-track {
-				@if $form-focus-background-color != $form-background-color {
-					background-color: $form-focus-background-color;
-				}
-				@if $form-focus-border-color != $form-border-color {
-					border-color: $form-focus-border-color;
-				}
+				@include range-track-focus();
 			}
 
 			&::-webkit-slider-thumb {
-				@if $form-focus-background-color != $form-background-color {
-					background-color: $form-focus-background-color;
-				}
-				@if $form-focus-border-color != $form-border-color {
-					border-color: $form-focus-border-color;
-				}
+				@include range-thumb-focus();
 			}
 
 			&::-moz-range-thumb {
-				@if $form-focus-background-color != $form-background-color {
-					background-color: $form-focus-background-color;
-				}
-				@if $form-focus-border-color != $form-border-color {
-					border-color: $form-focus-border-color;
-				}
+				@include range-thumb-focus();
 			}
 
 			&::-ms-thumb {
-				@if $form-focus-background-color != $form-background-color {
-					background-color: $form-focus-background-color;
-				}
-				@if $form-focus-border-color != $form-border-color {
-					border-color: $form-focus-border-color;
-				}
+				@include range-thumb-focus();
 			}
 		}
 	}
 
 	&.large {
 		&::-webkit-slider-runnable-track {
-			@if $form-border-radius-large != $form-border-radius {
-				border-radius: $form-border-radius-large;
-			}
-			@if $form-border-width-large != $form-border-width {
-				border-width: $form-border-width-large;
-			}
-			height: $range-size-large;
+			@include range-track-large();
 		}
 
 		&::-moz-range-track {
-			@if $form-border-radius-large != $form-border-radius {
-				border-radius: $form-border-radius-large;
-			}
-			@if $form-border-width-large != $form-border-width {
-				border-width: $form-border-width-large;
-			}
-			height: $range-size-large;
+			@include range-track-large();
 		}
 
 		&::-ms-track {
-			@if $form-border-radius-large != $form-border-radius {
-				border-radius: $form-border-radius-large;
-			}
-			@if $form-border-width-large != $form-border-width {
-				border-width: $form-border-width-large;
-			}
-			height: $range-size-large;
+			@include range-track-large();
 		}
 
 		&::-ms-fill-lower {
@@ -844,69 +571,29 @@ textarea.input-field {
 		}
 
 		&::-webkit-slider-thumb {
-			@if $form-border-radius-large != $form-border-radius {
-				border-radius: $form-border-radius-large;
-			}
-			@if $form-border-width-large != $form-border-width {
-				border-width: $form-border-width-large;
-				margin-top: -$form-border-width-large;
-			}
-			height: $range-size-large;
-			width: $range-size-large;
+			@include range-thumb-large();
 		}
 
 		&::-moz-range-thumb {
-			@if $form-border-radius-large != $form-border-radius {
-				border-radius: $form-border-radius-large;
-			}
-			@if $form-border-width-large != $form-border-width {
-				border-width: $form-border-width-large;
-			}
-			height: $range-size-large;
-			width: $range-size-large;
+			@include range-thumb-large();
 		}
 
 		&::-ms-thumb {
-			@if $form-border-radius-large != $form-border-radius {
-				border-radius: $form-border-radius-large;
-			}
-			@if $form-border-width-large != $form-border-width {
-				border-width: $form-border-width-large;
-			}
-			height: $range-size-large;
-			width: $range-size-large;
+			@include range-thumb-large();
 		}
 	}
 
 	&.small {
 		&::-webkit-slider-runnable-track {
-			@if $form-border-radius-small != $form-border-radius {
-				border-radius: $form-border-radius-small;
-			}
-			@if $form-border-width-small != $form-border-width {
-				border-width: $form-border-width-small;
-			}
-			height: $range-size-small;
+			@include range-track-small();
 		}
 
 		&::-moz-range-track {
-			@if $form-border-radius-small != $form-border-radius {
-				border-radius: $form-border-radius-small;
-			}
-			@if $form-border-width-small != $form-border-width {
-				border-width: $form-border-width-small;
-			}
-			height: $range-size-small;
+			@include range-track-small();
 		}
 
 		&::-ms-track {
-			@if $form-border-radius-small != $form-border-radius {
-				border-radius: $form-border-radius-small;
-			}
-			@if $form-border-width-small != $form-border-width {
-				border-width: $form-border-width-small;
-			}
-			height: $range-size-small;
+			@include range-track-small();
 		}
 
 		&::-ms-fill-lower {
@@ -928,81 +615,41 @@ textarea.input-field {
 		}
 
 		&::-webkit-slider-thumb {
-			@if $form-border-radius-small != $form-border-radius {
-				border-radius: $form-border-radius-small;
-			}
-			@if $form-border-width-small != $form-border-width {
-				border-width: $form-border-width-small;
-				margin-top: -$form-border-width-small;
-			}
-			height: $range-size-small;
-			width: $range-size-small;
+			@include range-thumb-small();
 		}
 
 		&::-moz-range-thumb {
-			@if $form-border-radius-small != $form-border-radius {
-				border-radius: $form-border-radius-small;
-			}
-			@if $form-border-width-small != $form-border-width {
-				border-width: $form-border-width-small;
-			}
-			height: $range-size-small;
-			width: $range-size-small;
+			@include range-thumb-small();
 		}
 
 		&::-ms-thumb {
-			@if $form-border-radius-small != $form-border-radius {
-				border-radius: $form-border-radius-small;
-			}
-			@if $form-border-width-small != $form-border-width {
-				border-width: $form-border-width-small;
-			}
-			height: $range-size-small;
-			width: $range-size-small;
+			@include range-thumb-small();
 		}
 	}
 
 	&:disabled {
 		&::-webkit-slider-runnable-track {
-			@if $form-disabled-background-color != $form-background-color {
-				background-color: $form-disabled-background-color;
-			}
-			@if $form-disabled-border-color != $form-border-color {
-				border-color: $form-disabled-border-color;
-			}
-			cursor: not-allowed;
+			@include range-track-disabled();
 		}
 
 		&::-moz-range-track {
-			@if $form-disabled-background-color != $form-background-color {
-				background-color: $form-disabled-background-color;
-			}
-			@if $form-disabled-border-color != $form-border-color {
-				border-color: $form-disabled-border-color;
-			}
-			cursor: not-allowed;
+			@include range-track-disabled();
 		}
 
 		&::-ms-track {
-			@if $form-disabled-background-color != $form-background-color {
-				background-color: $form-disabled-background-color;
-			}
-			@if $form-disabled-border-color != $form-border-color {
-				border-color: $form-disabled-border-color;
-			}
-			cursor: not-allowed;
+			@include range-track-disabled();
 		}
 
 		&::-webkit-slider-thumb {
-			cursor: not-allowed;
+			@include range-thumb-disabled();
 		}
 
 		&::-moz-range-thumb {
-			cursor: not-allowed;
+			@include range-thumb-disabled();
 		}
 
 		&::-ms-thumb {
-			cursor: not-allowed;
+			@include range-thumb-disabled();
 		}
 	}
 }
