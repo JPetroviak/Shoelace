@@ -20,7 +20,7 @@
   @each $color-key, $color-value in $colors {    
     &.#{$color-key} {
       background-color: color($color-key, light);
-      border-color: color($color-key, dark);
+      border-color: color($color-key, base);
       color: color($color-key, dark);
     }
   }
