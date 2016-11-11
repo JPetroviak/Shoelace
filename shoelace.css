@@ -1673,6 +1673,10 @@ label.label.required:after {
   color: #000000;
 }
 
+.input-field.error:-moz-ui-invalid {
+  box-shadow: none;
+}
+
 .input-field:disabled {
   background-color: #EFEFF4;
   color: #8E8E93;

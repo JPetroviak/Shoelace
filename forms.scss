@@ -178,6 +178,10 @@ label.label {
 		@if $form-error-border-color != $form-color {
 			color: $form-error-color;
 		}
+
+		&:-moz-ui-invalid {
+		  box-shadow: none;
+		}
 	}
 
 	&:disabled {
