@@ -39,31 +39,35 @@ table {
       }
     }
 
-    &.large > thead > tr > th, tbody > tr > td {
-      @if $table-font-size-large != $table-font-size {
-        font-size: $table-font-size-large;
-      }
-      @if $table-spacing-horizontal-large != $table-spacing-horizontal {
-        padding-left: $table-spacing-horizontal-large;
-        padding-right: $table-spacing-horizontal-large;
-      }
-      @if $table-spacing-vertical-large != $table-spacing-vertical {
-        padding-bottom: $table-spacing-vertical-large;
-        padding-top: $table-spacing-vertical-large;
+    &.large {
+      > thead > tr > th, tbody > tr > td {
+        @if $table-font-size-large != $table-font-size {
+          font-size: $table-font-size-large;
+        }
+        @if $table-spacing-horizontal-large != $table-spacing-horizontal {
+          padding-left: $table-spacing-horizontal-large;
+          padding-right: $table-spacing-horizontal-large;
+        }
+        @if $table-spacing-vertical-large != $table-spacing-vertical {
+          padding-bottom: $table-spacing-vertical-large;
+          padding-top: $table-spacing-vertical-large;
+        }
       }
     }
 
-    &.small > thead > tr > th, tbody > tr > td {
-      @if $table-font-size-small != $table-font-size {
-        font-size: $table-font-size-small;
-      }
-      @if $table-spacing-horizontal-small != $table-spacing-horizontal {
-        padding-left: $table-spacing-horizontal-small;
-        padding-right: $table-spacing-horizontal-small;
-      }
-      @if $table-spacing-vertical-small != $table-spacing-vertical {
-        padding-bottom: $table-spacing-vertical-small;
-        padding-top: $table-spacing-vertical-small;
+    &.small {
+      > thead > tr > th, tbody > tr > td {
+        @if $table-font-size-small != $table-font-size {
+          font-size: $table-font-size-small;
+        }
+        @if $table-spacing-horizontal-small != $table-spacing-horizontal {
+          padding-left: $table-spacing-horizontal-small;
+          padding-right: $table-spacing-horizontal-small;
+        }
+        @if $table-spacing-vertical-small != $table-spacing-vertical {
+          padding-bottom: $table-spacing-vertical-small;
+          padding-top: $table-spacing-vertical-small;
+        }
       }
     }
 
