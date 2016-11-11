@@ -313,8 +313,12 @@ textarea.input-field {
 
 @mixin range-track() {
 	background-color: $form-background-color;
-	border: $form-border-width $form-border-style $form-border-color;
-	border-radius: $form-border-radius;
+	@if $form-border {
+		border: $form-border-width $form-border-style $form-border-color;
+	}
+	@if $form-border-radius > 0 {
+	  border-radius: $form-border-radius;
+  }
 	cursor: pointer;
 	height: $range-size;
 	@if $form-transition {
@@ -326,11 +330,17 @@ textarea.input-field {
 @mixin range-thumb() {
   appearance: none;
 	background-color: $color-default-lighter;
-	border: $form-border-width $form-border-style $color-default-light;
-	border-radius: $form-border-radius;
+  @if $form-border {
+	  border: $form-border-width $form-border-style $color-default-light;
+  } @else {
+    border: none;
+  }
+  border-radius: $form-border-radius;
 	cursor: pointer;
 	height: $range-size;
-  margin-top: -$form-border-width;
+	@if $form-border {
+  	margin-top: -$form-border-width;
+	}
 	@if $form-transition {
 		transition: background-color $form-transition-speed $form-transition-property, border-color $form-transition-speed $form-transition-property;
 	}
@@ -870,7 +880,9 @@ textarea.input-field {
 	@else {
 		border: none;
 	}
-	border-radius: $form-border-radius;
+	@if $form-border-radius > 0 {
+	  border-radius: $form-border-radius;
+  }
 	color: $form-color;
 	cursor: pointer;
 	display: inline-block;
