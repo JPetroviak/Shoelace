@@ -16,7 +16,7 @@ fieldset {
 		margin-bottom: $spacing;
 
 		+ .input-helper {
-			margin-top: -$spacing-small;
+			margin-top: -($spacing-extra-small + $spacing-small);
 		}
 	}
 
@@ -24,7 +24,7 @@ fieldset {
 		margin-bottom: $spacing;
 
 		+ .input-helper {
-			margin-top: -$spacing-small;
+			margin-top: -($spacing-extra-small + $spacing-small);
 		}
 	}
 
@@ -1078,7 +1078,7 @@ textarea.input-field {
 	&:checked + .label:before {
 		background-color: $form-checked-color;
 		border-color: $form-checked-color;
-		box-shadow: inset 0 0 0 2px $form-background-color;
+		box-shadow: inset 0 0 0 2px $background-color-default;
 	}
 
 	&:disabled + .label {
@@ -1179,7 +1179,7 @@ textarea.input-field {
 	&:checked + .label:before {
 		background-color: $form-checked-color;
 		border-color: $form-checked-color;
-		box-shadow: inset 0 0 0 2px $form-background-color;
+		box-shadow: inset 0 0 0 2px $background-color-default;
 	}
 
 	&:disabled + .label {
@@ -1203,7 +1203,7 @@ textarea.input-field {
 
 .input-helper {
 	color: $form-helper-color;
-	margin-top: $spacing-small;
+	margin-top: $spacing-extra-small;
 	margin-bottom: $spacing;
 
 	&.error {
