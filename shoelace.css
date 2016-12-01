@@ -3200,3 +3200,45 @@ body.modal-open {
     text-align: center;
   }
 }
+
+.alignnone {
+  height: auto;
+  margin-left: 0;
+  margin-right: 0;
+  max-width: 100%;
+}
+
+.aligncenter {
+  display: block;
+  height: auto;
+  margin: 10px auto;
+}
+
+.alignleft, .alignright {
+  height: auto;
+  margin-bottom: 10px;
+}
+
+@media (min-width: 544px) {
+  .alignleft {
+    float: left;
+    margin-right: 10px;
+  }
+  .alignright {
+    float: right;
+    margin-left: 10px;
+  }
+}
+
+.wp-caption {
+  background-color: #EFEFF4;
+  border: 1px solid #CECED2;
+  border-radius: 4px;
+  padding: 5px;
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+}
+
+.wp-caption-text {
+  padding: 20px;
+}

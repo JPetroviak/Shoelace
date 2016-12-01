@@ -1,0 +1,41 @@
+// Wordpress
+.alignnone {
+  height: auto;
+  margin-left: 0;
+  margin-right: 0;
+  max-width: 100%;
+}
+
+.aligncenter {
+  display: block;
+  height: auto;
+  margin: $spacing-small auto;
+}
+
+.alignleft, .alignright {
+  height: auto;
+  margin-bottom: $spacing-small;
+}
+
+@include breakpoint-up(small) {
+  .alignleft {
+    float: left;
+    margin-right: $spacing-small;
+  }
+  .alignright {
+    float: right;
+    margin-left: $spacing-small;
+  }
+}
+
+.wp-caption {
+  background-color: $color-default-lightest;
+  border: 1px solid $border-color;
+  border-radius: $border-radius;
+  padding: $spacing-extra-small;
+  transition: all $transition-speed $transition-property;
+}
+
+.wp-caption-text {
+  padding: $spacing;
+}
