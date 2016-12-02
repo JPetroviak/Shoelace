@@ -143,12 +143,6 @@
 		"oS": 0,
 		"uL": 1
 		},
-	"\/build\/.gitignore": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/build\/.gitignore",
-		"oF": 0
-		},
 	"\/calendar.scss": {
 		"aP": 1,
 		"bl": 0,
@@ -320,6 +314,15 @@
 		"oAP": "\/shoelace-ck.css",
 		"oF": 0,
 		"oS": 0
+		},
+	"\/shoelace.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/min\/shoelace-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
 		},
 	"\/shoelace.scss": {
 		"aP": 1,
