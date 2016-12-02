@@ -124,8 +124,8 @@ $font-size-h3: ($font-size-small * 2);
 $font-size-h4: $font-size-large;
 $font-size-h5: $font-size;
 $font-size-h6: $font-size-small;
-$line-height: 20/14;
-$line-height-heading: $line-height;
+$line-height: 1.4;
+$line-height-heading: 1.2;
 
 // Breakpoints
 $breakpoints: (
