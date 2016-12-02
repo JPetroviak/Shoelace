@@ -10,11 +10,13 @@
   display: block;
   height: auto;
   margin: $spacing-small auto;
+  max-width: 100%;
 }
 
 .alignleft, .alignright {
   height: auto;
   margin-bottom: $spacing-small;
+  max-width: 100%;
 }
 
 @include breakpoint-up(small) {
