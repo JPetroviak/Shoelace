@@ -14,10 +14,10 @@ fieldset {
 .form-group {
 	.input-field {
 		margin-bottom: $spacing;
+	}
 
-		+ .input-helper {
-			margin-top: -($spacing-extra-small + $spacing-small);
-		}
+	.input-helper {
+		margin-top: -($spacing-extra-small + $spacing-small);
 	}
 
 	.range {
@@ -49,7 +49,7 @@ fieldset {
 	width: auto;
 }
 
-label.label {
+.label {
 	display: inline-block;
 	@if $form-label-color != $color-default {
 		color: $form-label-color;
