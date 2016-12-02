@@ -54,7 +54,7 @@ $('form').each(function() {
   });
 });
 
-// Modals
+// Modal
 $('[data-toggle="modal"]').each(function() {
   var toggle = $(this);
   $(toggle).click(function() {
