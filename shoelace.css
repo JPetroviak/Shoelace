@@ -3015,6 +3015,96 @@ body.modal-open {
   }
 }
 
+.slides {
+  overflow: hidden;
+}
+
+.slides:after {
+  clear: both;
+  content: '';
+  display: block;
+}
+
+.slides .slide {
+  background: no-repeat center center;
+  background-size: cover;
+  float: left;
+  margin-right: -100%;
+  min-height: 500px;
+  position: relative;
+  width: 100%;
+  z-index: 1;
+}
+
+.slides .slide.active {
+  z-index: 2;
+}
+
+.slides .slide[data-type="fade"] {
+  opacity: 0;
+}
+
+.slides .slide[data-type="fade"].active {
+  opacity: 1;
+  -webkit-transition: opacity ease-in-out;
+  transition: opacity ease-in-out;
+}
+
+.slides .slide[data-type="fade"].previous {
+  opacity: 1;
+}
+
+.slides .slide[data-type="slide"] {
+  -webkit-transform: translateX(100%);
+      -ms-transform: translateX(100%);
+          transform: translateX(100%);
+}
+
+.slides .slide[data-type="slide"].active {
+  -webkit-transform: translateX(0);
+      -ms-transform: translateX(0);
+          transform: translateX(0);
+  -webkit-transition: -webkit-transform ease-in-out;
+  transition: -webkit-transform ease-in-out;
+  transition: transform ease-in-out;
+  transition: transform ease-in-out, -webkit-transform ease-in-out;
+}
+
+.slides .slide[data-type="slide"].previous {
+  -webkit-transform: translateX(0);
+      -ms-transform: translateX(0);
+          transform: translateX(0);
+}
+
+.slides .slide .overlay {
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.slides .slide .caption {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  color: #FFFFFF;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-shadow: 0 1px 4px rgba(51, 51, 51, 0.7);
+}
+
 .background-color-primary {
   background-color: rgba(0, 122, 255, 0.25);
 }
