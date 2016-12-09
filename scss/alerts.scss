@@ -9,12 +9,8 @@
   padding: $alert-spacing;
   margin-bottom: $spacing;
   
-  > p, > ul {
+  > *:last-child {
     margin-bottom: 0;
-  }
-  
-  > p + p {
-    margin-top: $spacing-small;
   }
   
   @each $color-key, $color-value in $colors {    
