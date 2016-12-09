@@ -736,12 +736,6 @@ textarea.input-field {
 		}
 	}
 
-	&:checked + .label:before {
-		background-color: $form-checked-color;
-		border-color: $form-checked-color;
-		box-shadow: inset 0 0 0 2px $background-color-default;
-	}
-
 	&:disabled + .label {
 		@if $form-disabled-color != $form-color {
 			color: $form-disabled-color;
@@ -758,6 +752,12 @@ textarea.input-field {
 				}
 			}
 		}
+	}
+
+	&:checked + .label:before {
+		background-color: $form-checked-color;
+		border-color: $form-checked-color;
+		box-shadow: inset 0 0 0 2px $background-color-default;
 	}
 }
 
@@ -837,12 +837,6 @@ textarea.input-field {
 		}
 	}
 
-	&:checked + .label:before {
-		background-color: $form-checked-color;
-		border-color: $form-checked-color;
-		box-shadow: inset 0 0 0 2px $background-color-default;
-	}
-
 	&:disabled + .label {
 		@if $form-disabled-color != $form-color {
 			color: $form-disabled-color;
@@ -859,6 +853,12 @@ textarea.input-field {
 				}
 			}
 		}
+	}
+
+	&:checked + .label:before {
+		background-color: $form-checked-color;
+		border-color: $form-checked-color;
+		box-shadow: inset 0 0 0 2px $background-color-default;
 	}
 }
 
