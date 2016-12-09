@@ -22,7 +22,7 @@
 			z-index: 2;
 		}
 		
-		&[data-type="fade"] {
+		&[data-transition-type="fade"] {
 			opacity: 0;
 			
 			&.active {
@@ -35,7 +35,7 @@
 			}	
 		}
 		
-		&[data-type="slide"] {
+		&[data-transition-type="slide"] {
 			transform: translateX(100%);
 			
 			&.active {
