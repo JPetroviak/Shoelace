@@ -1473,6 +1473,14 @@ table.table.small > thead > tr > th, table.table.small tbody > tr > td {
   padding-top: 8.5px;
 }
 
+table.table.bordered {
+  border: 1px solid #CECED2;
+}
+
+table.table.bordered > caption, table.table.bordered > thead > tr > th, table.table.bordered > tbody > tr td {
+  border: 1px solid #CECED2;
+}
+
 table.table.striped > tbody > tr:nth-child(odd) {
   background-color: #EFEFF4;
 }
@@ -1495,19 +1503,11 @@ table.table.toggle-row > tbody > tr.table-row-hidden > td > * {
   padding: 10px 10px;
 }
 
-table.table.toggle-row.striped > tbody > tr:nth-child(4n+1) {
+table.table.toggle-row.striped > tbody > tr:nth-child(4n+1), table.table.toggle-row.striped > tbody > tr:nth-child(4n+2) {
   background-color: #EFEFF4;
 }
 
-table.table.toggle-row.striped > tbody > tr:nth-child(4n+2) {
-  background-color: #EFEFF4;
-}
-
-table.table.toggle-row.striped > tbody > tr:nth-child(4n+3) {
-  background-color: transparent;
-}
-
-table.table.toggle-row.striped > tbody > tr:nth-child(4n+4) {
+table.table.toggle-row.striped > tbody > tr:nth-child(4n+3), table.table.toggle-row.striped > tbody > tr:nth-child(4n+4) {
   background-color: transparent;
 }
 
@@ -1996,6 +1996,7 @@ textarea.input-field {
 
 .radio + .label {
   cursor: pointer;
+  padding-left: 25px;
 }
 
 .radio + .label:before {
@@ -2006,9 +2007,11 @@ textarea.input-field {
   display: inline-block;
   height: 20px;
   margin-bottom: -5px;
+  margin-left: -25px;
   margin-right: 5px;
   -webkit-transition: background-color 200ms ease-in-out, border-color 200ms ease-in-out, box-shadow 200ms ease-in-out;
   transition: background-color 200ms ease-in-out, border-color 200ms ease-in-out, box-shadow 200ms ease-in-out;
+  vertical-align: top;
   width: 20px;
 }
 
@@ -2018,15 +2021,25 @@ textarea.input-field {
   margin-left: 5px;
 }
 
+.radio.large + .label {
+  padding-left: 30px;
+}
+
 .radio.large + .label:before {
   border-width: 2px;
   height: 25px;
+  margin-left: -30px;
   width: 25px;
+}
+
+.radio.small + .label {
+  padding-left: 22px;
 }
 
 .radio.small + .label:before {
   border-width: 0.5px;
   height: 17px;
+  margin-left: -22px;
   width: 17px;
 }
 
@@ -2056,6 +2069,7 @@ textarea.input-field {
 
 .checkbox + .label {
   cursor: pointer;
+  padding-left: 25px;
 }
 
 .checkbox + .label:before {
@@ -2066,9 +2080,11 @@ textarea.input-field {
   display: inline-block;
   height: 20px;
   margin-bottom: -5px;
+  margin-left: -25px;
   margin-right: 5px;
   -webkit-transition: background-color 200ms ease-in-out, border-color 200ms ease-in-out, box-shadow 200ms ease-in-out;
   transition: background-color 200ms ease-in-out, border-color 200ms ease-in-out, box-shadow 200ms ease-in-out;
+  vertical-align: top;
   width: 20px;
 }
 
@@ -2078,17 +2094,25 @@ textarea.input-field {
   margin-left: 5px;
 }
 
+.checkbox.large + .label {
+  padding-left: 30px;
+}
+
 .checkbox.large + .label:before {
-  border-radius: 5px;
   border-width: 2px;
   height: 25px;
+  margin-left: -30px;
   width: 25px;
 }
 
+.checkbox.small + .label {
+  padding-left: 22px;
+}
+
 .checkbox.small + .label:before {
-  border-radius: 3.4px;
   border-width: 0.5px;
   height: 17px;
+  margin-left: -22px;
   width: 17px;
 }
 

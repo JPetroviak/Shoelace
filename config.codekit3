@@ -189,6 +189,15 @@
 		"sC": 1,
 		"tS": 0
 		},
+	"\/js\/textarealimiter.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/js\/min\/textarealimiter-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
 	"\/README.html": {
 		"ft": 8192,
 		"oA": 2,

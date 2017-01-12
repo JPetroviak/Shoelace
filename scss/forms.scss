@@ -673,6 +673,7 @@ textarea.input-field {
 
 	+ .label {
 		cursor: pointer;
+		padding-left: $radio-size + $spacing-extra-small;
 
 		&:before {
 			background-color: $form-background-color;
@@ -684,10 +685,12 @@ textarea.input-field {
 			display: inline-block;
 			height: $radio-size;
 			margin-bottom: -$spacing-extra-small;
+			margin-left: -($radio-size + $spacing-extra-small);
 			margin-right: $spacing-extra-small;
 			@if $form-transition {
 				transition: background-color $form-transition-speed $form-transition-property, border-color $form-transition-speed $form-transition-property, box-shadow $form-transition-speed $form-transition-property;
 			}
+			vertical-align: top;
 			width: $radio-size;
 		}
 
@@ -709,21 +712,31 @@ textarea.input-field {
 		}
 	}
 
-	&.large + .label:before {
-		@if $form-border-width-large != $form-border-width {
-			border-width: $form-border-width-large;
-		}
-		height: $radio-size-large;
-		width: $radio-size-large;
-	}
+	&.large + .label {
+    padding-left: $radio-size-large + $spacing-extra-small;
+    
+    &:before {
+      @if $form-border-width-large != $form-border-width {
+        border-width: $form-border-width-large;
+      }
+      height: $radio-size-large;
+      margin-left: -($radio-size-large + $spacing-extra-small);
+      width: $radio-size-large;
+    }
+  }
 
-	&.small + .label:before {
-		@if $form-border-width-small != $form-border-width {
-			border-width: $form-border-width-small;
-		}
-		height: $radio-size-small;
-		width: $radio-size-small;
-	}
+  &.small + .label {
+    padding-left: $radio-size-small + $spacing-extra-small;
+    
+    &:before {
+      @if $form-border-width-small != $form-border-width {
+        border-width: $form-border-width-small;
+      }
+      height: $radio-size-small;
+      margin-left: -($radio-size-small + $spacing-extra-small);
+      width: $radio-size-small;
+    }
+  }
 
 	&.error + .label:before {
 		@if $form-error-background-color {
@@ -766,6 +779,7 @@ textarea.input-field {
 
 	+ .label {
 		cursor: pointer;
+		padding-left: $checkbox-size + $spacing-extra-small;
 
 		&:before {
 			background-color: $form-background-color;
@@ -779,10 +793,12 @@ textarea.input-field {
 			display: inline-block;
 			height: $checkbox-size;
 			margin-bottom: -$spacing-extra-small;
+			margin-left: -($checkbox-size + $spacing-extra-small);
 			margin-right: $spacing-extra-small;
 			@if $form-transition {
 				transition: background-color $form-transition-speed $form-transition-property, border-color $form-transition-speed $form-transition-property, box-shadow $form-transition-speed $form-transition-property;
 			}
+			vertical-align: top;
 			width: $checkbox-size;
 		}
 
@@ -804,27 +820,31 @@ textarea.input-field {
 		}
 	}
 
-	&.large + .label:before {
-		@if $form-border-radius-large != $form-border-radius {
-			border-radius: $form-border-radius-large;
-		}
-		@if $form-border-width-large != $form-border-width {
-			border-width: $form-border-width-large;
-		}
-		height: $checkbox-size-large;
-		width: $checkbox-size-large;
-	}
+	&.large + .label {
+    padding-left: $checkbox-size-large + $spacing-extra-small;
+    
+    &:before {
+      @if $form-border-width-large != $form-border-width {
+        border-width: $form-border-width-large;
+      }
+      height: $checkbox-size-large;
+      margin-left: -($checkbox-size-large + $spacing-extra-small);
+      width: $checkbox-size-large;
+    }
+  }
 
-	&.small + .label:before {
-		@if $form-border-radius-small != $form-border-radius {
-			border-radius: $form-border-radius-small;
-		}
-		@if $form-border-width-small != $form-border-width {
-			border-width: $form-border-width-small;
-		}
-		height: $checkbox-size-small;
-		width: $checkbox-size-small;
-	}
+  &.small + .label {
+    padding-left: $checkbox-size-small + $spacing-extra-small;
+    
+    &:before {
+      @if $form-border-width-small != $form-border-width {
+        border-width: $form-border-width-small;
+      }
+      height: $checkbox-size-small;
+      margin-left: -($checkbox-size-small + $spacing-extra-small);
+      width: $checkbox-size-small;
+    }
+  }
 
 	&.error + .label:before {
 		@if $form-error-background-color {
