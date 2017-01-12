@@ -73,6 +73,14 @@ table {
       }
     }
 
+    &.bordered {
+      border: $table-border-width $table-border-style $table-border-color;
+      
+      > caption, > thead > tr > th, > tbody > tr td {
+        border: $table-border-width $table-border-style $table-border-color;
+      }
+    }
+
     &.striped > tbody > tr {
       &:nth-child(odd) {
         @if $table-background-color-odd != $table-background-color {
@@ -106,19 +114,11 @@ table {
       }
 
       &.striped > tbody > tr {
-        &:nth-child(4n+1) {
+        &:nth-child(4n+1), &:nth-child(4n+2) {
           background-color: $table-background-color-odd;
         }
 
-        &:nth-child(4n+2) {
-          background-color: $table-background-color-odd;
-        }
-
-        &:nth-child(4n+3) {
-          background-color: $table-background-color-even;
-        }
-
-        &:nth-child(4n+4) {
+        &:nth-child(4n+3), &:nth-child(4n+4) {
           background-color: $table-background-color-even;
         }
       }
