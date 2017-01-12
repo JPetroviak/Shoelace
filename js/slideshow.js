@@ -17,7 +17,7 @@ function changeSlide(slides) {
 			 slideNext.css('transition-duration', slideNextTransitionSpeed + 'ms').addClass('active');
 			 changeSlide(slides);
 		 }, slideActiveDuration + slideActiveTransitionSpeed);
-	$(slides).hover(
+	slides.hover(
 		function() {
 			clearTimeout(timer);
 		},

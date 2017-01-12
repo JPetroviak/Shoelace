@@ -1,8 +1,8 @@
 // Modal
 $('[data-toggle="modal"]').each(function() {
   var toggle = $(this);
-  $(toggle).click(function() {
-    var modal = $(toggle).attr('data-target');
+  toggle.click(function() {
+    var modal = toggle.attr('data-target');
     $('body').addClass('modal-open').append('<div class="modal-backdrop"></div>');
     $('.modal-backdrop').fadeIn();
     $(modal).addClass('open').fadeIn();
