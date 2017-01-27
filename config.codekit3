@@ -235,6 +235,12 @@
 		"sC": 1,
 		"tS": 0
 		},
+	"\/php\/shoelace.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/php\/shoelace.php",
+		"oF": 0
+		},
 	"\/README.html": {
 		"ft": 8192,
 		"oA": 2,
