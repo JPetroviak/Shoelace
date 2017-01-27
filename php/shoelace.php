@@ -278,86 +278,113 @@ $slideshowCaptionTextShadow = get_sub_field('');
 	  -webkit-tap-highlight-color: transparent;
 	  -webkit-text-size-adjust: 100%;
 	      -ms-text-size-adjust: 100%;
-	          text-size-adjust: 100%; }
+	          text-size-adjust: 100%;
+          }
 
 	*, *:before, *:after {
-	  box-sizing: inherit; }
+	  box-sizing: inherit;
+  }
 
 	body {
-	  background-color: #FFFFFF;
-	  color: #000000;
-	  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-	  font-size: 14px;
-	  line-height: 1.4;
-	  margin: 0; }
+	  background-color: <?=$bodyBackgroundColor?>;
+	  color: <?=$bodyColor?>;
+	  font-family: <?=$fontFamily?>;
+	  font-size: <?=$fontSize?>;
+	  line-height: <?=$lineHeight?>;
+	  margin: 0;
+  }
 
 	[tabindex="-1"]:focus {
-	  outline: none !important; }
+	  outline: none !important;
+  }
 
 	article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
-	  display: block; }
+	  display: block;
+  }
 
 	audio, canvas, video {
 	  display: inline-block;
-	  vertical-align: baseline; }
+	  vertical-align: baseline;
+  }
 
 	audio:not([controls]) {
 	  display: none;
-	  height: 0; }
+	  height: 0;
+  }
 
 	::-moz-selection {
-	  color: #FFFFFF;
-	  background-color: #007AFF;
-	  text-shadow: none; }
+	  color: <?=$selectionColor?>;
+	  background-color: <?=$selectionBackgroundColor?>;
+	  text-shadow: none;
+  }
 
 	::selection {
-	  color: #FFFFFF;
-	  background-color: #007AFF;
-	  text-shadow: none; }
+	  color: <?=$selectionColor?>;
+	  background-color: <?=$selectionBackgroundColor?>;
+	  text-shadow: none;
+  }
 
 	a {
 	  background-color: transparent;
-	  color: #007AFF;
+	  color: <?=$linkColor?>;
 	  text-decoration: none;
 	  -ms-touch-action: manipulation;
 	      touch-action: manipulation;
-	  -webkit-transition: color 200ms ease-in-out;
-	  transition: color 200ms ease-in-out; }
-	  a:active, a:hover {
-	    color: #5856D9;
-	    outline: 0; }
+	  <?php
+	  if ($transition) {
+  		?>
+	    -webkit-transition: color <?=$transitionSpeed?> <?=$transitionProperty?>;
+	    	  transition: color <?=$transitionSpeed?> <?=$transitionProperty?>;
+	  	<?php
+ 		}
+	  ?>
+	}
+
+  a:active, a:hover {
+    color: <?=$linkHoverColor?>;
+    outline: 0;
+	}
 
 	area {
 	  -ms-touch-action: manipulation;
-	      touch-action: manipulation; }
+	      touch-action: manipulation;
+      }
 
 	h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 	  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 	  line-height: 1.2;
 	  margin-bottom: 10px;
-	  margin-top: 0; }
+	  margin-top: 0;
+  }
 
 	h1, .h1 {
-	  font-size: 35px; }
+	  font-size: 35px;
+  }
 
 	h2, .h2 {
-	  font-size: 28px; }
+	  font-size: 28px;
+  }
 
 	h3, .h3 {
-	  font-size: 23.8px; }
+	  font-size: 23.8px;
+  }
 
 	h4, .h4 {
-	  font-size: 17.5px; }
+	  font-size: 17.5px;
+  }
 
 	h5, .h5 {
-	  font-size: 14px; }
+	  font-size: 14px;
+  }
 
 	h6, .h6 {
-	  font-size: 11.9px; }
+	  font-size: 11.9px;
+  }
 
 	p {
 	  margin-bottom: 10px;
-	  margin-top: 0; }
+	  margin-top: 0;
+  }
 
 	hr {
 	  border-bottom: 1px solid #CECED2;
@@ -365,78 +392,101 @@ $slideshowCaptionTextShadow = get_sub_field('');
 	  box-sizing: content-box;
 	  height: 0;
 	  margin-bottom: 20px;
-	  margin-top: 20px; }
+	  margin-top: 20px;
+  }
 
 	abbr[title] {
-	  border-bottom: 1px solid #CECED2; }
+	  border-bottom: 1px solid #CECED2;
+  }
 
 	b, strong {
-	  font-weight: bold; }
+	  font-weight: bold;
+  }
 
 	dfn {
-	  font-style: italic; }
+	  font-style: italic;
+  }
 
 	mark {
 	  background-color: rgba(255, 204, 0, 0.25);
-	  color: #000000; }
+	  color: #000000;
+  }
 
 	small {
-	  font-size: 80%; }
+	  font-size: 80%;
+  }
 
 	sub, sup {
 	  font-size: 75%;
 	  line-height: 0;
 	  position: relative;
-	  vertical-align: baseline; }
+	  vertical-align: baseline;
+  }
 
 	sup {
-	  top: -0.5em; }
+	  top: -0.5em;
+  }
 
 	sub {
-	  bottom: -0.25em; }
+	  bottom: -0.25em;
+  }
 
 	ul, ol, dl {
-	  margin: 0 0 20px; }
-	  ul.list-unstyled, ul.list-inline, ol.list-unstyled, ol.list-inline, dl.list-unstyled, dl.list-inline {
-	    list-style: none;
-	    padding-left: 0; }
-	  ul.list-inline, ol.list-inline, dl.list-inline {
-	    display: -webkit-box;
-	    display: -ms-flexbox;
-	    display: flex;
-	    -webkit-box-orient: horizontal;
-	    -webkit-box-direction: normal;
-	        -ms-flex-direction: row;
-	            flex-direction: row;
-	    -ms-flex-wrap: wrap;
-	        flex-wrap: wrap;
-	    margin-left: -5px;
-	    margin-right: -5px; }
-	    ul.list-inline li, ol.list-inline li, dl.list-inline li {
-	      padding-left: 5px;
-	      padding-right: 5px; }
+	  margin: 0 0 20px;
+  }
+
+  ul.list-unstyled, ul.list-inline, ol.list-unstyled, ol.list-inline, dl.list-unstyled, dl.list-inline {
+    list-style: none;
+    padding-left: 0;
+  }
+
+	ul.list-inline, ol.list-inline, dl.list-inline {
+	  display: -webkit-box;
+	  display: -ms-flexbox;
+	  display: flex;
+	  -webkit-box-orient: horizontal;
+	  -webkit-box-direction: normal;
+	      -ms-flex-direction: row;
+	          flex-direction: row;
+	  -ms-flex-wrap: wrap;
+	      flex-wrap: wrap;
+	  margin-left: -5px;
+	  margin-right: -5px;
+	}
+    
+  ul.list-inline li, ol.list-inline li, dl.list-inline li {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
 
 	ol ol, ul ul, ol ul, ul ol {
-	  margin-bottom: 0; }
+	  margin-bottom: 0;
+  }
 
 	pre {
 	  margin: 0 0 20px;
-	  overflow: auto; }
+	  overflow: auto;
+  }
 
 	code, kbd, pre, samp {
 	  font-family: monospace, monospace;
-	  font-size: 1em; }
+	  font-size: 1em;
+  }
 
 	blockquote {
-	  margin: 0 0 20px; }
+	  margin: 0 0 20px;
+  }
 	  blockquote.blockquote cite {
-	    color: #8E8E93; }
+	    color: #8E8E93;
+    }
 
 	svg:not(:root) {
-	  overflow: hidden; }
+	  overflow: hidden;
+  }
 
 	figure {
-	  margin: 0 0 20px; }
+	  margin: 0 0 20px;
+  }
 
 	img {
 	  border: 0; }

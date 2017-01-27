@@ -117,6 +117,16 @@
 		"oAP": "\/.sass-cache\/ded7a3d2d4e788bc76dcb4f767415aac246e7d19\/variables.scssc",
 		"oF": 0
 		},
+	"\/css\/shoelace.css": {
+		"aP": 0,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 2,
+		"oAP": "\/css\/shoelace-ck.css",
+		"oF": 0,
+		"oS": 0
+		},
 	"\/dist\/css\/shoelace.css": {
 		"aP": 0,
 		"bl": 0,
