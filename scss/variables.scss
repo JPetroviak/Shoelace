@@ -232,7 +232,7 @@ $alert-spacing: $spacing-small !default;
 
 // Progress
 $progress-background-color: $color-default-lightest !default;
-$progress-border: true !default; // true | false
+$progress-border: false !default; // true | false
 $progress-border-color: $border-color !default;
 $progress-border-style: $border-style !default;
 $progress-border-width: $border-width !default;
