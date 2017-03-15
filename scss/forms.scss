@@ -472,24 +472,15 @@ textarea.input-field {
 
 	&::-ms-track {
 		@include range-track();
+		color: transparent;
 	}
 
 	&::-ms-fill-lower {
-		background-color: $form-background-color;
-		border: $form-border-width $form-border-style $form-border-color;
-		border-radius: $form-border-radius;
-		@if $form-transition {
-			transition: background-color $form-transition-speed $form-transition-property, border-color $form-transition-speed $form-transition-property;
-		}
+		@include range-track();
 	}
 
 	&::-ms-fill-upper {
-		background-color: $form-background-color;
-		border: $form-border-width $form-border-style $form-border-color;
-		border-radius: $form-border-radius;
-		@if $form-transition {
-			transition: background-color $form-transition-speed $form-transition-property, border-color $form-transition-speed $form-transition-property;
-		}
+		@include range-track();
 	}
 
 	&::-webkit-slider-thumb {
