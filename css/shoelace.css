@@ -2333,7 +2333,7 @@ body.modal-open {
 .aligncenter {
   display: block;
   height: auto;
-  margin: 10px auto;
+  margin: 0 10px auto;
   max-width: 100%; }
 
 .alignleft, .alignright {
