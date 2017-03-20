@@ -1269,19 +1269,28 @@ textarea.input-field {
     height: 20px;
     -webkit-transition: background-color 200ms ease-in-out, border-color 200ms ease-in-out;
     transition: background-color 200ms ease-in-out, border-color 200ms ease-in-out;
-    width: 100%; }
+    width: 100%;
+    background: transparent;
+    border-color: transparent;
+    border-width: 0; }
   .range::-ms-fill-lower {
     background-color: transparent;
     border: 1px solid #CECED2;
     border-radius: 4px;
+    cursor: pointer;
+    height: 20px;
     -webkit-transition: background-color 200ms ease-in-out, border-color 200ms ease-in-out;
-    transition: background-color 200ms ease-in-out, border-color 200ms ease-in-out; }
+    transition: background-color 200ms ease-in-out, border-color 200ms ease-in-out;
+    width: 100%; }
   .range::-ms-fill-upper {
     background-color: transparent;
     border: 1px solid #CECED2;
     border-radius: 4px;
+    cursor: pointer;
+    height: 20px;
     -webkit-transition: background-color 200ms ease-in-out, border-color 200ms ease-in-out;
-    transition: background-color 200ms ease-in-out, border-color 200ms ease-in-out; }
+    transition: background-color 200ms ease-in-out, border-color 200ms ease-in-out;
+    width: 100%; }
   .range::-webkit-slider-thumb {
     -webkit-appearance: none;
             appearance: none;
@@ -1871,7 +1880,7 @@ progress.progress {
        -moz-appearance: none;
             appearance: none;
     background-color: #EFEFF4;
-    border: 1px solid #CECED2;
+    border: none;
     border-radius: 4px; }
     progress.progress[value]::-webkit-progress-bar {
       background-color: #EFEFF4;
@@ -2113,7 +2122,7 @@ body.modal-open {
     content: '';
     display: block; }
   .slides .slide {
-    background: no-repeat center center;
+    background-repeat: no-repeat;
     background-size: cover;
     float: left;
     margin-right: -100%;

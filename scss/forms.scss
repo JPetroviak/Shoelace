@@ -472,7 +472,9 @@ textarea.input-field {
 
 	&::-ms-track {
 		@include range-track();
-		color: transparent;
+		background: transparent;
+    border-color: transparent;
+    border-width: 0;
 	}
 
 	&::-ms-fill-lower {
