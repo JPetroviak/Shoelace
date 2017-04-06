@@ -9,7 +9,7 @@
 .aligncenter {
   display: block;
   height: auto;
-  margin: 0 $spacing-small auto;
+  margin: 0 auto $spacing-small;
   max-width: 100%;
 }
 
@@ -24,6 +24,7 @@
     float: left;
     margin-right: $spacing-small;
   }
+  
   .alignright {
     float: right;
     margin-left: $spacing-small;
