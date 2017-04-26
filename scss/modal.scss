@@ -26,7 +26,7 @@ body.modal-open {
   bottom: 0;
   display: none;
   left: 0;
-  letter-spacing: -4px;
+  letter-spacing: $inline-block-letter-spacing;
   overflow: auto;
   @if $container-spacing > 0 {
     padding-left: $container-spacing;

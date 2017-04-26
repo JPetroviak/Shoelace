@@ -99,7 +99,7 @@ ul, ol, dl {
 			flex-wrap: wrap;
 		} @else {
 			display: block;
-			letter-spacing: -4px;
+			letter-spacing: $inline-block-letter-spacing;
 		}
 		@extend .list-unstyled;
 		margin-left: -$spacing-extra-small;
