@@ -105,7 +105,7 @@ ul, ol, dl {
 		margin-left: -$spacing-extra-small;
 		margin-right: -$spacing-extra-small;
 
-		li {
+		> li {
 			@if not $flex {
 				display: inline-block;
 				letter-spacing: normal;

@@ -142,7 +142,7 @@ ul, ol, dl {
         flex-wrap: wrap;
     margin-left: -5px;
     margin-right: -5px; }
-    ul.list-inline li, ol.list-inline li, dl.list-inline li {
+    ul.list-inline > li, ol.list-inline > li, dl.list-inline > li {
       padding-left: 5px;
       padding-right: 5px; }
 
